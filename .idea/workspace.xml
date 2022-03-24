@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_ci_environment_8_1_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_core_7_2_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_expressions_15_0_1.xml" beforeDir="false" />
@@ -41,17 +38,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_picocontainer_picocontainer_2_15.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/DevelopmentEmployee.java" beforeDir="false" />
     </list>
-    <list id="fd314242-bafb-4f46-9c2e-2b9dd18eecfe" name="Changes by aleks" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/System.java" beforeDir="false" />
-    </list>
-    <list id="9c7e0372-8b55-4332-8969-0c779f37401c" name="Changes by Nikolai" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
-    </list>
+    <list id="fd314242-bafb-4f46-9c2e-2b9dd18eecfe" name="Changes by aleks" comment="24/3" />
+    <list id="9c7e0372-8b55-4332-8969-0c779f37401c" name="Changes by Nikolai" comment="Changes by Nikolai" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,15 +58,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/dtu/system/Project.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="4" changelist="9c7e0372-8b55-4332-8969-0c779f37401c" />
-        <range start1="5" end1="6" start2="7" end2="8" changelist="fd314242-bafb-4f46-9c2e-2b9dd18eecfe" />
-        <range start1="10" end1="11" start2="12" end2="43" changelist="9c7e0372-8b55-4332-8969-0c779f37401c" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -113,7 +93,35 @@
       <option name="project" value="LOCAL" />
       <updated>1648151191644</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="24/3">
+      <created>1648156631825</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1648156631825</updated>
+    </task>
+    <task id="LOCAL-00003" summary="24/3">
+      <created>1648156644510</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648156644510</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Changes by Nikolai">
+      <created>1648156657896</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648156657896</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changes by Nikolai">
+      <created>1648156671129</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648156671129</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +138,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="With Classes" />
     <MESSAGE value="24/3" />
-    <option name="LAST_COMMIT_MESSAGE" value="24/3" />
+    <MESSAGE value="Changes by Nikolai" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by Nikolai" />
   </component>
 </project>
