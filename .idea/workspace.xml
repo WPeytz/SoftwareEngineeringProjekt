@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19411f0a-1a9b-405d-9c32-46a0bd57567c" name="Changes" comment="" />
+    <list default="true" id="19411f0a-1a9b-405d-9c32-46a0bd57567c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dtu/system/DevelopmentEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/system/CucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/ExampleSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/system/ExampleSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/TestJUnit4AndJUnit5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/system/TestJUnit4AndJUnit5.java" afterDir="false" />
+    </list>
+    <list id="50b05c07-0af8-453f-8528-79bb77a56285" name="Changes by aleks" comment="" />
+    <list id="724b314a-9d25-440c-a420-13dc0ed39fe7" name="Changes by Nikolai" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/calculator/UpnCalculator.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +30,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SoftwareEngineering" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -58,7 +70,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647875788513</updated>
-      <workItem from="1647875805668" duration="1291000" />
+      <workItem from="1647875805668" duration="2201000" />
+      <workItem from="1648148779401" duration="793000" />
     </task>
     <servers />
   </component>

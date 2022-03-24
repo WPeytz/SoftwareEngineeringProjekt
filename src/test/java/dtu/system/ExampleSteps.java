@@ -1,4 +1,4 @@
-package dtu.calculator;
+package dtu.system;
 
 import static org.junit.Assert.assertEquals;
 
@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 
 public class ExampleSteps {
 	
-	UpnCalculator calc = new UpnCalculator();
+	Activity calc = new Activity();
 
 	@Given("the first input is {int}")
 	public void theFirstInputIs(Integer int1) {
