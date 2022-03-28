@@ -17,8 +17,8 @@ public class Project {
     public Project(String name, boolean customerProject,LocalDate startWeek, LocalDate endWeek) {
         this.name = name;
         this.customerProject = customerProject;
-        this.startWeek = startWeek; /* yyyy-ww */
-        this.endWeek = endWeek;  /* yyyy-ww */
+        this.startWeek = startWeek;
+        this.endWeek = endWeek;
         activities = new ArrayList<>();
         projectID = Integer.parseInt(String.valueOf(this.startWeek.getYear()).substring(2,4)
                 +decFormat.format(incTracking()));

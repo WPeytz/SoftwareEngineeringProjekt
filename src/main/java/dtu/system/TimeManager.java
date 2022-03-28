@@ -50,7 +50,7 @@ public class TimeManager {
 
     public void createProject(String name, boolean customerProject, LocalDate startWeek, LocalDate endWeek)
     {
-        projectList.add(new Project(name, customerProject));
+        projectList.add(new Project(name, customerProject,startWeek, endWeek));
     }
 
     public Project getProject(int projectID) {
