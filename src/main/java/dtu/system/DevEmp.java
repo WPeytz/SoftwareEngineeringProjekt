@@ -12,7 +12,7 @@ public class DevEmp {
         activities = new ArrayList<>();
     }
     
-    public void registerTimeSpent (Activity activity, String StDt, String EnDt) throws ParseException 
+    public void registerTimeSpent (Activity activity, String StDt, String EnDt) throws ParseException
     {
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH.mm");
         LocalDateTime startTime = LocalDateTime.parse(StDt, format);
