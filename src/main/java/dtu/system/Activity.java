@@ -1,7 +1,5 @@
 package dtu.system;
 
-
-
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -14,11 +12,13 @@ public class Activity {
     ArrayList<Double> timeSpent;
 
 
-    public Activity(String name, double timeBudget, boolean externalActivity) {
-        /* super(???); */
+    public Activity(String name, double timeBudget, boolean externalActivity, String startWeek, String endWeek) throws ParseException {
         this.name  = name;
         this.timeBudget = timeBudget;
         this.externalActivity = externalActivity;
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH.mm");
+        this.startWeek = LocalDateTime.parse(startWeek, format);
+        this.endWeek = LocalDateTime.parse(endWeek, format);
         timeSpent = new ArrayList<>();
         workingDevelopers = new ArrayList<>();
     }
