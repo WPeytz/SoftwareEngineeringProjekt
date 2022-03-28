@@ -16,10 +16,8 @@ public class Project {
         this.name = name;
         this.customerProject = customerProject;
         activities = new ArrayList<>();
-        startDate = Calendar.getInstance();
-        endDate = Calendar.getInstance();
-        projectID = startDate.get(Calendar.YEAR) + "000" + tracking;
-        tracking++;
+        projectID = Integer.parseInt(String.valueOf(this.startWeek.getYear()).substring(2,4)
+                +decFormat.format(incTracking()));
     }
 
     public void setProjectManager(DevEmp projectManager) {

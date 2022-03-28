@@ -1,6 +1,8 @@
 package dtu.system;
 
+import java.nio.file.Paths;
 import java.util.*;
+import java.io.*;
 
 public class TimeManager {
     ArrayList<Activity> extActList;
@@ -18,17 +20,7 @@ public class TimeManager {
     {
 
     }
- 
-    public ArrayList<DevEmp> viewFreeEmps()
-    {
-        ArrayList<DevEmp> FreeEmpsList = new ArrayList<>();
-        for (DevEmp devs : devEmpList)
-        {
-            if (devs.free) FreeEmpsList.add(devs);
-        }
 
-        return FreeEmpsList;
-    }
 
     public void createProject(String name, boolean customerProject)
     {
