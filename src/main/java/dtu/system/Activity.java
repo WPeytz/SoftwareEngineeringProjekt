@@ -36,11 +36,13 @@ public class Activity {
     }
 
     public void addWorkingDev(DevEmp devEmp){
-        workingDevelopers.add(devEmp);
+        if (!workingDevelopers.contains(devEmp)) {
+            workingDevelopers.add(devEmp);
+        }
     }
 
     public String requestAssistance (DevEmp assistingDev, Activity activity){
-        if (!activity.workingDevelopers.contains(assistingDev))
+        if (!activity.workingDevelopers.contains(assistingDev) && assistingDev.isFree(activity.startWeek,activity.endWeek))
         {
             return "I request your assitance " + assistingDev.Initials + " for " + activity.name;
         } else

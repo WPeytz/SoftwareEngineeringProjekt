@@ -4,26 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3">
+    <list default="true" id="77ba9d99-d29a-47af-81e6-a7aef4b8d46f" name="Changes" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_03_2022__20_40__Changes_by_Nikolai_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_03_2022__20_40__Changes_by_Nikolai_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
     </list>
-    <list id="d9153b00-579e-4cdd-9a10-4470ad45f91c" name="Changes by aleks" comment="">
+    <list id="15c0479d-b18a-43ca-b740-f5d7b67878f2" name="Changes by aleks" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/ZhongXina.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/ZhongXina.txt" afterDir="false" />
+    </list>
+    <list id="d980c941-8334-4cac-b887-d98d331fe2da" name="Changes by asbg2" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-    </list>
-    <list id="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" name="Changes by asbg2" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-    </list>
-    <list id="e03cc5fb-f59b-43e8-b43e-9df778a258ef" name="Changes by niko2" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
     </list>
@@ -54,55 +48,25 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/dtu/system/Project.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java">
-      <ranges>
-        <range start1="1" end1="3" start2="1" end2="1" changelist="d9153b00-579e-4cdd-9a10-4470ad45f91c" />
-        <range start1="4" end1="4" start2="2" end2="5" changelist="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" />
-        <range start1="5" end1="6" start2="6" end2="8" changelist="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" />
-        <range start1="7" end1="8" start2="9" end2="10" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="9" end1="10" start2="11" end2="11" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="11" end1="12" start2="12" end2="13" changelist="e03cc5fb-f59b-43e8-b43e-9df778a258ef" />
-        <range start1="17" end1="19" start2="18" end2="19" changelist="d9153b00-579e-4cdd-9a10-4470ad45f91c" />
-        <range start1="21" end1="24" start2="21" end2="21" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="25" end1="25" start2="22" end2="25" changelist="d9153b00-579e-4cdd-9a10-4470ad45f91c" />
-        <range start1="37" end1="41" start2="37" end2="47" changelist="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" />
-        <range start1="44" end1="44" start2="50" end2="97" changelist="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="11" changelist="d9153b00-579e-4cdd-9a10-4470ad45f91c" />
-        <range start1="5" end1="9" start2="13" end2="15" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="10" end1="11" start2="16" end2="17" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="12" end1="15" start2="18" end2="20" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="16" end1="21" start2="21" end2="47" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="23" end1="23" start2="49" end2="52" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="25" end1="26" start2="54" end2="54" changelist="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Project.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="e03cc5fb-f59b-43e8-b43e-9df778a258ef" />
-        <range start1="3" end1="4" start2="4" end2="5" changelist="e03cc5fb-f59b-43e8-b43e-9df778a258ef" />
-        <range start1="8" end1="10" start2="9" end2="11" changelist="e03cc5fb-f59b-43e8-b43e-9df778a258ef" />
-        <range start1="12" end1="13" start2="13" end2="15" changelist="e03cc5fb-f59b-43e8-b43e-9df778a258ef" />
-        <range start1="14" end1="15" start2="16" end2="17" changelist="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" />
-        <range start1="17" end1="17" start2="19" end2="21" changelist="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" />
-        <range start1="18" end1="22" start2="22" end2="24" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="35" end1="38" start2="37" end2="39" changelist="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" />
-        <range start1="39" end1="44" start2="40" end2="43" changelist="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" />
-        <range start1="45" end1="45" start2="44" end2="64" changelist="e03cc5fb-f59b-43e8-b43e-9df778a258ef" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java">
       <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="3" end1="3" start2="4" end2="5" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="8" end1="8" start2="10" end2="12" changelist="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" />
-        <range start1="16" end1="16" start2="20" end2="21" changelist="dbea0175-c834-4d21-bb0a-4c459ea2ec4d" />
-        <range start1="18" end1="18" start2="23" end2="48" changelist="d9153b00-579e-4cdd-9a10-4470ad45f91c" />
-        <range start1="20" end1="31" start2="50" end2="51" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="36" end1="36" start2="56" end2="66" changelist="e03cc5fb-f59b-43e8-b43e-9df778a258ef" />
+        <range start1="3" end1="3" start2="3" end2="4" changelist="77ba9d99-d29a-47af-81e6-a7aef4b8d46f" />
+        <range start1="14" end1="14" start2="15" end2="16" changelist="15c0479d-b18a-43ca-b740-f5d7b67878f2" />
+        <range start1="29" end1="31" start2="31" end2="31" changelist="15c0479d-b18a-43ca-b740-f5d7b67878f2" />
+        <range start1="37" end1="38" start2="37" end2="38" changelist="15c0479d-b18a-43ca-b740-f5d7b67878f2" />
+        <range start1="47" end1="49" start2="47" end2="47" changelist="15c0479d-b18a-43ca-b740-f5d7b67878f2" />
+        <range start1="52" end1="53" start2="50" end2="51" changelist="77ba9d99-d29a-47af-81e6-a7aef4b8d46f" />
+        <range start1="54" end1="55" start2="52" end2="53" changelist="d980c941-8334-4cac-b887-d98d331fe2da" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java">
+      <ranges>
+        <range start1="19" end1="19" start2="19" end2="22" changelist="d980c941-8334-4cac-b887-d98d331fe2da" />
+        <range start1="22" end1="25" start2="25" end2="25" changelist="d980c941-8334-4cac-b887-d98d331fe2da" />
+        <range start1="38" end1="39" start2="38" end2="41" changelist="77ba9d99-d29a-47af-81e6-a7aef4b8d46f" />
+        <range start1="42" end1="43" start2="44" end2="45" changelist="77ba9d99-d29a-47af-81e6-a7aef4b8d46f" />
+        <range start1="46" end1="47" start2="48" end2="49" changelist="d980c941-8334-4cac-b887-d98d331fe2da" />
+        <range start1="48" end1="98" start2="50" end2="50" changelist="d980c941-8334-4cac-b887-d98d331fe2da" />
       </ranges>
     </file>
   </component>

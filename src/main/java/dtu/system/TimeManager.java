@@ -1,6 +1,7 @@
 package dtu.system;
 
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.*;
 import java.io.*;
 
@@ -50,7 +51,7 @@ public class TimeManager {
     }
 
 
-    public void createProject(String name, boolean customerProject)
+    public void createProject(String name, boolean customerProject, LocalDate startWeek, LocalDate endWeek)
     {
         projectList.add(new Project(name, customerProject));
     }
