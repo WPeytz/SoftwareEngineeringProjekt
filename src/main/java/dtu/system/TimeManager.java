@@ -8,6 +8,8 @@ public class TimeManager {
     ArrayList<Activity> extActList;
     HashSet<Project> projectList;
     ArrayList<DevEmp> devEmpList;
+    double estTimeLeft;
+    String report;
 
     public TimeManager () {
         extActList = new ArrayList<>();
@@ -15,6 +17,7 @@ public class TimeManager {
         devEmpList = new ArrayList<>();
 
     }
+
 
     public void createReport(Project project)
     {

@@ -12,9 +12,11 @@ public class Project {
     boolean customerProject;
     int tracking = 1;
 
-    public Project(String name, boolean customerProject) {
+    public Project(String name, boolean customerProject,LocalDate startWeek, LocalDate endWeek) {
         this.name = name;
         this.customerProject = customerProject;
+        this.startWeek = startWeek; /* yyyy-ww */
+        this.endWeek = endWeek;  /* yyyy-ww */
         activities = new ArrayList<>();
         projectID = Integer.parseInt(String.valueOf(this.startWeek.getYear()).substring(2,4)
                 +decFormat.format(incTracking()));
@@ -31,14 +33,11 @@ public class Project {
         }
         return sum;
     }
-
-    public ArrayList<DevEmp> getWorkingDevelopers () {
-        ArrayList<DevEmp> workingDevs = new ArrayList<>();
+    public double timeBudget() {
+        double sum = 0;
         for (Activity a : activities) {
-            for (DevEmp dev : a.workingDevelopers) {
-                workingDevs.add(dev);
-            }
+            sum += a.timeBudget;
         }
-        return workingDevs;
+        return sum;
     }
 }
