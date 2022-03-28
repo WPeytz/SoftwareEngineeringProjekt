@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Activity {
     String name;
     double timeBudget;
-    int weekNumber;
+    LocalDateTime startWeek, endWeek;
     ArrayList<DevEmp> workingDevelopers;
     boolean externalActivity;
     ArrayList<Double> timeSpent;

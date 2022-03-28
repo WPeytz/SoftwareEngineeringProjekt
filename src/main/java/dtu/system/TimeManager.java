@@ -55,5 +55,15 @@ public class TimeManager {
         projectList.add(new Project(name, customerProject));
     }
 
+    public Project getProject(int projectID) {
+        for (Project p : projectList) {
+            if (p.projectID == projectID) {
+                return p;
+            }
+        }
+        System.out.println("Project not found");
+        return null;
+    }
+
 
 }

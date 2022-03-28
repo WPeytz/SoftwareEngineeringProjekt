@@ -1,16 +1,18 @@
 package dtu.system;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.time.*;
 
 public class Project {
     ArrayList<Activity> activities;
     String name;
-    String projectID;
-    Calendar startDate, endDate;
+    int projectID;
+    LocalDate startWeek, endWeek;
     DevEmp projectManager;
     boolean customerProject;
-    int tracking = 1;
+    int tracking = 0;
+    DecimalFormat decFormat = new DecimalFormat("0000");
 
     public Project(String name, boolean customerProject,LocalDate startWeek, LocalDate endWeek) {
         this.name = name;
@@ -40,4 +42,24 @@ public class Project {
         }
         return sum;
     }
+
+    public int incTracking () {
+        tracking++;
+        return tracking;
+    }
+
+/*
+    public int getProjectID () {
+        return projectID;
+    }
+
+    public String getName () {
+        return name;
+    }
+
+    public String getProjectManager () {
+        return projectManager.Initials;
+    }
+    */
+
 }
