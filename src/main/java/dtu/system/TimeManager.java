@@ -11,7 +11,7 @@ public class TimeManager {
     HashSet<Project> projectList;
     ArrayList<DevEmp> devEmpList;
     double estTimeLeft;
-    String report;
+    DateTimeFormatter format;
 
     public TimeManager () {
 
@@ -54,7 +54,17 @@ public class TimeManager {
         projectList.add(new Project(name, customerProject,startWeek, endWeek));
     }
 
-    public Project getProject(int projectID) {
+    public void createActivity(String name, double timeBudget, int projectID, String startWeek, String endWeek) throws Exception
+    {
+        if (projectID == 0)
+        {
+            extActList.add(new Activity(name, timeBudget, projectID, startWeek, endWeek));
+        } else {
+            getProject(projectID).activities.add(new Activity(name, timeBudget, projectID, startWeek, endWeek));
+        }
+    }
+
+    public Project getProject(int projectID) throws Exception {
         for (Project p : projectList) {
             if (p.projectID == projectID) {
                 return p;
@@ -64,5 +74,20 @@ public class TimeManager {
         return null;
     }
 
-
+    public void changeEndWeek(String endWeek, String activityName, int projectID) throws Exception{
+        format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
+        Activity activity = null;
+        for (Activity a : getProject(projectID).activities) {
+            if (a.name.equals(activityName)) {
+                activity = a;
+            }
+        }
+        if (activity == null) {
+            throw new Exception("Activity does not exist");
+        }
+        activity.endWeek = LocalDateTime.parse(endWeek+"-Sun",format);
+        if (activity.endWeek.isAfter(getProject(activity.projectID).endWeek)) {
+            getProject(activity.projectID).endWeek = activity.endWeek;
+        }
+    }
 }
