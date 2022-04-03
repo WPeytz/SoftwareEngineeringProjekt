@@ -16,11 +16,11 @@ public class Activity {
     ArrayList<Double> timeSpent;
 
 
-    public Activity(String name, double timeBudget, boolean externalActivity, String startWeek, String endWeek) throws ParseException {
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH.mm");
-        this.startWeek = LocalDateTime.parse(startWeek, format);
-        this.endWeek = LocalDateTime.parse(endWeek, format);
-        this.name  = name;
+    public Activity(String name, double timeBudget, int projectID, String startWeek, String endWeek) {
+        format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
+        this.startWeek = LocalDateTime.parse(startWeek+"-Mon", format);
+        this.endWeek = LocalDateTime.parse(endWeek+"-Sun", format);
+        this.name = name;
         this.timeBudget = timeBudget;
         this.externalActivity = externalActivity;
         timeSpent = new ArrayList<>();
