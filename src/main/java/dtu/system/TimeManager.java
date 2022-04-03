@@ -6,6 +6,17 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.io.*;
 
+/*
+ * 1. Create Project
+ * 2. View Projects
+ * 3. Create Report
+ * 4. Create Activity
+ * 5. View Free Employees
+ *
+ */
+
+
+
 public class TimeManager {
     ArrayList<Activity> extActList;
     HashSet<Project> projectList;
@@ -21,9 +32,26 @@ public class TimeManager {
 
     }
 
+    public void viewProjects() {
+        for (Project p : projectList) {
+            System.out.println(p.projectID + " " + p.name + " " + p.projectManager.Initials + " " + p.totalTimeSpent()+"h");
+        }
+    }
 
+    public void viewFreeEmployees (String startWeek, String endWeek) {
+        format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
+
+        for (DevEmp dev : devEmpList) {
+            if (dev.isFree(LocalDateTime.parse(startWeek+"-Mon"),LocalDateTime.parse(endWeek+"-Sun"))) {
+                System.out.println(dev.Initials);
+            }
+        }
+    }
+
+    //createReport(getProject(projectID))
     public void createReport(Project project)
     {
+
         estTimeLeft = project.timeBudget() - project.totalTimeSpent();
 
         String report = ("The time budget for project" + project.name +  "is" + project.timeBudget() +"."+"\r\n"+
@@ -49,9 +77,9 @@ public class TimeManager {
     }
 
 
-    public void createProject(String name, boolean customerProject, LocalDate startWeek, LocalDate endWeek)
+    public void createProject(String name, boolean customerProject, String startWeek, String endWeek)
     {
-        projectList.add(new Project(name, customerProject,startWeek, endWeek));
+        projectList.add(new Project(name, customerProject, startWeek, endWeek));
     }
 
     public void createActivity(String name, double timeBudget, int projectID, String startWeek, String endWeek) throws Exception
@@ -70,8 +98,7 @@ public class TimeManager {
                 return p;
             }
         }
-        System.out.println("Project not found");
-        return null;
+        throw new Exception("Project does not exist");
     }
 
     public void changeEndWeek(String endWeek, String activityName, int projectID) throws Exception{

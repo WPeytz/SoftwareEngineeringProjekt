@@ -1,6 +1,7 @@
 package dtu.system;
 
 import java.text.DecimalFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.time.*;
 
@@ -8,17 +9,20 @@ public class Project {
     ArrayList<Activity> activities;
     String name;
     int projectID;
-    LocalDate startWeek, endWeek;
+    LocalDateTime startWeek, endWeek;
     DevEmp projectManager;
     boolean customerProject;
     int tracking = 0;
     DecimalFormat decFormat = new DecimalFormat("0000");
+    DateTimeFormatter format;
 
-    public Project(String name, boolean customerProject,LocalDate startWeek, LocalDate endWeek) {
+    public Project(String name, boolean customerProject, String startWeek, String endWeek) {
+        format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
+
         this.name = name;
         this.customerProject = customerProject;
-        this.startWeek = startWeek;
-        this.endWeek = endWeek;
+        this.startWeek = LocalDateTime.parse(startWeek+"-Mon",format);
+        this.endWeek = LocalDateTime.parse(endWeek+"-Sun",format);
         activities = new ArrayList<>();
         projectID = Integer.parseInt(String.valueOf(this.startWeek.getYear()).substring(2,4)
                 +decFormat.format(incTracking()));
@@ -46,6 +50,10 @@ public class Project {
     public int incTracking () {
         tracking++;
         return tracking;
+    }
+
+    public void changeProjectEndWeek(String endWeek) {
+        this.endWeek = LocalDateTime.parse(endWeek+"-Sun",format);
     }
 
 /*
