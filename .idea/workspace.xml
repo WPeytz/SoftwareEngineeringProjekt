@@ -4,25 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3">
-      <change afterPath="$PROJECT_DIR$/features/RegisterTime.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_03_2022,_20_40_[Changes_by_Nikolai]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_03_2022__20_40__Changes_by_Nikolai_.xml" beforeDir="false" />
+    <list default="true" id="77ba9d99-d29a-47af-81e6-a7aef4b8d46f" name="Changes" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/put_your_project_name_here.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoftwareEngineeringProjekt.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
     </list>
-    <list id="d9153b00-579e-4cdd-9a10-4470ad45f91c" name="Changes by aleks" comment="" />
-    <list id="960d322e-fbfc-4021-b9bf-f48d505470c5" name="Changes by asbg2" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-    </list>
-    <list id="e03cc5fb-f59b-43e8-b43e-9df778a258ef" name="Changes by niko2" comment="" />
-    <list id="f5be4745-d31f-4837-aece-c57ac94baa03" name="Changes by Nikolai" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-    </list>
+    <list id="15c0479d-b18a-43ca-b740-f5d7b67878f2" name="Changes by aleks" comment="Changes by aleks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,59 +38,33 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/dtu/system/Project.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="2" changelist="960d322e-fbfc-4021-b9bf-f48d505470c5" />
-        <range start1="6" end1="8" start2="5" end2="5" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="14" end1="15" start2="11" end2="13" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="16" end1="16" start2="14" end2="15" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="18" end1="23" start2="17" end2="22" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="24" end1="25" start2="23" end2="28" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="40" end1="40" start2="43" end2="44" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="42" end1="42" start2="46" end2="47" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="50" end1="50" start2="55" end2="60" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java">
-      <ranges>
-        <range start1="2" end1="4" start2="2" end2="5" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="6" end1="6" start2="7" end2="18" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="12" end1="13" start2="24" end2="25" changelist="960d322e-fbfc-4021-b9bf-f48d505470c5" />
-        <range start1="22" end1="22" start2="34" end2="42" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="23" end1="23" start2="43" end2="51" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="25" end1="25" start2="53" end2="54" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="50" end1="51" start2="79" end2="80" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="52" end1="53" start2="81" end2="82" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="55" end1="56" start2="84" end2="95" changelist="960d322e-fbfc-4021-b9bf-f48d505470c5" />
-        <range start1="61" end1="63" start2="100" end2="101" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="65" end1="66" start2="103" end2="119" changelist="960d322e-fbfc-4021-b9bf-f48d505470c5" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="270RZAsNIYYYgV0FXifrPEdqOPE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/features" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/features" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -168,14 +131,35 @@
       <updated>1648156717368</updated>
     </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3" />
+      <changelist id="77ba9d99-d29a-47af-81e6-a7aef4b8d46f" name="Changes" comment="commit" />
       <created>1648455082858</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648455082858</updated>
       <workItem from="1648455088246" duration="21907000" />
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit">
+      <created>1648480829320</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648480829320</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Changes by aleks">
+      <created>1648480841807</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648480841807</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changes by asbg2">
+      <created>1648480854923</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648480854923</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,28 +170,20 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="With Classes" />
     <MESSAGE value="Changes by Nikolai" />
     <MESSAGE value="24/3" />
-    <option name="LAST_COMMIT_MESSAGE" value="24/3" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="Changes by aleks" />
+    <MESSAGE value="Changes by asbg2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by asbg2" />
   </component>
 </project>

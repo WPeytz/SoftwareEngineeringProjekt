@@ -23,13 +23,76 @@ public class TimeManager {
     ArrayList<DevEmp> devEmpList;
     double estTimeLeft;
     DateTimeFormatter format;
+    Scanner sc;
 
     public TimeManager () {
 
         extActList = new ArrayList<>();
         projectList = new HashSet<>();
         devEmpList = new ArrayList<>();
+        sc = new Scanner(System.in);
+    }
 
+    public void loadCLI() throws Exception {
+        menu();
+        int userIn = 0;
+        while(true) {
+            if (sc.hasNextLine()) {
+                userIn = sc.nextInt();
+            }
+            if (userIn == 1) {
+                clearScreen();
+                System.out.print("Project Name: ");
+                String projectName = sc.nextLine();
+                System.out.println();
+
+                System.out.print("External Project? y/n: ");
+                String extProject = sc.next();
+                System.out.println();
+                boolean extPrjct;
+                if (extProject.contains("n")) {
+                    extPrjct = false;
+                } else {
+                    extPrjct = true;
+                }
+
+                System.out.print("Start Date (yyyy-ww): ");
+                String startDate = sc.nextLine();
+                System.out.println();
+                System.out.print("End Date (yyyy-ww): ");
+                String endDate = sc.nextLine();
+                System.out.println();
+                createProject(projectName,extPrjct,startDate,endDate);
+                System.out.println("Project " + projectName + " created.");
+                Thread.sleep(500);
+                clearScreen();
+                menu();
+            } else if (userIn == 2) {
+                clearScreen();
+                viewProjects();
+                sc.next();
+                clearScreen();
+                menu();
+            } else if (userIn == 3) {
+                clearScreen();
+                System.out.print("Enter Project ID: ");
+                int projID = sc.nextInt();
+                createReport(getProject(projID));
+
+            }
+        }
+    }
+    public void menu() {
+        System.out.println("1. Create Project");
+        System.out.println("2. View Projects");
+        System.out.println("3. Create Report");
+        System.out.println("4. Create Activity");
+        System.out.println("5. View Free Employees");
+    }
+
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 
     public void viewProjects() {

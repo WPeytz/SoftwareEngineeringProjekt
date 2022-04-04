@@ -6,9 +6,9 @@
 	<!-- Tip to update to the latest releases: Run "mvn versions:use-latest-releases" -->
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>dtu</groupId>
-	<artifactId>put_your_project_name_here</artifactId>
-	<name>put_your_project_name_here</name>
+	<groupId>01</groupId>
+	<artifactId>SoftwareEngineeringProjekt</artifactId>
+	<name>SoftwareEngineeringProjekt</name>
 	<version>SNAPSHOT 0.0.1</version>
 
 	<properties>
