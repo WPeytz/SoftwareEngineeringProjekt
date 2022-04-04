@@ -1,6 +1,7 @@
 package dtu.system;
 
 
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -12,7 +13,7 @@ import java.io.*;
  * 3. Create Report
  * 4. Create Activity
  * 5. View Free Employees
- *
+ * 6. View report list
  */
 
 
@@ -40,130 +41,35 @@ public class TimeManager {
 
     public void loadCLI() throws Exception
     {
-        int projID;
-        String startDate,endDate;
-        menu();
-        char userIn = 0;
+        int userIn = 0;
+        Menu mn = new Menu();
+
         while(true)
         {
+            mn.menu();
             if (sc.hasNextLine())
             {
-                userIn = sc.nextLine();
+                userIn = sc.nextInt();
             }
             switch (userIn)
             {
-                case '1':
-                    clearScreen();
-                    System.out.print("Project Name: ");
-                    String projectName = sc.nextLine();
-                    System.out.println();
-                    System.out.print("External Project? y/n: ");
-                    String extProject = sc.next();
-                    System.out.println();
-                    boolean extPrjct;
-                    if (extProject.contains("n"))
-                    {
-                        extPrjct = false;
-                    }
-                    else
-                    {
-                        extPrjct = true;
-                    }
-                    System.out.print("Start Date (yyyy-ww): ");
-                    startDate = sc.nextLine();
-                    System.out.println();
-                    System.out.print("End Date (yyyy-ww): ");
-                    endDate = sc.nextLine();
-                    System.out.println();
-                    createProject(projectName, extPrjct, startDate, endDate);
-                    System.out.println("Project \"" + projectName + "\" created.");
-                    Thread.sleep(500);
-                    clearScreen();
-                    menu();
-                    break;
-                case '2':
-                    clearScreen();
-                    viewProjects();
-                    sc.next();
-                    clearScreen();
-                    menu();
-
-                    break;
-                case '3':
-                    clearScreen();
-                    System.out.print("Enter Project ID: ");
-                    projID = sc.nextInt();
-                    System.out.println();
-                    createReport(getProject(projID));
-                    Thread.sleep(500);
-                    clearScreen();
-                    menu();
-
-                    break;
-                case '4':
-                    clearScreen();
-                    System.out.print("Activity Name: ");
-                    String activityName = sc.nextLine();
-                    System.out.println();
-                    System.out.print("Time Budget: ");
-                    double timeBudget = sc.nextDouble();
-                    System.out.println();
-                    System.out.print("Project ID (\"0\" if external activity: ");
-                    projID = sc.nextInt();
-                    System.out.println();
-
-                    System.out.print("Start Date (yyyy-ww): ");
-                    startDate = sc.nextLine();
-                    System.out.println();
-                    System.out.print("End Date (yyyy-ww): ");
-                    endDate = sc.nextLine();
-                    System.out.println();
-
-                    createActivity(activityName, timeBudget, projID, startDate, endDate);
-                    System.out.println("Activity \"" + activityName + "\" has been created");
-                    Thread.sleep(500);
-                    clearScreen();
-                    menu();
-                    break;
-                case '5':
-                    clearScreen();
-                    System.out.print("View free employees in the period (yyyy-ww): ");
-                    startDate = sc.nextLine();
-                    System.out.println();
-                    System.out.print("to (yyyy-ww): ");
-                    endDate = sc.nextLine();
-                    System.out.println();
-                    viewFreeEmployees(startDate,endDate);
-                    sc.next();
-                    clearScreen();
-                    menu();
-                    break;
-                case 'z':
-                    File file = new File("ZhongXina.txt");
-                    Scanner sc = new Scanner(file);
-
-                    while (sc.hasNextLine())
-                    {
-                        System.out.println(sc.nextLine());
-                    }
-                    break;
-                case '0':
-                    System.exit(0);
+                case 1 -> mn.case1();
+                case 2 -> mn.case2();
+                case 3 -> mn.case3();
+                case 4 -> mn.case4();
+                case 5 -> mn.case5();
+                case 6 -> mn.case6();
+                case 666 -> mn.case666();
+                case 0 -> System.exit(0);
                 default:
                     System.out.println("Undefined input. The program will close...");
                     System.exit(69);
-
             }
         }
     }
-    public void menu() {
-        System.out.println("1. Create Project");
-        System.out.println("2. View Projects");
-        System.out.println("3. Create Report");
-        System.out.println("4. Create Activity");
-        System.out.println("5. View Free Employees");
-        System.out.println("0. Close");
-    }
+
+
+
 
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
@@ -184,6 +90,15 @@ public class TimeManager {
                 System.out.println(dev.Initials);
             }
         }
+    }
+
+    public String getRepDir()
+    {
+        String curUser = System.getProperty("user.name");
+        String projRepDir = ("C:\\Users\\"+curUser+"\\Documents\\ProjectReports\\");
+        File projDir = new File(projRepDir);
+        projDir.mkdir();
+        return projRepDir;
     }
 
     //createReport(getProject(projectID))
@@ -207,10 +122,7 @@ public class TimeManager {
 
         try
         {
-            String curUser = System.getProperty("user.name");
-            String projRepDir = ("C:\\Users\\"+curUser+"\\Documents\\ProjectReports\\");
-            File projDir = new File(projRepDir);
-            projDir.mkdir();
+            String projRepDir = getRepDir();
             File projReport = new File(projRepDir+project.projectID+"_report.txt");
             projReport.createNewFile();
             FileWriter FlWrtr = new FileWriter(projReport);

@@ -5,19 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_ci_environment_8_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_core_7_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_expressions_15_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_gherkin_7_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_gherkin_messages_7_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_java_7_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_junit_7_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_picocontainer_7_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_plugin_7_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_datatable_7_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_docstring_7_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_html_formatter_17_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_messages_17_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_tag_expressions_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_launcher_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_runner_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_suite_api_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_suite_commons_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_vintage_junit_vintage_engine_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_picocontainer_picocontainer_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dtu/system/HappyMerchant.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_29__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_36__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoftwareEngineeringProjekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoftwareEngineeringProjekt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/system/CucumberTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/system/ExampleSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/system/TestJUnit4AndJUnit5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/ZhongXina.txt" beforeDir="false" />
     </list>
-    <list id="d9153b00-579e-4cdd-9a10-4470ad45f91c" name="Changes by aleks" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-    </list>
-    <list id="960d322e-fbfc-4021-b9bf-f48d505470c5" name="Changes by asbg2" comment="" />
+    <list id="d9153b00-579e-4cdd-9a10-4470ad45f91c" name="Changes by aleks" comment="" />
     <list id="138d5bff-0662-4459-b46b-4b120c207ece" name="Changes by niko2" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
     </list>
     <list id="f5be4745-d31f-4837-aece-c57ac94baa03" name="Changes by Nikolai" comment="" />
@@ -50,13 +88,24 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java">
       <ranges>
-        <range start1="33" end1="33" start2="33" end2="38" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
-        <range start1="35" end1="36" start2="40" end2="44" changelist="d9153b00-579e-4cdd-9a10-4470ad45f91c" />
-        <range start1="37" end1="41" start2="45" end2="51" changelist="d9153b00-579e-4cdd-9a10-4470ad45f91c" />
-        <range start1="42" end1="88" start2="52" end2="155" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="97" end1="97" start2="164" end2="165" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
-        <range start1="125" end1="125" start2="193" end2="202" changelist="d9153b00-579e-4cdd-9a10-4470ad45f91c" />
-        <range start1="126" end1="127" start2="203" end2="204" changelist="d9153b00-579e-4cdd-9a10-4470ad45f91c" />
+        <range start1="3" end1="3" start2="3" end2="4" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="14" end1="15" start2="15" end2="16" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="42" end1="46" start2="43" end2="46" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="48" end1="48" start2="48" end2="49" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="50" end1="51" start2="51" end2="52" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="54" end1="151" start2="55" end2="63" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="154" end1="155" start2="66" end2="66" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="158" end1="166" start2="69" end2="72" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="174" end1="175" start2="80" end2="81" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
+        <range start1="183" end1="184" start2="89" end2="90" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
+        <range start1="188" end1="188" start2="94" end2="103" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="209" end1="213" start2="124" end2="125" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="218" end1="219" start2="130" end2="131" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
+        <range start1="232" end1="233" start2="144" end2="145" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
+        <range start1="234" end1="234" start2="146" end2="172" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
+        <range start1="236" end1="237" start2="174" end2="175" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
+        <range start1="238" end1="239" start2="176" end2="177" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
+        <range start1="240" end1="240" start2="178" end2="179" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
       </ranges>
     </file>
   </component>
@@ -72,12 +121,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/features" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="CodeWithMe" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -184,11 +235,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="With Classes" />
     <MESSAGE value="Changes by Nikolai" />
     <MESSAGE value="24/3" />
     <option name="LAST_COMMIT_MESSAGE" value="24/3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

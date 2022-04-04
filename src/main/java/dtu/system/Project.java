@@ -16,7 +16,8 @@ public class Project {
     DecimalFormat decFormat = new DecimalFormat("0000");
     DateTimeFormatter format;
 
-    public Project(String name, boolean customerProject, String startWeek, String endWeek) {
+    public Project(String name, boolean customerProject, String startWeek, String endWeek)
+    {
         format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
 
         this.name = name;
