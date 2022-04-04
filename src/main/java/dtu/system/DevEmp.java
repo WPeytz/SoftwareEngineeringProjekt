@@ -6,12 +6,12 @@ import java.util.*;
 import java.time.*;
 
 public class DevEmp {
-    String Initials;
+    String initials;
     ArrayList<Activity> activities;
 
     public DevEmp (String initials)
     {
-        this.Initials = initials;
+        this.initials = initials;
         activities = new ArrayList<>();
     }
     

@@ -49,9 +49,9 @@ public class Activity {
     public String requestAssistance (DevEmp assistingDev, Activity activity){
         if (!activity.workingDevelopers.contains(assistingDev) && assistingDev.isFree(activity.startWeek,activity.endWeek))
         {
-            return "I request your assitance " + assistingDev.Initials + " for " + activity.name;
+            return "I request your assitance " + assistingDev.initials + " for " + activity.name;
         } else
-            return assistingDev.Initials + " is already working on the same activity as you or is busy.";
+            return assistingDev.initials + " is already working on the same activity as you or is busy.";
     }
 
     public void setName(String name) {
