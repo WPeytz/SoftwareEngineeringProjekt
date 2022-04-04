@@ -11,6 +11,7 @@ public class Menu extends TimeManager
 
     int projID;
     String startDate,endDate;
+
     public void menu() {
         System.out.println();
         System.out.println("1. Create Project");
@@ -21,7 +22,8 @@ public class Menu extends TimeManager
         System.out.println("6. View reports");
         System.out.println("0. Close");
     }
-    public void case1() throws InterruptedException {
+    public void case1() throws InterruptedException
+    {
         clearScreen();
         System.out.print("Project Name: ");
         String projectName = sc.nextLine();
@@ -143,6 +145,9 @@ public class Menu extends TimeManager
 
     public void printFileContents (Scanner sc)
     {
-
+        while (sc.hasNextLine())
+        {
+            System.out.println(sc.nextLine());
+        }
     }
 }

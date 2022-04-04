@@ -24,19 +24,12 @@ public class TimeManager {
     ArrayList<DevEmp> devEmpList;
     double estTimeLeft;
     DateTimeFormatter format;
-    Scanner sc;
-
+    Scanner sc = new Scanner(System.in);
     public TimeManager () {
 
         extActList = new ArrayList<>();
         projectList = new HashSet<>();
         devEmpList = new ArrayList<>();
-        sc = new Scanner(System.in);
-        try {
-            loadCLI();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public void loadCLI() throws Exception
@@ -61,11 +54,13 @@ public class TimeManager {
                 case 6 -> mn.case6();
                 case 666 -> mn.case666();
                 case 0 -> System.exit(0);
-                default:
+                default -> {
                     System.out.println("Undefined input. The program will close...");
                     System.exit(69);
+                }
             }
         }
+
     }
 
 
