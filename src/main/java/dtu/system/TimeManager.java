@@ -25,7 +25,8 @@ public class TimeManager {
     double estTimeLeft;
     DateTimeFormatter format;
     Scanner sc = new Scanner(System.in);
-    public TimeManager () {
+    public TimeManager ()
+    {
         extActList = new ArrayList<>();
         projectList = new HashSet<>();
         devEmpList = new ArrayList<>();
@@ -71,17 +72,22 @@ public class TimeManager {
         System.out.flush();
     }
 
-    public void viewProjects() {
-        for (Project p : projectList) {
+    public void viewProjects()
+    {
+        for (Project p : projectList)
+        {
             System.out.println(p.projectID + " " + p.name + " " + p.projectManager.initials + " " + p.totalTimeSpent()+"h");
         }
     }
 
-    public void viewFreeEmployees (String startWeek, String endWeek) {
+    public void viewFreeEmployees (String startWeek, String endWeek)
+    {
         format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
 
-        for (DevEmp dev : devEmpList) {
-            if (dev.isFree(LocalDateTime.parse(startWeek+"-Mon"),LocalDateTime.parse(endWeek+"-Sun"))) {
+        for (DevEmp dev : devEmpList)
+        {
+            if (dev.isFree(LocalDateTime.parse(startWeek+"-Mon"),LocalDateTime.parse(endWeek+"-Sun")))
+            {
                 System.out.println(dev.initials);
             }
         }
@@ -146,7 +152,8 @@ public class TimeManager {
         System.out.print("Initials: ");
         String initials = sc.nextLine();
         System.out.println();
-        if (!initials.equals(getProject(projectID).projectManager.initials)) {
+        if (projectID != 0 && !initials.equals(getProject(projectID).projectManager.initials))
+        {
             System.out.println("Credentials do not match.");
             return;
         }
@@ -168,34 +175,44 @@ public class TimeManager {
         if (projectID == 0)
         {
             extActList.add(new Activity(activityName, timeBudget, projectID, startDate, endDate));
-        } else {
+        }
+        else
+        {
             getProject(projectID).activities.add(new Activity(activityName, timeBudget, projectID, startDate, endDate));
         }
         System.out.println("Activity \"" + activityName + "\" has been created");
     }
 
-    public Project getProject(int projectID) throws Exception {
-        for (Project p : projectList) {
-            if (p.projectID == projectID) {
+    public Project getProject(int projectID) throws Exception
+    {
+        for (Project p : projectList)
+        {
+            if (p.projectID == projectID)
+            {
                 return p;
             }
         }
         throw new Exception("Project does not exist");
     }
 
-    public void changeEndWeek(String endWeek, String activityName, int projectID) throws Exception{
+    public void changeEndWeek(String endWeek, String activityName, int projectID) throws Exception
+    {
         format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
         Activity activity = null;
-        for (Activity a : getProject(projectID).activities) {
-            if (a.name.equals(activityName)) {
+        for (Activity a : getProject(projectID).activities)
+        {
+            if (a.name.equals(activityName))
+            {
                 activity = a;
             }
         }
-        if (activity == null) {
+        if (activity == null)
+        {
             throw new Exception("Activity does not exist");
         }
         activity.endWeek = LocalDateTime.parse(endWeek+"-Sun",format);
-        if (activity.endWeek.isAfter(getProject(activity.projectID).endWeek)) {
+        if (activity.endWeek.isAfter(getProject(activity.projectID).endWeek))
+        {
             getProject(activity.projectID).endWeek = activity.endWeek;
         }
     }

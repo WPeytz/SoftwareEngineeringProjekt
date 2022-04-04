@@ -2,12 +2,25 @@ package dtu.calculator;
 
 import io.cucumber.java.en.*;
 
-public class CustomerSteps
+public class RegisterTime_Steps
 {
-    @Given("that the developer {string} is assigned an project activity {string}")
-    public void that_the_developer_is_assigned_an_project_activity(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    TimeManager manager;
+    Activity a;
+    DevEmp dev;
+    String startTime, endTime;
+
+    public RegisterTime_Steps () {
+        manager = new TimeManager();
+    }
+
+
+
+    @Given("that the developer {string} is assigned an project {int} activity {string}")
+    public void that_the_developer_is_assigned_an_project_activity(String devEmp, int projectID, String activity) throws Exception{
+        dev = manager.getDevEmp(devEmp);
+        Project project = manager.getProject(projectID);
+        a = project.getActivity(activity);
+        assertTrue(a.workingDevelopers.contains(dev));
     }
     @When("{string} registers start time as {string}")
     public void registers_start_time_as(String string, String string2) {

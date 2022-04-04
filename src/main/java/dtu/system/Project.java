@@ -53,7 +53,8 @@ public class Project {
         return tracking;
     }
 
-    public void changeProjectEndWeek(String endWeek) {
+    public void changeProjectEndWeek(String endWeek)
+    {
         this.endWeek = LocalDateTime.parse(endWeek+"-Sun",format);
     }
 
