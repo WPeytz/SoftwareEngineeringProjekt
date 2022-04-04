@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.time.*;
 
 public class Project {
-    ArrayList<Activity> activities;
+    public ArrayList<Activity> activities;
     String name;
     int projectID;
     LocalDateTime startWeek, endWeek;
@@ -51,6 +51,15 @@ public class Project {
     public int incTracking () {
         tracking++;
         return tracking;
+    }
+
+    public Activity getActivity (String name) throws Exception{
+        for (Activity a : activities) {
+            if (a.name.equals(name)){
+                return a;
+            }
+        }
+        throw new Exception("Activity \"" + name + "\" could not be found");
     }
 
     public void changeProjectEndWeek(String endWeek)

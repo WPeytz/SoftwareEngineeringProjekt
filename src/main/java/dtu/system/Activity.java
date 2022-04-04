@@ -8,7 +8,7 @@ public class Activity {
     String name;
     double timeBudget;
     LocalDateTime startWeek, endWeek;
-    ArrayList<DevEmp> workingDevelopers;
+    public ArrayList<DevEmp> workingDevelopers;
     boolean externalActivity = false;
     int projectID;
     ArrayList<Double> timeSpent;

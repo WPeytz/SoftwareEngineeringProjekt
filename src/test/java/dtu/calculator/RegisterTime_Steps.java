@@ -6,6 +6,8 @@ import dtu.system.Project;
 import dtu.system.TimeManager;
 import io.cucumber.java.en.*;
 
+import static org.junit.Assert.*;
+
 public class RegisterTime_Steps
 {
     TimeManager manager;

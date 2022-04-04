@@ -21,7 +21,7 @@ import java.io.*;
 public class TimeManager {
     ArrayList<Activity> extActList;
     HashSet<Project> projectList;
-    ArrayList<DevEmp> devEmpList;
+    public ArrayList<DevEmp> devEmpList;
     double estTimeLeft;
     DateTimeFormatter format;
     Scanner sc = new Scanner(System.in);
@@ -65,9 +65,12 @@ public class TimeManager {
     }
 
 
-    public static void clearScreen() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+    public static void clearScreen() throws IOException, InterruptedException
+    {
+        //System.out.print("\033[H\033[2J");
+        //System.out.flush();
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
     }
 
     public void viewProjects()
@@ -89,6 +92,18 @@ public class TimeManager {
                 System.out.println(dev.initials);
             }
         }
+    }
+
+    public DevEmp getDevEmp (String initials) throws Exception
+    {
+        for (DevEmp dev : devEmpList)
+        {
+            if (initials.equals(dev.initials))
+            {
+                return dev;
+            }
+        }
+        throw new Exception("No matching developer with initials "+initials+" found.");
     }
 
     public String getRepDir()
