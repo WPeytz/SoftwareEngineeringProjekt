@@ -40,52 +40,109 @@ public class TimeManager {
             if (sc.hasNextLine()) {
                 userIn = sc.nextInt();
             }
-            if (userIn == 1) {
-                clearScreen();
-                System.out.print("Project Name: ");
-                String projectName = sc.nextLine();
-                System.out.println();
+            switch (userIn)
+            {
+                case '1':
+                    clearScreen();
+                    System.out.print("Project Name: ");
+                    String projectName = sc.nextLine();
+                    System.out.println();
+                    System.out.print("External Project? y/n: ");
+                    String extProject = sc.next();
+                    System.out.println();
+                    boolean extPrjct;
+                    if (extProject.contains("n"))
+                    {
+                        extPrjct = false;
+                    }
+                    else
+                    {
+                        extPrjct = true;
+                    }
+                    System.out.print("Start Date (yyyy-ww): ");
+                    startDate = sc.nextLine();
+                    System.out.println();
+                    System.out.print("End Date (yyyy-ww): ");
+                    endDate = sc.nextLine();
+                    System.out.println();
+                    createProject(projectName, extPrjct, startDate, endDate);
+                    System.out.println("Project \"" + projectName + "\" created.");
+                    Thread.sleep(500);
+                    clearScreen();
+                    menu();
+                    break;
+                case '2':
+                    clearScreen();
+                    viewProjects();
+                    sc.next();
+                    clearScreen();
+                    menu();
 
-                System.out.print("External Project? y/n: ");
-                String extProject = sc.next();
-                System.out.println();
-                boolean extPrjct;
-                if (extProject.contains("n")) {
-                    extPrjct = false;
-                } else {
-                    extPrjct = true;
-                }
+                    break;
+                case '3':
+                    clearScreen();
+                    System.out.print("Enter Project ID: ");
+                    projID = sc.nextInt();
+                    System.out.println();
+                    createReport(getProject(projID));
+                    Thread.sleep(500);
+                    clearScreen();
+                    menu();
 
-                System.out.print("Start Date (yyyy-ww): ");
-                String startDate = sc.nextLine();
-                System.out.println();
-                System.out.print("End Date (yyyy-ww): ");
-                String endDate = sc.nextLine();
-                System.out.println();
-                createProject(projectName,extPrjct,startDate,endDate);
-                System.out.println("Project " + projectName + " created.");
-                Thread.sleep(500);
-                clearScreen();
-                menu();
-            } else if (userIn == 2) {
-                clearScreen();
-                viewProjects();
-                sc.next();
-                clearScreen();
-                menu();
-            } else if (userIn == 3) {
-                clearScreen();
-                System.out.print("Enter Project ID: ");
-                int projID = sc.nextInt();
-                System.out.println();
-                createReport(getProject(projID));
-                Thread.sleep(500);
-                clearScreen();
-                menu();
-            } else if (userIn == 4) {
-                clearScreen();
-                System.out.print("Activity Name: ");
-                String activityName;
+                    break;
+                case '4':
+                    clearScreen();
+                    System.out.print("Activity Name: ");
+                    String activityName = sc.nextLine();
+                    System.out.println();
+                    System.out.print("Time Budget: ");
+                    double timeBudget = sc.nextDouble();
+                    System.out.println();
+                    System.out.print("Project ID (\"0\" if external activity: ");
+                    projID = sc.nextInt();
+                    System.out.println();
+
+                    System.out.print("Start Date (yyyy-ww): ");
+                    startDate = sc.nextLine();
+                    System.out.println();
+                    System.out.print("End Date (yyyy-ww): ");
+                    endDate = sc.nextLine();
+                    System.out.println();
+
+                    createActivity(activityName, timeBudget, projID, startDate, endDate);
+                    System.out.println("Activity \"" + activityName + "\" has been created");
+                    Thread.sleep(500);
+                    clearScreen();
+                    menu();
+                    break;
+                case '5':
+                    clearScreen();
+                    System.out.print("View free employees in the period (yyyy-ww): ");
+                    startDate = sc.nextLine();
+                    System.out.println();
+                    System.out.print("to (yyyy-ww): ");
+                    endDate = sc.nextLine();
+                    System.out.println();
+                    viewFreeEmployees(startDate,endDate);
+                    sc.next();
+                    clearScreen();
+                    menu();
+                    break;
+                case 'z':
+                    File file = new File("ZhongXina.txt");
+                    Scanner sc = new Scanner(file);
+
+                    while (sc.hasNextLine())
+                    {
+                        System.out.println(sc.nextLine());
+                    }
+                    break;
+                case '0':
+                    System.exit(0);
+                default:
+                    System.out.println("Undefined input. The program will close...");
+                    System.exit(69);
+
             }
         }
     }
