@@ -26,10 +26,10 @@ public class TimeManager {
     DateTimeFormatter format;
     Scanner sc = new Scanner(System.in);
     public TimeManager () {
-
         extActList = new ArrayList<>();
         projectList = new HashSet<>();
         devEmpList = new ArrayList<>();
+        System.out.println("Test");
     }
 
     public void loadCLI() throws Exception

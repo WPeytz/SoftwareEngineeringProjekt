@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/cucumber.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/cucumber.properties" afterDir="false" />
     </list>
     <list id="d9153b00-579e-4cdd-9a10-4470ad45f91c" name="Changes by aleks" comment="" />
-    <list id="84ae9332-c244-40bd-b739-9a1eda0f39f2" name="Changes by asbg2" comment="">
-      <change beforePath="$PROJECT_DIR$/features/RegisterTime.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/RegisterTime.feature" afterDir="false" />
-    </list>
+    <list id="84ae9332-c244-40bd-b739-9a1eda0f39f2" name="Changes by asbg2" comment="Changes by asbg2" />
     <list id="138d5bff-0662-4459-b46b-4b120c207ece" name="Changes by niko2" comment="Changes by niko2" />
     <list id="f5be4745-d31f-4837-aece-c57ac94baa03" name="Changes by Nikolai" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +66,7 @@
       <recent name="$PROJECT_DIR$/features" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CucumberTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dtu.system.Main" />
       <module name="SoftwareEngineeringProjekt" />
@@ -83,8 +80,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftwareEngineeringProjekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dtu.calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dtu.calculator" />
+      <option name="MAIN_CLASS_NAME" value="dtu.calculator.CucumberTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CucumberTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -155,7 +168,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649069171071</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="24/3">
+      <created>1649076639789</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1649076639789</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changes by asbg2">
+      <created>1649076652239</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649076652239</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,9 +215,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="With Classes" />
     <MESSAGE value="Changes by Nikolai" />
-    <MESSAGE value="24/3" />
     <MESSAGE value="Changes by niko2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by niko2" />
+    <MESSAGE value="24/3" />
+    <MESSAGE value="Changes by asbg2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by asbg2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
