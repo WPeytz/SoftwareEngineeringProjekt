@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77ba9d99-d29a-47af-81e6-a7aef4b8d46f" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/put_your_project_name_here.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoftwareEngineeringProjekt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="77ba9d99-d29a-47af-81e6-a7aef4b8d46f" name="Changes" comment="commit" />
     <list id="15c0479d-b18a-43ca-b740-f5d7b67878f2" name="Changes by aleks" comment="Changes by aleks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648480854923</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit">
+      <created>1649059295176</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649059295176</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,9 +182,9 @@
     <MESSAGE value="With Classes" />
     <MESSAGE value="Changes by Nikolai" />
     <MESSAGE value="24/3" />
-    <MESSAGE value="commit" />
     <MESSAGE value="Changes by aleks" />
     <MESSAGE value="Changes by asbg2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by asbg2" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>

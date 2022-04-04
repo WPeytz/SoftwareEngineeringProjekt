@@ -77,8 +77,15 @@ public class TimeManager {
                 clearScreen();
                 System.out.print("Enter Project ID: ");
                 int projID = sc.nextInt();
+                System.out.println();
                 createReport(getProject(projID));
-
+                Thread.sleep(500);
+                clearScreen();
+                menu();
+            } else if (userIn == 4) {
+                clearScreen();
+                System.out.print("Activity Name: ");
+                String activityName;
             }
         }
     }
@@ -132,6 +139,7 @@ public class TimeManager {
             FileWriter FlWrtr = new FileWriter(projReport);
             FlWrtr.write(report);
             FlWrtr.close();
+            System.out.println("Project Report has been saved in: "+projRepDir);
         }
         catch (IOException IOE)
         {
