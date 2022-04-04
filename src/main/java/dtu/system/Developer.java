@@ -15,7 +15,7 @@ public class Developer {
         activities = new ArrayList<>();
     }
     
-    public void registerTimeSpent (Activity activity, String StDt, String EnDt) throws ParseException
+    public double registerTimeSpent (Activity activity, String StDt, String EnDt) throws ParseException
     {
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH.mm");
         LocalDateTime startTime = LocalDateTime.parse(StDt, format);
@@ -23,6 +23,7 @@ public class Developer {
         double l = Duration.between(startTime, endTime).toMinutes();
         l = (double) Math.round(l/30)/2;
         activity.timeSpent.add(l);
+        return l;
     }
 
 
