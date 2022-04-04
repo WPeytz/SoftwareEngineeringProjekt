@@ -15,6 +15,7 @@ public class RegisterTime_Steps
     Activity a;
     Developer dev;
     String startTime, endTime;
+    double l, prevTotal;
 
     public RegisterTime_Steps() {
         manager = new TimeManager();

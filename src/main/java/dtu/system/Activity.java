@@ -18,8 +18,8 @@ public class Activity {
     public Activity(String name, double timeBudget, int projectID, String startWeek, String endWeek)
     {
         format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
-        this.startWeek = LocalDateTime.parse(startWeek+"-Mon", format);
-        this.endWeek = LocalDateTime.parse(endWeek+"-Sun", format);
+        this.startWeek = LocalDate.parse(startWeek+"-Mon", format);
+        this.endWeek = LocalDate.parse(endWeek+"-Sun", format);
         this.name = name;
         this.timeBudget = timeBudget;
         if (projectID == 0)

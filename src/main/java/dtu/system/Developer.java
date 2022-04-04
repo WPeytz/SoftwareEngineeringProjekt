@@ -27,9 +27,9 @@ public class Developer {
     }
 
 
-    public boolean isFree(LocalDateTime newStartWeek, LocalDateTime newEndWeek)
+    public boolean isFree(LocalDate newStartWeek, LocalDate newEndWeek)
     {
-        for (LocalDateTime i = newStartWeek; i.isBefore(newEndWeek);i = i.plusWeeks(1))
+        for (LocalDate i = newStartWeek; i.isBefore(newEndWeek);i = i.plusWeeks(1))
         {
             int activityCount = 0;
             for (Activity a : activities)
