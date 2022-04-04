@@ -9,12 +9,19 @@ import java.io.*;
 
 public class Menu extends TimeManager
 {
-
     int projID;
     String startDate,endDate;
 
     public void menu()
     {
+        /*
+         * 1. Create Project
+         * 2. View Projects
+         * 3. Create Report
+         * 4. Create Activity
+         * 5. View Free Employees
+         * 6. View report list
+         */
         System.out.println();
         System.out.println("1. Create Project");
         System.out.println("2. View Projects");

@@ -5,11 +5,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.time.*;
 
-public class DevEmp {
+public class Developer {
     String initials;
     ArrayList<Activity> activities;
 
-    public DevEmp (String initials)
+    public Developer(String initials)
     {
         this.initials = initials;
         activities = new ArrayList<>();

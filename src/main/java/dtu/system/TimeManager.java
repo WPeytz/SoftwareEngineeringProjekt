@@ -1,27 +1,16 @@
 package dtu.system;
 
 
-import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.io.*;
 
-/*
- * 1. Create Project
- * 2. View Projects
- * 3. Create Report
- * 4. Create Activity
- * 5. View Free Employees
- * 6. View report list
- */
-
-
-
 public class TimeManager {
     ArrayList<Activity> extActList;
     HashSet<Project> projectList;
-    public ArrayList<DevEmp> devEmpList;
+    public ArrayList<Developer> developerList;
     double estTimeLeft;
     DateTimeFormatter format;
     Scanner sc = new Scanner(System.in);
@@ -29,8 +18,7 @@ public class TimeManager {
     {
         extActList = new ArrayList<>();
         projectList = new HashSet<>();
-        devEmpList = new ArrayList<>();
-        System.out.println("Test");
+        developerList = new ArrayList<>();
     }
 
     public void loadCLI() throws Exception
@@ -85,18 +73,18 @@ public class TimeManager {
     {
         format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
 
-        for (DevEmp dev : devEmpList)
+        for (Developer dev : developerList)
         {
-            if (dev.isFree(LocalDateTime.parse(startWeek+"-Mon"),LocalDateTime.parse(endWeek+"-Sun")))
+            if (dev.isFree(LocalDate.parse(startWeek+"-Mon"),LocalDate.parse(endWeek+"-Sun")))
             {
                 System.out.println(dev.initials);
             }
         }
     }
 
-    public DevEmp getDevEmp (String initials) throws Exception
+    public Developer getDeveloper(String initials) throws Exception
     {
-        for (DevEmp dev : devEmpList)
+        for (Developer dev : developerList)
         {
             if (initials.equals(dev.initials))
             {
@@ -151,9 +139,16 @@ public class TimeManager {
     }
 
 
-    public void createProject(String name, boolean customerProject, String startWeek, String endWeek)
+    public void createProject(String name, boolean customerProject, String startWeek, String endWeek) throws OperationNotAllowedException
     {
-        projectList.add(new Project(name, customerProject, startWeek, endWeek));
+        if(projectExists(name))
+        {
+            throw new OperationNotAllowedException("Project could not be created, as the project name is already in use.");
+        }
+        else
+        {
+            projectList.add(new Project(name, customerProject, startWeek, endWeek));
+        }
     }
 
     public void createActivity() throws Exception
@@ -196,6 +191,18 @@ public class TimeManager {
         System.out.println("Activity \"" + activityName + "\" has been created");
     }
 
+    public boolean projectExists(String name)
+    {
+        for (Project p : projectList)
+        {
+            if(p.name.equals(name))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public Project getProject(int projectID) throws Exception
     {
         for (Project p : projectList)
@@ -210,7 +217,7 @@ public class TimeManager {
 
     public void changeEndWeek(String endWeek, String activityName, int projectID) throws Exception
     {
-        format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
+        format = DateTimeFormatter.ofPattern("YYYY-ww-Eee");
         Activity activity = null;
         for (Activity a : getProject(projectID).activities)
         {
@@ -223,7 +230,7 @@ public class TimeManager {
         {
             throw new Exception("Activity does not exist");
         }
-        activity.endWeek = LocalDateTime.parse(endWeek+"-Sun",format);
+        activity.endWeek = LocalDate.parse(endWeek+"-Sun",format);
         if (activity.endWeek.isAfter(getProject(activity.projectID).endWeek))
         {
             getProject(activity.projectID).endWeek = activity.endWeek;

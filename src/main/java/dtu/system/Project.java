@@ -9,8 +9,8 @@ public class Project {
     public ArrayList<Activity> activities;
     String name;
     int projectID;
-    LocalDateTime startWeek, endWeek;
-    DevEmp projectManager;
+    LocalDate startWeek, endWeek;
+    Developer projectManager;
     boolean customerProject;
     int tracking = 0;
     DecimalFormat decFormat = new DecimalFormat("0000");
@@ -18,18 +18,18 @@ public class Project {
 
     public Project(String name, boolean customerProject, String startWeek, String endWeek)
     {
-        format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
+        format = DateTimeFormatter.ofPattern("YYYY-ww-EEE");
 
         this.name = name;
         this.customerProject = customerProject;
-        this.startWeek = LocalDateTime.parse(startWeek+"-Mon",format);
-        this.endWeek = LocalDateTime.parse(endWeek+"-Sun",format);
+        this.startWeek = LocalDate.parse(startWeek+"-Mon",format);
+        this.endWeek = LocalDate.parse(endWeek+"-Sun",format);
         activities = new ArrayList<>();
         projectID = Integer.parseInt(String.valueOf(this.startWeek.getYear()).substring(2,4)
                 +decFormat.format(incTracking()));
     }
 
-    public void setProjectManager(DevEmp projectManager) {
+    public void setProjectManager(Developer projectManager) {
         this.projectManager = projectManager;
     }
 
@@ -64,7 +64,7 @@ public class Project {
 
     public void changeProjectEndWeek(String endWeek)
     {
-        this.endWeek = LocalDateTime.parse(endWeek+"-Sun",format);
+        this.endWeek = LocalDate.parse(endWeek+"-Sun",format);
     }
 
 /*
