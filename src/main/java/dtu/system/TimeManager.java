@@ -33,12 +33,17 @@ public class TimeManager {
         sc = new Scanner(System.in);
     }
 
-    public void loadCLI() throws Exception {
+    public void loadCLI() throws Exception
+    {
+        int projID;
+        String startDate,endDate;
         menu();
-        int userIn = 0;
-        while(true) {
-            if (sc.hasNextLine()) {
-                userIn = sc.nextInt();
+        char userIn = 0;
+        while(true)
+        {
+            if (sc.hasNextLine())
+            {
+                userIn = sc.nextLine();
             }
             switch (userIn)
             {
@@ -180,8 +185,17 @@ public class TimeManager {
     {
 
         estTimeLeft = project.timeBudget() - project.totalTimeSpent();
+        String CustomerProject;
+        if (project.customerProject)
+        {
+            CustomerProject = "Cutomer Project";
+        }
+        else
+        {
+            CustomerProject = "Internal Project";
+;       }
 
-        String report = ("The time budget for project" + project.name +  "is" + project.timeBudget() +"."+"\r\n"+
+        String report = ("Project Report for project: "+project.name+"\r\n"+"Project type: "+CustomerProject+"\r\n"+"The time budget for project" + project.name +  "is" + project.timeBudget() +"."+"\r\n"+
         "There has currently been worked " + project.totalTimeSpent() + " hours on the project."+"\r\n"+
         "The estimated number of hours left on the project is" + estTimeLeft + " hours.");
 
