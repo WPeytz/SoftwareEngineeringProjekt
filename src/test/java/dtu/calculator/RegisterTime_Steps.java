@@ -1,5 +1,9 @@
 package dtu.calculator;
 
+import dtu.system.Activity;
+import dtu.system.DevEmp;
+import dtu.system.Project;
+import dtu.system.TimeManager;
 import io.cucumber.java.en.*;
 
 public class RegisterTime_Steps
@@ -23,17 +27,16 @@ public class RegisterTime_Steps
         assertTrue(a.workingDevelopers.contains(dev));
     }
     @When("{string} registers start time as {string}")
-    public void registers_start_time_as(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void registers_start_time_as(String devEmp, String starttime) {
+        startTime = starttime;
     }
     @When("registers end time as {string} to project activity {string}")
-    public void registers_end_time_as_to_project_activity(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void registers_end_time_as_to_project_activity(String endtime, String activity) throws Exception {
+        endTime = endtime;
+        dev.registerTimeSpent(a,startTime,endTime);
     }
     @Then("the total time is rounded to {double} hours")
-    public void the_total_time_is_rounded_to_hours(Double double1) {
+    public void the_total_time_is_rounded_to_hours(Double totaltime) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
