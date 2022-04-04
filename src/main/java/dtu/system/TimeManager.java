@@ -31,6 +31,11 @@ public class TimeManager {
         projectList = new HashSet<>();
         devEmpList = new ArrayList<>();
         sc = new Scanner(System.in);
+        try {
+            loadCLI();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void loadCLI() throws Exception
@@ -157,6 +162,7 @@ public class TimeManager {
         System.out.println("3. Create Report");
         System.out.println("4. Create Activity");
         System.out.println("5. View Free Employees");
+        System.out.println("0. Close");
     }
 
     public static void clearScreen() {
