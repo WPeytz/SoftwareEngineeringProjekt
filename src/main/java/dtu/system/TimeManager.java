@@ -8,7 +8,7 @@ import java.util.*;
 import java.io.*;
 
 public class TimeManager {
-    ArrayList<Activity> extActList;
+    public ArrayList<Activity> extActList;
     HashSet<Project> projectList;
     public ArrayList<Developer> developerList;
     double estTimeLeft;

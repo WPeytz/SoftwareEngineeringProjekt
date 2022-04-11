@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Activity {
     public String name;
     double timeBudget;
-    LocalDate startWeek, endWeek;
+    public LocalDate startWeek, endWeek;
     public ArrayList<Developer> workingDevelopers;
     boolean externalActivity = false;
     int projectID;
@@ -58,7 +58,9 @@ public class Activity {
     public void requestAssistance (Developer assistingDev) throws OperationNotAllowedException {
         if (!this.workingDevelopers.contains(assistingDev) && assistingDev.isFree(this.startWeek,this.endWeek))
         {
-            return "I request your assitance " + assistingDev.initials + " for " + activity.name;
+            addWorkingDev(assistingDev);
+            System.out.println(assistingDev.initials + "has been granted access to register time on activity" + this.name);
+            //return "I request your assitance " + assistingDev.initials + " for " + this.name;
         }
         else
         {
