@@ -50,7 +50,7 @@ public class RequestAssistanceSteps
     @When("{string} requests assistance for {string} from developer {string}")
     public void requestsAssistanceForFromDeveloper(String user, String name, String dev) {
         devName = dev;
-
+        manager.developerList.add(new Developer(dev));
         try {
             manager.getProject(projName).getActivity(name).requestAssistance(manager.getDeveloper(dev));
         } catch (OperationNotAllowedException ONAE) {
