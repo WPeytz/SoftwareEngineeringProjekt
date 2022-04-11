@@ -69,20 +69,26 @@ public class TimeManager {
         }
     }
 
-    public void viewFreeEmployees (String startWeek, String endWeek)
-    {
-        format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
+    public void viewFreeEmployees (String startWeek, String endWeek) throws OperationNotAllowedException {
+        format = DateTimeFormatter.ofPattern("YYYY-ww-e");
 
         for (Developer dev : developerList)
         {
-            if (dev.isFree(LocalDate.parse(startWeek+"-Mon"),LocalDate.parse(endWeek+"-Sun")))
+            if (dev.isFree(LocalDate.parse(startWeek+"-1"),LocalDate.parse(endWeek+"-7")))
             {
                 System.out.println(dev.initials);
             }
         }
     }
 
-    public Developer getDeveloper(String initials) throws Exception
+    public Activity getExternalActivity(String actName) throws OperationNotAllowedException{
+        for (Activity a : extActList) {
+            if (a.name.equals(actName)) return a;
+        }
+        throw new OperationNotAllowedException("External activity does not exist");
+    }
+
+    public Developer getDeveloper(String initials) throws OperationNotAllowedException
     {
         for (Developer dev : developerList)
         {
@@ -91,7 +97,7 @@ public class TimeManager {
                 return dev;
             }
         }
-        throw new Exception("No matching developer with initials "+initials+" found.");
+        throw new OperationNotAllowedException("No matching developer with initials "+initials+" found.");
     }
 
     public String getRepDir()
@@ -160,7 +166,7 @@ public class TimeManager {
         System.out.print("Initials: ");
         String initials = sc.nextLine();
         System.out.println();
-        if (projectID != 0 && !initials.equals(getProject(projectID).projectManager.initials))
+        if (projectID != 0 && !getProject(projectID).isProjectManager(initials))
         {
             System.out.println("Credentials do not match.");
             return;
@@ -203,7 +209,7 @@ public class TimeManager {
         return false;
     }
 
-    public Project getProject(int projectID) throws Exception
+    public Project getProject(int projectID) throws OperationNotAllowedException
     {
         for (Project p : projectList)
         {
@@ -212,7 +218,16 @@ public class TimeManager {
                 return p;
             }
         }
-        throw new Exception("Project does not exist");
+        throw new OperationNotAllowedException("Project does not exist");
+    }
+
+    public Project getProject (String projectName) throws OperationNotAllowedException {
+        for (Project p : projectList) {
+            if (p.name.equals(projectName)){
+                return p;
+            }
+        }
+        throw new OperationNotAllowedException("Project does not exist");
     }
 
     public void changeEndWeek(String endWeek, String activityName, int projectID) throws Exception

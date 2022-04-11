@@ -8,9 +8,9 @@ import java.time.*;
 public class Project {
     public ArrayList<Activity> activities;
     String name;
-    int projectID;
+    public int projectID;
     LocalDate startWeek, endWeek;
-    Developer projectManager;
+    public Developer projectManager;
     boolean customerProject;
     int tracking = 0;
     DecimalFormat decFormat = new DecimalFormat("0000");
@@ -18,12 +18,12 @@ public class Project {
 
     public Project(String name, boolean customerProject, String startWeek, String endWeek)
     {
-        format = DateTimeFormatter.ofPattern("YYYY-ww-EEE");
+        format = DateTimeFormatter.ofPattern("YYYY-ww-e");
 
         this.name = name;
         this.customerProject = customerProject;
-        this.startWeek = LocalDate.parse(startWeek+"-Mon",format);
-        this.endWeek = LocalDate.parse(endWeek+"-Sun",format);
+        this.startWeek = LocalDate.parse(startWeek+"-1",format);
+        this.endWeek = LocalDate.parse(endWeek+"-7",format);
         activities = new ArrayList<>();
         projectID = Integer.parseInt(String.valueOf(this.startWeek.getYear()).substring(2,4)
                 +decFormat.format(incTracking()));
@@ -31,6 +31,14 @@ public class Project {
 
     public void setProjectManager(Developer projectManager) {
         this.projectManager = projectManager;
+    }
+
+    public boolean isProjectManager (String init) throws OperationNotAllowedException{
+        if (this.projectManager == null || !this.projectManager.initials.equals(init)) {
+            throw new OperationNotAllowedException("You are not project manager");
+        }
+        else return true;
+
     }
 
     public double totalTimeSpent() {
@@ -53,13 +61,13 @@ public class Project {
         return tracking;
     }
 
-    public Activity getActivity (String name) throws Exception{
+    public Activity getActivity (String name) throws OperationNotAllowedException{
         for (Activity a : activities) {
             if (a.name.equals(name)){
                 return a;
             }
         }
-        throw new Exception("Activity \"" + name + "\" could not be found");
+        throw new OperationNotAllowedException("Activity \"" + name + "\" could not be found");
     }
 
     public void changeProjectEndWeek(String endWeek)

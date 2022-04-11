@@ -2,14 +2,9 @@ package dtu.calculator;
 
 import dtu.system.Activity;
 import dtu.system.Developer;
-import dtu.system.Project;
 import dtu.system.TimeManager;
-import io.cucumber.java.en.*;
 
-
-import static org.junit.Assert.*;
-
-public class RegisterTime_Steps
+public class RegisterTimeSteps
 {
     TimeManager manager;
     Activity a;
@@ -17,7 +12,7 @@ public class RegisterTime_Steps
     String startTime, endTime;
     double l, prevTotal;
 
-    public RegisterTime_Steps() {
+    public RegisterTimeSteps() {
         manager = new TimeManager();
     }
 

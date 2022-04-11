@@ -15,9 +15,6 @@ Feature: Create project activity
     Then the new project activity is created
 
   Scenario: Add project activity "UX-Design" to the project "MIT-ID" when the user is not the project manager of "MIT-ID"
-    Given that the project named "MIT-ID" is chosen
-    And create project activity is chosen
-    When user "whkp" writes their ID
-    Then the system checks if they are the project manager of the project "MIT-ID"
-    Given that the user is not the project manager of the project "MIT-ID"
-    Then the user will recieve error message "You are not project manager"
+    Given that the "customer" project named "NEM-ID" with start week "2022-09" and end week "2022-50" exists
+    And that the user "whkp" is not the project manager of the project "NEM-ID"
+    Then the user will receive error message "You are not project manager"

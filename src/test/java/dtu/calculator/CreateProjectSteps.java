@@ -4,14 +4,14 @@ import dtu.system.*;
 import io.cucumber.java.en.*;
 import static org.junit.Assert.*;
 
-public class CreateProject_Steps {
+public class CreateProjectSteps {
     TimeManager manager;
     Activity a;
     Developer dev;
     double l, prevTotal;
     String errorMessage;
 
-    public CreateProject_Steps()
+    public CreateProjectSteps()
     {
         manager = new TimeManager();
     }

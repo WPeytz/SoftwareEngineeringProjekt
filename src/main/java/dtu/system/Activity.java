@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Activity {
-    String name;
+    public String name;
     double timeBudget;
     LocalDate startWeek, endWeek;
     public ArrayList<Developer> workingDevelopers;
@@ -17,9 +17,9 @@ public class Activity {
 
     public Activity(String name, double timeBudget, int projectID, String startWeek, String endWeek)
     {
-        format = DateTimeFormatter.ofPattern("yyyy-ww-EEE");
-        this.startWeek = LocalDate.parse(startWeek+"-Mon", format);
-        this.endWeek = LocalDate.parse(endWeek+"-Sun", format);
+        format = DateTimeFormatter.ofPattern("YYYY-ww-e");
+        this.startWeek = LocalDate.parse(startWeek+"-1", format);
+        this.endWeek = LocalDate.parse(endWeek+"-7", format);
         this.name = name;
         this.timeBudget = timeBudget;
         if (projectID == 0)
@@ -44,24 +44,25 @@ public class Activity {
         return sum;
     }
 
-    public void addWorkingDev(Developer developer)
-    {
+    public void addWorkingDev(Developer developer) throws OperationNotAllowedException {
         if (!workingDevelopers.contains(developer) && developer.isFree(this.startWeek,this.endWeek))
         {
             workingDevelopers.add(developer);
             developer.activities.add(this);
+        } else {
+            throw new OperationNotAllowedException("Activity could not be created as the developer is not free in the given time period.");
         }
+
     }
 
-    public String requestAssistance (Developer assistingDev, Activity activity)
-    {
-        if (!activity.workingDevelopers.contains(assistingDev) && assistingDev.isFree(activity.startWeek,activity.endWeek))
+    public void requestAssistance (Developer assistingDev) throws OperationNotAllowedException {
+        if (!this.workingDevelopers.contains(assistingDev) && assistingDev.isFree(this.startWeek,this.endWeek))
         {
             return "I request your assitance " + assistingDev.initials + " for " + activity.name;
         }
         else
         {
-            return assistingDev.initials + " is already working on the same activity as you or is busy.";
+            throw new OperationNotAllowedException(assistingDev.initials + " is already working on the same activity as you or is busy.");
         }
     }
 

@@ -5,28 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3">
-      <change afterPath="$PROJECT_DIR$/features/CreateNewProject.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectactivity.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/AssignProjectManager.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/CreateExternalActivity.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/RequestAssistance.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/AssignProjectManagerSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateExternalActivitySteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectActivitySteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/CreateProjectActivity.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/CreateProjectActivity.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTime_Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTime_Steps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectActivity_Steps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProject_Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTime_Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTimeSteps.java" afterDir="false" />
     </list>
-    <list id="d9153b00-579e-4cdd-9a10-4470ad45f91c" name="Changes by aleks" comment="" />
-    <list id="84ae9332-c244-40bd-b739-9a1eda0f39f2" name="Changes by asbg2" comment="Changes by asbg2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
-    </list>
-    <list id="138d5bff-0662-4459-b46b-4b120c207ece" name="Changes by niko2" comment="Changes by niko2">
-      <change beforePath="$PROJECT_DIR$/features/RegisterTime.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/RegisterTime.feature" afterDir="false" />
+    <list id="4ca0393d-30f5-4868-b0f0-51e3673e25ba" name="Changes by aleks" comment="" />
+    <list id="21e60bc4-4ae5-468c-bc71-b7b7b332c243" name="Changes by Alex" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/DevEmp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTime_Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTime_Steps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
     </list>
+    <list id="84ae9332-c244-40bd-b739-9a1eda0f39f2" name="Changes by asbg2" comment="">
+      <change beforePath="$PROJECT_DIR$/features/CreateProjectActivity.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/CreateProjectActivity.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
+    </list>
+    <list id="138d5bff-0662-4459-b46b-4b120c207ece" name="Changes by niko2" comment="Changes by niko2" />
     <list id="f5be4745-d31f-4837-aece-c57ac94baa03" name="Changes by Nikolai" comment="" />
+    <list id="6ae4ff2c-8f7e-46a2-917d-a890db1eccf9" name="Changes by williampeytz" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +53,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -55,42 +66,49 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/dtu/system/Project.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java">
+    <file path="$PROJECT_DIR$/features/CreateProjectActivity.feature">
       <ranges>
-        <range start1="7" end1="8" start2="7" end2="8" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="11" end1="12" start2="11" end2="12" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="17" end1="18" start2="17" end2="18" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="25" end1="25" start2="25" end2="26" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="28" end1="29" start2="29" end2="30" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
-        <range start1="30" end1="31" start2="31" end2="32" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
+        <range start1="4" end1="15" start2="4" end2="9" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
+        <range start1="17" end1="23" start2="11" end2="14" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTime_Steps.java">
+    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Project.java">
       <ranges>
-        <range start1="3" end1="4" start2="3" end2="4" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="8" end1="8" start2="8" end2="9" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="14" end1="15" start2="15" end2="16" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="16" end1="16" start2="17" end2="18" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
-        <range start1="17" end1="18" start2="19" end2="20" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="23" end1="71" start2="25" end2="51" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="10" end1="11" start2="10" end2="11" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="12" end1="13" start2="12" end2="13" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="20" end1="21" start2="20" end2="21" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="24" end1="26" start2="24" end2="26" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="31" end1="32" start2="31" end2="33" changelist="6ae4ff2c-8f7e-46a2-917d-a890db1eccf9" />
+        <range start1="35" end1="35" start2="36" end2="44" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="55" end1="56" start2="64" end2="65" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="61" end1="62" start2="70" end2="71" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java">
+      <ranges>
+        <range start1="10" end1="11" start2="10" end2="11" changelist="21e60bc4-4ae5-468c-bc71-b7b7b332c243" />
+        <range start1="71" end1="74" start2="71" end2="73" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="77" end1="78" start2="76" end2="77" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="84" end1="85" start2="83" end2="91" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="93" end1="94" start2="99" end2="100" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="162" end1="163" start2="168" end2="169" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="205" end1="206" start2="211" end2="212" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="214" end1="215" start2="220" end2="221" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="216" end1="216" start2="222" end2="231" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="219" end1="220" start2="234" end2="235" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java">
       <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="9" end1="11" start2="10" end2="12" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="16" end1="18" start2="17" end2="19" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="19" end1="21" start2="20" end2="22" changelist="138d5bff-0662-4459-b46b-4b120c207ece" />
-        <range start1="23" end1="24" start2="24" end2="26" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="25" end1="26" start2="27" end2="30" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="32" end1="33" start2="36" end2="38" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="34" end1="35" start2="39" end2="41" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="40" end1="44" start2="46" end2="52" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="47" end1="49" start2="55" end2="57" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="52" end1="53" start2="60" end2="63" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="54" end1="54" start2="64" end2="65" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="56" end1="57" start2="67" end2="69" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="59" end1="60" start2="71" end2="71" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="8" end1="9" start2="8" end2="9" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="10" end1="11" start2="10" end2="11" changelist="21e60bc4-4ae5-468c-bc71-b7b7b332c243" />
+        <range start1="19" end1="22" start2="19" end2="22" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="46" end1="48" start2="46" end2="47" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="52" end1="52" start2="51" end2="53" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="53" end1="53" start2="54" end2="55" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="55" end1="58" start2="57" end2="59" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="59" end1="60" start2="60" end2="63" changelist="21e60bc4-4ae5-468c-bc71-b7b7b332c243" />
+        <range start1="63" end1="64" start2="66" end2="67" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
       </ranges>
     </file>
   </component>
@@ -98,10 +116,12 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="270RZAsNIYYYgV0FXifrPEdqOPE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -110,13 +130,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/features" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="CodeWithMe" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -124,12 +145,17 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.CucumberTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dtu.system.Main" />
+    <configuration name="Feature: CreateExternalActivity" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/features/CreateExternalActivity.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="SoftwareEngineeringProjekt" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: CreateExternalActivity" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dtu.system.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,6 +181,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Feature: CreateProjectActivity" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/features/CreateProjectActivity.feature" />
+      <option name="GLUE" value="dtu.calculator" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SoftwareEngineeringProjekt" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: CreateProjectActivity" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in SoftwareEngineeringProjekt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftwareEngineeringProjekt" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareEngineeringProjekt" />
       <extension name="coverage">
@@ -172,9 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in SoftwareEngineeringProjekt" />
         <item itemvalue="JUnit.CucumberTest" />
+        <item itemvalue="Cucumber Java.Feature: CreateProjectActivity" />
+        <item itemvalue="Cucumber Java.Feature: CreateExternalActivity" />
         <item itemvalue="Cucumber Java.Feature: CreateNewProject" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -321,7 +376,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="With Classes" />
@@ -334,5 +388,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1649077313869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dtu.system.*</FILTER>
+    </SUITE>
   </component>
 </project>

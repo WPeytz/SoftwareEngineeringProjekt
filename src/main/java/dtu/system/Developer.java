@@ -6,7 +6,7 @@ import java.util.*;
 import java.time.*;
 
 public class Developer {
-    String initials;
+    public String initials;
     ArrayList<Activity> activities;
 
     public Developer(String initials)
@@ -15,8 +15,11 @@ public class Developer {
         activities = new ArrayList<>();
     }
     
-    public double registerTimeSpent (Activity activity, String StDt, String EnDt) throws ParseException
+    public double registerTimeSpent (Activity activity, String StDt, String EnDt) throws OperationNotAllowedException
     {
+        if (!activity.workingDevelopers.contains(this)) {
+            throw new OperationNotAllowedException("Developer" + this.initials + "is not on the activity" + activity.name);
+        }
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH.mm");
         LocalDateTime startTime = LocalDateTime.parse(StDt, format);
         LocalDateTime endTime = LocalDateTime.parse(EnDt, format);
@@ -27,7 +30,7 @@ public class Developer {
     }
 
 
-    public boolean isFree(LocalDate newStartWeek, LocalDate newEndWeek)
+    public boolean isFree(LocalDate newStartWeek, LocalDate newEndWeek) throws OperationNotAllowedException
     {
         for (LocalDate i = newStartWeek; i.isBefore(newEndWeek);i = i.plusWeeks(1))
         {
@@ -36,7 +39,7 @@ public class Developer {
             {
                 if (activityCount >= 20)
                 {
-                    return false;
+                    throw new OperationNotAllowedException("Activity could not be created as the developer is not free in the given time period.");
                 }
                 else if ((i.isAfter(a.startWeek)) && (i.isBefore(a.endWeek)))
                 {
