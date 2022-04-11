@@ -50,7 +50,7 @@ public class Activity {
             workingDevelopers.add(developer);
             developer.activities.add(this);
         } else {
-            throw new OperationNotAllowedException("Activity could not be created as the developer is not free in the given time period.");
+            throw new OperationNotAllowedException("Developer could not be added as the developer is not free in the given time period.");
         }
 
     }
@@ -59,7 +59,7 @@ public class Activity {
         if (!this.workingDevelopers.contains(assistingDev) && assistingDev.isFree(this.startWeek,this.endWeek))
         {
             addWorkingDev(assistingDev);
-            System.out.println(assistingDev.initials + "has been granted access to register time on activity" + this.name);
+            System.out.println(assistingDev.initials + " has been granted access to register time on activity" + this.name);
             //return "I request your assitance " + assistingDev.initials + " for " + this.name;
         }
         else

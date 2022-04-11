@@ -11,5 +11,5 @@ Feature: Request Assistance
   Scenario: Request Assistance from developer who is not available
     Given that the "customer" project "NEM-ID" with start week "2022-09" and end week "2022-49" exists
     And that the developer "asbg" is assigned a project activity "Debugging" with start week "2022-40", end week "2022-42" and time budget 10
-    When "asbg" requests assistance for "Debugging" from developer "nikh"
-    Then the error "developer is not available in the activity time period"  is returned
+    When "asbg" requests assistance for "Debugging" from busy developer "nikh"
+    Then the error "Developer is not free in the given time period."  is returned

@@ -4,41 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3">
-      <change afterPath="$PROJECT_DIR$/features/AssignProjectManager.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/CreateExternalActivity.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/RequestAssistance.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/AssignProjectManagerSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateExternalActivitySteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectActivitySteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="11/04">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/CreateProjectActivity.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/CreateProjectActivity.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/RequestAssistance.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/RequestAssistance.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectActivity_Steps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProject_Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTime_Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTimeSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" afterDir="false" />
     </list>
     <list id="4ca0393d-30f5-4868-b0f0-51e3673e25ba" name="Changes by aleks" comment="" />
-    <list id="21e60bc4-4ae5-468c-bc71-b7b7b332c243" name="Changes by Alex" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
+    <list id="21e60bc4-4ae5-468c-bc71-b7b7b332c243" name="Changes by Alex" comment="Changes by Alex">
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" afterDir="false" />
     </list>
-    <list id="84ae9332-c244-40bd-b739-9a1eda0f39f2" name="Changes by asbg2" comment="">
-      <change beforePath="$PROJECT_DIR$/features/CreateProjectActivity.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/CreateProjectActivity.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-    </list>
+    <list id="84ae9332-c244-40bd-b739-9a1eda0f39f2" name="Changes by asbg2" comment="Changes by asbg2" />
     <list id="138d5bff-0662-4459-b46b-4b120c207ece" name="Changes by niko2" comment="Changes by niko2" />
     <list id="f5be4745-d31f-4837-aece-c57ac94baa03" name="Changes by Nikolai" comment="" />
-    <list id="6ae4ff2c-8f7e-46a2-917d-a890db1eccf9" name="Changes by williampeytz" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
-    </list>
+    <list id="6ae4ff2c-8f7e-46a2-917d-a890db1eccf9" name="Changes by williampeytz" comment="Changes by williampeytz" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,49 +45,12 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/dtu/system/Project.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/features/CreateProjectActivity.feature">
+    <file path="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java">
       <ranges>
-        <range start1="4" end1="15" start2="4" end2="9" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="17" end1="23" start2="11" end2="14" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Project.java">
-      <ranges>
-        <range start1="10" end1="11" start2="10" end2="11" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="12" end1="13" start2="12" end2="13" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="20" end1="21" start2="20" end2="21" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="24" end1="26" start2="24" end2="26" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="31" end1="32" start2="31" end2="33" changelist="6ae4ff2c-8f7e-46a2-917d-a890db1eccf9" />
-        <range start1="35" end1="35" start2="36" end2="44" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="55" end1="56" start2="64" end2="65" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="61" end1="62" start2="70" end2="71" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java">
-      <ranges>
-        <range start1="10" end1="11" start2="10" end2="11" changelist="21e60bc4-4ae5-468c-bc71-b7b7b332c243" />
-        <range start1="71" end1="74" start2="71" end2="73" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="77" end1="78" start2="76" end2="77" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="84" end1="85" start2="83" end2="91" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="93" end1="94" start2="99" end2="100" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="162" end1="163" start2="168" end2="169" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="205" end1="206" start2="211" end2="212" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="214" end1="215" start2="220" end2="221" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="216" end1="216" start2="222" end2="231" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="219" end1="220" start2="234" end2="235" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java">
-      <ranges>
-        <range start1="8" end1="9" start2="8" end2="9" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="10" end1="11" start2="10" end2="11" changelist="21e60bc4-4ae5-468c-bc71-b7b7b332c243" />
-        <range start1="19" end1="22" start2="19" end2="22" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="46" end1="48" start2="46" end2="47" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="52" end1="52" start2="51" end2="53" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="53" end1="53" start2="54" end2="55" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="55" end1="58" start2="57" end2="59" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="59" end1="60" start2="60" end2="63" changelist="21e60bc4-4ae5-468c-bc71-b7b7b332c243" />
-        <range start1="63" end1="64" start2="66" end2="67" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="52" end1="53" start2="52" end2="53" changelist="21e60bc4-4ae5-468c-bc71-b7b7b332c243" />
+        <range start1="69" end1="70" start2="69" end2="89" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="73" end1="87" start2="92" end2="92" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="91" end1="91" start2="96" end2="97" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
       </ranges>
     </file>
   </component>
@@ -225,8 +167,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in SoftwareEngineeringProjekt" />
         <item itemvalue="JUnit.CucumberTest" />
+        <item itemvalue="JUnit.All in SoftwareEngineeringProjekt" />
         <item itemvalue="Cucumber Java.Feature: CreateProjectActivity" />
         <item itemvalue="Cucumber Java.Feature: CreateExternalActivity" />
         <item itemvalue="Cucumber Java.Feature: CreateNewProject" />
@@ -348,7 +290,35 @@
       <option name="project" value="LOCAL" />
       <updated>1649080072471</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="11/04">
+      <created>1649687861509</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1649687861509</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Changes by Alex">
+      <created>1649687872279</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1649687872279</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Changes by asbg2">
+      <created>1649687879939</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1649687879939</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Changes by williampeytz">
+      <created>1649687884934</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1649687884934</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,10 +350,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="With Classes" />
     <MESSAGE value="Changes by Nikolai" />
-    <MESSAGE value="Changes by asbg2" />
     <MESSAGE value="Changes by niko2" />
     <MESSAGE value="24/3" />
-    <option name="LAST_COMMIT_MESSAGE" value="24/3" />
+    <MESSAGE value="11/04" />
+    <MESSAGE value="Changes by Alex" />
+    <MESSAGE value="Changes by asbg2" />
+    <MESSAGE value="Changes by williampeytz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by williampeytz" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

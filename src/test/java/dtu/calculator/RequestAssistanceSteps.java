@@ -68,25 +68,30 @@ public class RequestAssistanceSteps
         }
     }
 
-
-    @Then("the error {string}  is returned")
-    public void theErrorIsReturned(String error) {
+    @When("{string} requests assistance for {string} from busy developer {string}")
+    public void requestsAssistanceForFromBusyDeveloper(String user, String name, String dev) {
+        manager.developerList.add(new Developer(dev));
         Activity[] dummies = new Activity[21];
         for (int i = 0; i < 21; i++) {
-            dummies[i] = new Activity("dummy"+i, 20, 0, startWeek, endWeek);
             try {
-                dummies[i].addWorkingDev(manager.getDeveloper(devName));
+                dummies[i] = new Activity("dummy"+i, 20, manager.getProject(projName).projectID, startWeek, endWeek);
+                dummies[i].addWorkingDev(manager.getDeveloper(dev));
             } catch (OperationNotAllowedException ONAE) {
                 errorMessage = ONAE.getMessage();
             }
         }
         try {
-            manager.getProject(projName).getActivity(actName).requestAssistance(manager.getDeveloper(devName);
+            manager.getProject(projName).getActivity(name).requestAssistance(manager.getDeveloper(dev));
         } catch (OperationNotAllowedException ONAE) {
             errorMessage = ONAE.getMessage();
         }
+    }
+
+    @Then("the error {string}  is returned")
+    public void theErrorIsReturned(String error) {
         assertEquals(error,errorMessage);
     }
+
 
 
 }

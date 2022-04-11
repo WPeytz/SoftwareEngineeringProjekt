@@ -17,4 +17,4 @@ Feature: Create external activity
      When developer "whkp" is asked what developers should be added to the activity.
      Then developer writes "pmka", "dskw" and "vmrr"
      Given that at least one of the developers are not a free employee in the chosen time period
-     Then developer "whkp" will be met with the error message "Activity could not be created as the developer is not free in the given time period."
+     Then developer "whkp" will be met with the error message "Developer is not free in the given time period."

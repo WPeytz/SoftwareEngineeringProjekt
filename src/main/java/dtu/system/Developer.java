@@ -39,7 +39,7 @@ public class Developer {
             {
                 if (activityCount >= 20)
                 {
-                    throw new OperationNotAllowedException("Activity could not be created as the developer is not free in the given time period.");
+                    throw new OperationNotAllowedException("Developer is not free in the given time period.");
                 }
                 else if ((i.isAfter(a.startWeek)) && (i.isBefore(a.endWeek)))
                 {
