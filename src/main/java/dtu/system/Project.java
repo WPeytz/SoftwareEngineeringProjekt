@@ -29,7 +29,8 @@ public class Project {
                 +decFormat.format(incTracking()));
     }
 
-    public void setProjectManager(Developer projectManager) {
+    public void setProjectManager(Developer projectManager)
+    {
         this.projectManager = projectManager;
     }
 
