@@ -232,7 +232,7 @@ public class TimeManager {
 
     public void changeEndWeek(String endWeek, String activityName, int projectID) throws Exception
     {
-        format = DateTimeFormatter.ofPattern("YYYY-ww-Eee");
+        format = DateTimeFormatter.ofPattern("YYYY-ww-e");
         Activity activity = null;
         for (Activity a : getProject(projectID).activities)
         {
