@@ -12,6 +12,7 @@ public class Project
     public int projectID;
     public LocalDate startWeek, endWeek;
     public Developer projectManager;
+    public ArrayList<Developer> workingProjectDevelopers;
     boolean customerProject;
     int tracking = 0;
     DecimalFormat decFormat = new DecimalFormat("0000");
