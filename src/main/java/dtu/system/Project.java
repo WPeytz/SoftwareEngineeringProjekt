@@ -54,29 +54,37 @@ public class Project
 
     }
 
-    public double totalTimeSpent() {
+    public double totalTimeSpent()
+    {
         double sum = 0;
-        for (Activity a : activities) {
+        for (Activity a : activities)
+        {
             sum += a.activityTime();
         }
         return sum;
     }
-    public double timeBudget() {
+    public double timeBudget()
+    {
         double sum = 0;
-        for (Activity a : activities) {
+        for (Activity a : activities)
+        {
             sum += a.timeBudget;
         }
         return sum;
     }
 
-    public int incTracking () {
+    public int incTracking()
+    {
         tracking++;
         return tracking;
     }
 
-    public Activity getActivity (String name) throws OperationNotAllowedException{
-        for (Activity a : activities) {
-            if (a.name.equals(name)){
+    public Activity getActivity (String name) throws OperationNotAllowedException
+    {
+        for (Activity a : activities)
+        {
+            if (a.name.equals(name))
+            {
                 return a;
             }
         }

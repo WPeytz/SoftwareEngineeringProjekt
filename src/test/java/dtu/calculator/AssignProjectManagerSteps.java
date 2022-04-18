@@ -4,7 +4,8 @@ import dtu.system.*;
 import io.cucumber.java.en.*;
 import io.cucumber.java.hu.De;
 import static org.junit.Assert.*;
-public class AssignProjectManagerSteps {
+public class AssignProjectManagerSteps
+{
     TimeManager manager;
     String errorMessage;
     Project proj;

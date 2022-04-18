@@ -243,7 +243,8 @@ public class TimeManager
         Activity activity = null;
         if (projectID == 0)
         {
-            for (Activity a : extActList) {
+            for (Activity a : extActList)
+            {
                 if (a.name.equals(activityName))
                 {
                     activity = a;
