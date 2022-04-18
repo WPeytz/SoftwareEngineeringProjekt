@@ -5,19 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="11/04">
+      <change afterPath="$PROJECT_DIR$/features/ChangeEndWeekForAProject.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/ChangeEndWeekForAnActivity.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/ChangeEndWeekForAProjectSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/ChangeEndWeekForAnActivitySteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/RequestAssistance.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/RequestAssistance.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/CreateExternalActivity.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/CreateExternalActivity.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/AssignProjectManagerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/AssignProjectManagerSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateExternalActivitySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateExternalActivitySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTimeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTimeSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" afterDir="false" />
     </list>
-    <list id="4ca0393d-30f5-4868-b0f0-51e3673e25ba" name="Changes by aleks" comment="" />
-    <list id="21e60bc4-4ae5-468c-bc71-b7b7b332c243" name="Changes by Alex" comment="Changes by Alex">
+    <list id="08eec999-c8dc-48e1-8edd-5cede0892c18" name="Changes by aleks" comment="">
+      <change beforePath="$PROJECT_DIR$/features/CreateExternalActivity.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/CreateExternalActivity.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/RegisterTime.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/RegisterTime.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTimeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTimeSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" afterDir="false" />
+    </list>
+    <list id="50c29dca-e185-4a26-ba6f-af15999502c7" name="Changes by Alex" comment="">
+      <change beforePath="$PROJECT_DIR$/features/RequestAssistance.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/RequestAssistance.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateExternalActivitySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateExternalActivitySteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java" afterDir="false" />
     </list>
     <list id="84ae9332-c244-40bd-b739-9a1eda0f39f2" name="Changes by asbg2" comment="Changes by asbg2" />
     <list id="138d5bff-0662-4459-b46b-4b120c207ece" name="Changes by niko2" comment="Changes by niko2" />
     <list id="f5be4745-d31f-4837-aece-c57ac94baa03" name="Changes by Nikolai" comment="" />
-    <list id="6ae4ff2c-8f7e-46a2-917d-a890db1eccf9" name="Changes by williampeytz" comment="Changes by williampeytz" />
+    <list id="5cff18c4-ded0-4e13-b356-8af77295aec8" name="Changes by williampeytz" comment="">
+      <change beforePath="$PROJECT_DIR$/features/RegisterTime.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/RegisterTime.feature" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,12 +67,77 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/dtu/system/Project.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/features/CreateExternalActivity.feature">
+      <ranges>
+        <range start1="7" end1="8" start2="7" end2="7" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="15" end1="17" start2="14" end2="15" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java">
+      <ranges>
+        <range start1="83" end1="85" start2="83" end2="87" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="232" end1="233" start2="234" end2="235" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="236" end1="252" start2="238" end2="263" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateExternalActivitySteps.java">
+      <ranges>
+        <range start1="17" end1="19" start2="17" end2="18" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="34" end1="39" start2="33" end2="33" changelist="50c29dca-e185-4a26-ba6f-af15999502c7" />
+        <range start1="40" end1="42" start2="34" end2="35" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/features/RegisterTime.feature">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="5cff18c4-ded0-4e13-b356-8af77295aec8" />
+        <range start1="4" end1="10" start2="4" end2="12" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="11" end1="11" start2="13" end2="24" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="3" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="11" end1="15" start2="11" end2="29" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="19" end1="20" start2="33" end2="35" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Project.java">
+      <ranges>
+        <range start1="7" end1="8" start2="7" end2="9" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="11" end1="12" start2="12" end2="13" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="75" end1="76" start2="76" end2="77" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/src/test/java/dtu/calculator/RequestAssistanceSteps.java">
       <ranges>
-        <range start1="52" end1="53" start2="52" end2="53" changelist="21e60bc4-4ae5-468c-bc71-b7b7b332c243" />
-        <range start1="69" end1="70" start2="69" end2="89" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="73" end1="87" start2="92" end2="92" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="91" end1="91" start2="96" end2="97" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="2" end1="3" start2="2" end2="2" changelist="50c29dca-e185-4a26-ba6f-af15999502c7" />
+        <range start1="4" end1="5" start2="3" end2="3" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="6" end1="7" start2="4" end2="4" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="25" end1="26" start2="22" end2="24" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="27" end1="28" start2="25" end2="27" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="29" end1="30" start2="28" end2="31" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="34" end1="36" start2="35" end2="38" changelist="50c29dca-e185-4a26-ba6f-af15999502c7" />
+        <range start1="39" end1="41" start2="41" end2="45" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="44" end1="45" start2="48" end2="51" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="50" end1="51" start2="56" end2="58" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="52" end1="54" start2="59" end2="63" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="55" end1="56" start2="64" end2="67" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="63" end1="64" start2="74" end2="76" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="65" end1="66" start2="77" end2="80" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="71" end1="72" start2="85" end2="87" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="74" end1="76" start2="89" end2="93" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="78" end1="79" start2="95" end2="98" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="82" end1="83" start2="101" end2="103" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="84" end1="85" start2="104" end2="107" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/test/java/dtu/calculator/RegisterTimeSteps.java">
+      <ranges>
+        <range start1="2" end1="5" start2="2" end2="5" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="12" end1="12" start2="12" end2="15" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="14" end1="15" start2="17" end2="19" changelist="08eec999-c8dc-48e1-8edd-5cede0892c18" />
+        <range start1="19" end1="19" start2="23" end2="37" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="20" end1="46" start2="38" end2="98" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
       </ranges>
     </file>
   </component>
@@ -318,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649687884934</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="11/04">
+      <created>1649688742936</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1649688742936</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Changes by Alex">
+      <created>1649688750476</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1649688750476</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,11 +453,11 @@
     <MESSAGE value="Changes by Nikolai" />
     <MESSAGE value="Changes by niko2" />
     <MESSAGE value="24/3" />
-    <MESSAGE value="11/04" />
-    <MESSAGE value="Changes by Alex" />
     <MESSAGE value="Changes by asbg2" />
     <MESSAGE value="Changes by williampeytz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by williampeytz" />
+    <MESSAGE value="11/04" />
+    <MESSAGE value="Changes by Alex" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by Alex" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

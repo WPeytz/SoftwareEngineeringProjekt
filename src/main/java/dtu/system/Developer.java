@@ -1,6 +1,6 @@
 package dtu.system;
 
-import java.text.*;
+
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.time.*;
@@ -9,10 +9,24 @@ public class Developer {
     public String initials;
     ArrayList<Activity> activities;
 
-    public Developer(String initials)
+    public Developer(String initials) throws OperationNotAllowedException
     {
-        this.initials = initials;
-        activities = new ArrayList<>();
+        if(initials.matches("[a-zA-Z]+"))
+        {
+            if (initials.length() > 0 && initials.length() <= 4)
+            {
+                this.initials = initials;
+                activities = new ArrayList<>();
+            }
+            else
+            {
+                throw new OperationNotAllowedException("Invalid amount of initials for developer name. Initials length must be between 1 and 4 (inclusive)");
+            }
+        }
+        else
+        {
+            throw new OperationNotAllowedException("Illegal character(s) found. Only letters are allowed in developer initials");
+        }
     }
     
     public double registerTimeSpent (Activity activity, String StDt, String EnDt) throws OperationNotAllowedException

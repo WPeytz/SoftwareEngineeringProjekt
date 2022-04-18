@@ -9,7 +9,7 @@ public class Project {
     public ArrayList<Activity> activities;
     String name;
     public int projectID;
-    LocalDate startWeek, endWeek;
+    public LocalDate startWeek, endWeek;
     public Developer projectManager;
     boolean customerProject;
     int tracking = 0;
@@ -73,7 +73,7 @@ public class Project {
 
     public void changeProjectEndWeek(String endWeek)
     {
-        this.endWeek = LocalDate.parse(endWeek+"-Sun",format);
+        this.endWeek = LocalDate.parse(endWeek+"-7",format);
     }
 
 /*

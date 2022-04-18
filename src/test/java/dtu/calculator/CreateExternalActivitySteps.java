@@ -15,8 +15,7 @@ public class CreateExternalActivitySteps
     String stW, edW;
 
     @Given("that the developer {string} wants to create an external activity called {string}.")
-    public void that_the_developer_wants_to_create_an_external_activity_called(String devName, String chosenActName)
-    {
+    public void that_the_developer_wants_to_create_an_external_activity_called(String devName, String chosenActName) throws OperationNotAllowedException {
         dev = new Developer(devName);
         if (!manager.developerList.contains(dev))
         {
@@ -38,8 +37,7 @@ public class CreateExternalActivitySteps
         System.out.println("What developers should be added to the external activity?");
     }
     @Then("developer writes {string}, {string} and {string}")
-    public void developer_writes_and(String emp1, String emp2, String emp3)
-    {
+    public void developer_writes_and(String emp1, String emp2, String emp3) throws OperationNotAllowedException {
         manager.developerList.add(new Developer(emp1));
         manager.developerList.add(new Developer(emp2));
         manager.developerList.add(new Developer(emp3));

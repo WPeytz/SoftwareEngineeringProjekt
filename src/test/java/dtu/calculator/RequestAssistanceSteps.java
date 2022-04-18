@@ -2,9 +2,7 @@ package dtu.calculator;
 
 
 import dtu.system.*;
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.*;
-import io.cucumber.java.hu.De;
 import static org.junit.Assert.*;
 
 

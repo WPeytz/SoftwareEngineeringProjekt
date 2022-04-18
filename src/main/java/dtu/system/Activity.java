@@ -59,8 +59,6 @@ public class Activity {
         if (!this.workingDevelopers.contains(assistingDev) && assistingDev.isFree(this.startWeek,this.endWeek))
         {
             addWorkingDev(assistingDev);
-            System.out.println(assistingDev.initials + " has been granted access to register time on activity" + this.name);
-            //return "I request your assitance " + assistingDev.initials + " for " + this.name;
         }
         else
         {

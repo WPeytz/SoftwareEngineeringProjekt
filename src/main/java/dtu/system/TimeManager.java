@@ -230,25 +230,37 @@ public class TimeManager {
         throw new OperationNotAllowedException("Project does not exist");
     }
 
-    public void changeEndWeek(String endWeek, String activityName, int projectID) throws Exception
+    public void changeEndWeek(String endWeek, String activityName, int projectID) throws OperationNotAllowedException
     {
         format = DateTimeFormatter.ofPattern("YYYY-ww-e");
         Activity activity = null;
-        for (Activity a : getProject(projectID).activities)
+        if (projectID == 0)
         {
-            if (a.name.equals(activityName))
-            {
-                activity = a;
+            for (Activity a : extActList) {
+                if (a.name.equals(activityName))
+                {
+                    activity = a;
+                }
             }
         }
-        if (activity == null)
+        else
         {
-            throw new Exception("Activity does not exist");
-        }
-        activity.endWeek = LocalDate.parse(endWeek+"-Sun",format);
-        if (activity.endWeek.isAfter(getProject(activity.projectID).endWeek))
-        {
-            getProject(activity.projectID).endWeek = activity.endWeek;
+            for (Activity a : getProject(projectID).activities)
+            {
+                if (a.name.equals(activityName))
+                {
+                    activity = a;
+                }
+            }
+            if (activity == null)
+            {
+                throw new OperationNotAllowedException("Activity does not exist");
+            }
+            activity.endWeek = LocalDate.parse(endWeek + "-Sun", format);
+            if (activity.endWeek.isAfter(getProject(activity.projectID).endWeek))
+            {
+                getProject(activity.projectID).endWeek = activity.endWeek;
+            }
         }
     }
 }

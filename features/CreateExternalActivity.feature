@@ -5,7 +5,6 @@ Feature: Create external activity
   Scenario: Create an external activity where all chosen developers are free employees
     Given that the developer "whkp" wants to create an external activity called "Software Course".
     When the developer "whkp" chooses to create an activity with name "Software Course" as an external activity, with start week "2022-15" and end week "2022-17".
-    When developer "whkp" is asked what developers should be added to the activity.
     Then developer writes "pmka", "dskw" and "vmrr"
     Given that the chosen developers are free employees in the time period
     Then the external activity is created

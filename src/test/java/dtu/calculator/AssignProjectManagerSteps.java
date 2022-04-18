@@ -25,7 +25,7 @@ public class AssignProjectManagerSteps {
     }
 
     @And("that the developer {string} and {string} exists")
-    public void thatTheDeveloperAndExists(String user, String dev) {
+    public void thatTheDeveloperAndExists(String user, String dev) throws OperationNotAllowedException {
         manager.developerList.add(new Developer(user));
         manager.developerList.add(new Developer(dev));
     }
@@ -41,7 +41,7 @@ public class AssignProjectManagerSteps {
     }
 
     @And("that the developer {string}, {string} and {string} exists")
-    public void thatTheDeveloperAndExists(String user, String dev1, String dev2) {
+    public void thatTheDeveloperAndExists(String user, String dev1, String dev2) throws OperationNotAllowedException {
         manager.developerList.add(new Developer(user));
         manager.developerList.add(new Developer(dev1));
         manager.developerList.add(new Developer(dev2));
