@@ -1,4 +1,4 @@
-Feature: Register Time
+Feature: Register Time spent on activity
 	Description: Developer records time spent on project activity on a given date.
 	Actors: Developer
 
