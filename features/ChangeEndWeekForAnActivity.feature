@@ -4,7 +4,6 @@ Feature: Change end week for an activity
 
   Scenario: Change end week for a external activity
     Given that external activity "Vacation to New York" with start week "2022-04" and end week "2022-10" with time budget 0 exists
-    And the developer has chosen to change end week for the external activity "Vacation to New York"
     When developer "asbg" changes end week to "2022-09"
     Then end week for "Vaction to New York" is "2022-09"
 

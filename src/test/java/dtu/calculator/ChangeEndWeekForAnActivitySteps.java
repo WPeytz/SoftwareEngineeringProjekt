@@ -2,6 +2,9 @@ package dtu.calculator;
 
 import dtu.system.*;
 import io.cucumber.java.en.*;
+
+import java.time.format.DateTimeFormatter;
+
 import static org.junit.Assert.*;
 
 public class ChangeEndWeekForAnActivitySteps
@@ -11,6 +14,7 @@ public class ChangeEndWeekForAnActivitySteps
     String actName;
     String stW, edW;
     String errorMessage;
+    DateTimeFormatter format = DateTimeFormatter.ofPattern("YYYY-ww");
 
     public ChangeEndWeekForAnActivitySteps()
     {
@@ -41,9 +45,9 @@ public class ChangeEndWeekForAnActivitySteps
     @Then("end week for {string} is {string}")
     public void endWeekForIs(String string, String string2)
     {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        assertEquals(a.endWeek.format(format),newWeek);
     }
+
 
 
 }

@@ -26,6 +26,7 @@ public class Project
         this.startWeek = LocalDate.parse(startWeek+"-1",format);
         this.endWeek = LocalDate.parse(endWeek+"-7",format);
         activities = new ArrayList<>();
+        workingProjectDevelopers = new ArrayList<>();
         projectID = Integer.parseInt(String.valueOf(this.startWeek.getYear()).substring(2,4)
                 +decFormat.format(incTracking()));
     }
@@ -35,8 +36,18 @@ public class Project
         this.projectManager = projectManager;
     }
 
-    public boolean isProjectManager (String init) throws OperationNotAllowedException{
-        if (this.projectManager == null || !this.projectManager.initials.equals(init)) {
+    public void addWorkingDev(Developer developer) throws OperationNotAllowedException {
+        if (!workingProjectDevelopers.contains(developer)) {
+            workingProjectDevelopers.add(developer);
+        } else {
+            throw new OperationNotAllowedException("This developer has already been assigned to the project");
+        }
+    }
+
+    public boolean isProjectManager (String init) throws OperationNotAllowedException
+    {
+        if (this.projectManager == null || !this.projectManager.initials.equals(init))
+        {
             throw new OperationNotAllowedException("You are not project manager");
         }
         else return true;

@@ -45,14 +45,15 @@ public class Activity {
     }
 
     public void addWorkingDev(Developer developer) throws OperationNotAllowedException {
-        if (!workingDevelopers.contains(developer) && developer.isFree(this.startWeek,this.endWeek))
+        if (workingDevelopers.contains(developer))
         {
-            workingDevelopers.add(developer);
-            developer.activities.add(this);
-        } else {
+            throw new OperationNotAllowedException("Developer is already working on the activity");
+        }
+        else if (!developer.isFree(this.startWeek,this.endWeek)){
             throw new OperationNotAllowedException("Developer could not be added as the developer is not free in the given time period.");
         }
-
+        workingDevelopers.add(developer);
+        developer.activities.add(this);
     }
 
     public void requestAssistance (Developer assistingDev) throws OperationNotAllowedException {

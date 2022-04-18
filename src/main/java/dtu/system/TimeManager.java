@@ -259,15 +259,15 @@ public class TimeManager
                     activity = a;
                 }
             }
-            if (activity == null)
-            {
-                throw new OperationNotAllowedException("Activity does not exist");
-            }
-            activity.endWeek = LocalDate.parse(endWeek + "-Sun", format);
-            if (activity.endWeek.isAfter(getProject(activity.projectID).endWeek))
-            {
-                getProject(activity.projectID).endWeek = activity.endWeek;
-            }
+        }
+        if (activity == null)
+        {
+            throw new OperationNotAllowedException("Activity does not exist");
+        }
+        activity.endWeek = LocalDate.parse(endWeek + "-7", format);
+        if (activity.endWeek.isAfter(getProject(activity.projectID).endWeek))
+        {
+            getProject(activity.projectID).endWeek = activity.endWeek;
         }
     }
 }
