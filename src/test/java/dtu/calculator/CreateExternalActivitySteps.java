@@ -31,11 +31,6 @@ public class CreateExternalActivitySteps
         a = new Activity(actName,0,0,startWeek,endWeek);
         manager.extActList.add(a);
     }
-    @When("developer {string} is asked what developers should be added to the activity.")
-    public void developer_is_asked_what_developers_should_be_added_to_the_activity(String string)
-    {
-        System.out.println("What developers should be added to the external activity?");
-    }
     @Then("developer writes {string}, {string} and {string}")
     public void developer_writes_and(String emp1, String emp2, String emp3) throws OperationNotAllowedException {
         manager.developerList.add(new Developer(emp1));

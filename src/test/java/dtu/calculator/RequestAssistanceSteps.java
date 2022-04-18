@@ -1,6 +1,5 @@
 package dtu.calculator;
 
-
 import dtu.system.*;
 import io.cucumber.java.en.*;
 import static org.junit.Assert.*;
@@ -34,8 +33,9 @@ public class RequestAssistanceSteps
         }
     }
 
-    @And("that the developer {string} is assigned a project activity {string} with start week {string}, end week {string} and time budget {int}")
-    public void thatTheDeveloperIsAssignedAProjectActivityWithStartWeekEndWeekAndTimeBudget(String init, String name, String stW, String edW, int tb) {
+    @And("that the developer {string} is assigned a project activity {string} with start week {string}, end week {string} and time budget {int} exists")
+    public void thatTheDeveloperIsAssignedAProjectActivityWithStartWeekEndWeekAndTimeBudget(String init, String name, String stW, String edW, int tb)
+    {
         actName = name;
         startWeek = stW;
         endWeek = edW;
