@@ -31,7 +31,8 @@ public class Developer {
     
     public double registerTimeSpent (Activity activity, String StDt, String EnDt) throws OperationNotAllowedException
     {
-        if (!activity.workingDevelopers.contains(this)) {
+        if (!activity.workingDevelopers.contains(this))
+        {
             throw new OperationNotAllowedException("Developer" + this.initials + "is not on the activity" + activity.name);
         }
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH.mm");

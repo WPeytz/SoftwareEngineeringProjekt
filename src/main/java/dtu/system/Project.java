@@ -5,7 +5,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.time.*;
 
-public class Project {
+public class Project
+{
     public ArrayList<Activity> activities;
     String name;
     public int projectID;

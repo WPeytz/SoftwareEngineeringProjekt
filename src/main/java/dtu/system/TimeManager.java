@@ -7,14 +7,16 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.io.*;
 
-public class TimeManager {
+public class TimeManager
+{
     public ArrayList<Activity> extActList;
     HashSet<Project> projectList;
     public ArrayList<Developer> developerList;
     double estTimeLeft;
     DateTimeFormatter format;
     Scanner sc = new Scanner(System.in);
-    public TimeManager ()
+
+    public TimeManager()
     {
         extActList = new ArrayList<>();
         projectList = new HashSet<>();
@@ -26,7 +28,7 @@ public class TimeManager {
         int userIn = 0;
         Menu mn = new Menu();
 
-        while(true)
+        while (true)
         {
             mn.menu();
             if (sc.hasNextLine())
@@ -49,7 +51,6 @@ public class TimeManager {
                 }
             }
         }
-
     }
 
 
@@ -65,24 +66,27 @@ public class TimeManager {
     {
         for (Project p : projectList)
         {
-            System.out.println(p.projectID + " " + p.name + " " + p.projectManager.initials + " " + p.totalTimeSpent()+"h");
+            System.out.println(p.projectID + " " + p.name + " " + p.projectManager.initials + " " + p.totalTimeSpent() + "h");
         }
     }
 
-    public void viewFreeEmployees (String startWeek, String endWeek) throws OperationNotAllowedException {
+    public void viewFreeEmployees(String startWeek, String endWeek) throws OperationNotAllowedException
+    {
         format = DateTimeFormatter.ofPattern("YYYY-ww-e");
 
         for (Developer dev : developerList)
         {
-            if (dev.isFree(LocalDate.parse(startWeek+"-1"),LocalDate.parse(endWeek+"-7")))
+            if (dev.isFree(LocalDate.parse(startWeek + "-1"), LocalDate.parse(endWeek + "-7")))
             {
                 System.out.println(dev.initials);
             }
         }
     }
 
-    public Activity getExternalActivity(String actName) throws OperationNotAllowedException{
-        for (Activity a : extActList) {
+    public Activity getExternalActivity(String actName) throws OperationNotAllowedException
+    {
+        for (Activity a : extActList)
+        {
             if (a.name.equals(actName)) return a;
         }
         throw new OperationNotAllowedException("External activity does not exist");
@@ -97,13 +101,13 @@ public class TimeManager {
                 return dev;
             }
         }
-        throw new OperationNotAllowedException("No matching developer with initials "+initials+" found.");
+        throw new OperationNotAllowedException("No matching developer with initials " + initials + " found.");
     }
 
     public String getRepDir()
     {
         String curUser = System.getProperty("user.name");
-        String projRepDir = ("C:\\Users\\"+curUser+"\\Documents\\ProjectReports\\");
+        String projRepDir = ("C:\\Users\\" + curUser + "\\Documents\\ProjectReports\\");
         File projDir = new File(projRepDir);
         projDir.mkdir();
         return projRepDir;
@@ -122,21 +126,21 @@ public class TimeManager {
         else
         {
             CustomerProject = "Internal Project";
-;       }
+        }
 
-        String report = ("Project Report for project: "+project.name+"\r\n"+"Project type: "+CustomerProject+"\r\n"+"The time budget for project" + project.name +  "is" + project.timeBudget() +"."+"\r\n"+
-        "There has currently been worked " + project.totalTimeSpent() + " hours on the project."+"\r\n"+
-        "The estimated number of hours left on the project is" + estTimeLeft + " hours.");
+        String report = ("Project Report for project: " + project.name + "\r\n" + "Project type: " + CustomerProject + "\r\n" + "The time budget for project" + project.name + "is" + project.timeBudget() + "." + "\r\n" +
+                "There has currently been worked " + project.totalTimeSpent() + " hours on the project." + "\r\n" +
+                "The estimated number of hours left on the project is" + estTimeLeft + " hours.");
 
         try
         {
             String projRepDir = getRepDir();
-            File projReport = new File(projRepDir+project.projectID+"_report.txt");
+            File projReport = new File(projRepDir + project.projectID + "_report.txt");
             projReport.createNewFile();
             FileWriter FlWrtr = new FileWriter(projReport);
             FlWrtr.write(report);
             FlWrtr.close();
-            System.out.println("Project Report has been saved in: "+getRepDir());
+            System.out.println("Project Report has been saved in: " + getRepDir());
         }
         catch (IOException IOE)
         {
@@ -147,7 +151,7 @@ public class TimeManager {
 
     public void createProject(String name, boolean customerProject, String startWeek, String endWeek) throws OperationNotAllowedException
     {
-        if(projectExists(name))
+        if (projectExists(name))
         {
             throw new OperationNotAllowedException("Project could not be created, as the project name is already in use.");
         }
@@ -157,8 +161,8 @@ public class TimeManager {
         }
     }
 
-    public void createActivity() throws Exception
-    {
+    public void createActivity() throws Exception {
+
         System.out.print("Project ID (\"0\" if external activity: ");
         int projectID = sc.nextInt();
         System.out.println();
@@ -201,7 +205,7 @@ public class TimeManager {
     {
         for (Project p : projectList)
         {
-            if(p.name.equals(name))
+            if (p.name.equals(name))
             {
                 return true;
             }
@@ -221,9 +225,12 @@ public class TimeManager {
         throw new OperationNotAllowedException("Project does not exist");
     }
 
-    public Project getProject (String projectName) throws OperationNotAllowedException {
-        for (Project p : projectList) {
-            if (p.name.equals(projectName)){
+    public Project getProject(String projectName) throws OperationNotAllowedException
+    {
+        for (Project p : projectList)
+        {
+            if (p.name.equals(projectName))
+            {
                 return p;
             }
         }

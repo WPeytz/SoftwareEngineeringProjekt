@@ -15,7 +15,8 @@ public class RegisterTimeSteps
     String devName;
     double l, prevTotal;
 
-    public RegisterTimeSteps() {
+    public RegisterTimeSteps()
+    {
         manager = new TimeManager();
     }
 
