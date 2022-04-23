@@ -32,9 +32,13 @@ public class Project
                 +decFormat.format(incTracking()));
     }
 
-    public void setProjectManager(Developer projectManager)
+    public void setProjectManager(Developer projectManager) throws OperationNotAllowedException
     {
         this.projectManager = projectManager;
+        if (!workingProjectDevelopers.contains(projectManager))
+        {
+            workingProjectDevelopers.add(projectManager);
+        }
     }
 
     public void addWorkingDev(Developer developer) throws OperationNotAllowedException {

@@ -82,12 +82,8 @@ public class Menu extends TimeManager
         System.out.print("Enter Initials: ");
         String initials = sc.nextLine();
         System.out.println();
-        if (!initials.equals(getProject(projID).projectManager.initials))
-        {
-            System.out.println("Credentials do not match.");
-        }
 
-        createReport(getProject(projID));
+        createReport(getProject(projID),getDeveloper(initials));
         Thread.sleep(500);
         clearScreen();
         menu();
@@ -146,14 +142,7 @@ public class Menu extends TimeManager
         }
     }
 
-    public void case666() throws FileNotFoundException
-    {
-        String filePath = "HappyMerchant.txt";
-        var path = Paths.get("src/main/java/dtu/system/", filePath);
-        printFileContents(path);
-    }
-
-    public void printFileContents (Path path) throws FileNotFoundException
+    public void printFileContents(Path path)
     {
         File file = new File(String.valueOf(path));
         Scanner sc = new Scanner(file);

@@ -43,7 +43,6 @@ public class TimeManager
                 case 4 -> mn.case4();
                 case 5 -> mn.case5();
                 case 6 -> mn.case6();
-                case 666 -> mn.case666();
                 case 0 -> System.exit(0);
                 default -> {
                     System.out.println("Undefined input. The program will close...");
