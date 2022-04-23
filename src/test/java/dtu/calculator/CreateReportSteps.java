@@ -2,6 +2,10 @@ package dtu.calculator;
 
 import io.cucumber.java.en.*;
 import dtu.system.*;
+
+import java.io.FileNotFoundException;
+import java.sql.Time;
+
 import static org.junit.Assert.*;
 
 public class CreateReportSteps
