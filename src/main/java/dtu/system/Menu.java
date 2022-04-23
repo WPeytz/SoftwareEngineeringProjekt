@@ -9,7 +9,7 @@ import java.io.*;
 public class Menu extends TimeManager
 {
     int projID;
-    String startDate,endDate;
+    String startWeek, endWeek;
 
     public void menu()
     {
@@ -51,12 +51,12 @@ public class Menu extends TimeManager
             extPrjct = true;
         }
         System.out.print("Start Date (yyyy-ww): ");
-        startDate = sc.nextLine();
+        startWeek = sc.nextLine();
         System.out.println();
         System.out.print("End Date (yyyy-ww): ");
-        endDate = sc.nextLine();
+        endWeek = sc.nextLine();
         System.out.println();
-        createProject(projectName, extPrjct, startDate, endDate);
+        createProject(projectName, extPrjct, startWeek, endWeek);
         System.out.println("Project \"" + projectName + "\" created.");
         Thread.sleep(500);
         clearScreen();
@@ -102,12 +102,12 @@ public class Menu extends TimeManager
     {
         clearScreen();
         System.out.print("View free employees in the period (yyyy-ww): ");
-        startDate = sc.nextLine();
+        startWeek = sc.nextLine();
         System.out.println();
         System.out.print("to (yyyy-ww): ");
-        endDate = sc.nextLine();
+        endWeek = sc.nextLine();
         System.out.println();
-        viewFreeEmployees(startDate,endDate);
+        viewFreeEmployees(startWeek,endWeek);
         sc.next();
         clearScreen();
         menu();

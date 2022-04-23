@@ -68,7 +68,7 @@ public class Project
         double sum = 0;
         for (Activity a : activities)
         {
-            sum += a.activityTime();
+            //TODO
         }
 
         return 1000000000;
