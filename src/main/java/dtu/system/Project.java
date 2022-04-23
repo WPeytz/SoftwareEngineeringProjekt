@@ -41,10 +41,14 @@ public class Project
         }
     }
 
-    public void addWorkingDev(Developer developer) throws OperationNotAllowedException {
-        if (!workingProjectDevelopers.contains(developer)) {
+    public void addWorkingDev(Developer developer) throws OperationNotAllowedException
+    {
+        if (!workingProjectDevelopers.contains(developer))
+        {
             workingProjectDevelopers.add(developer);
-        } else {
+        }
+        else
+        {
             throw new OperationNotAllowedException("This developer has already been assigned to the project");
         }
     }
@@ -66,8 +70,10 @@ public class Project
         {
             sum += a.activityTime();
         }
-        return sum;
+
+        return 1000000000;
     }
+
     public double timeBudget()
     {
         double sum = 0;
@@ -101,18 +107,28 @@ public class Project
         this.endWeek = LocalDate.parse(endWeek+"-7",format);
     }
 
-/*
-    public int getProjectID () {
+    public int getProjectID ()
+    {
         return projectID;
     }
 
-    public String getName () {
+    public String getCustomerProject()
+    {
+        if (customerProject)
+        {
+            return "Customer Project";
+        }
+        return "Internal Project";
+    }
+
+    public String getName ()
+    {
         return name;
     }
 
-    public String getProjectManager () {
-        return projectManager.Initials;
+    public String getProjectManager ()
+    {
+        return projectManager.initials;
     }
-    */
 
 }

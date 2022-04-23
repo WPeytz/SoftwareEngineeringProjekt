@@ -6,34 +6,93 @@ import static org.junit.Assert.*;
 
 public class CreateReportSteps
 {
-    @Given("that {string} is the project manager of the customer project {string}")
-    public void thatIsTheProjectManagerOfTheCustomerProject(String string, String string2)
+    String errorMessage;
+    TimeManager manager;
+    public CreateReportSteps()
     {
-
+        manager = new TimeManager();
     }
-    @Then("{string} has an option to create a weekly report for this project")
-    public void hasAnOptionToCreateAWeeklyReportForThisProject(String string)
+
+    @Given("that the developer {string} and {string} project {string} with start week {string}, end week {string} exists")
+    public void thatTheDeveloperAndProjectWithStartWeekEndWeekAndTimebudgetExists(String dev, String customer, String projName, String startWeek, String endWeek) {
+        try
+        {
+            manager.developerList.add(new Developer(dev));
+            manager.createProject(projName,customer.equalsIgnoreCase("customer"),startWeek,endWeek);
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            errorMessage = ONAE.getMessage();
+        }
+        assertTrue(manager.projectExists(projName));
+    }
+    @Given("that {string} is the project manager of the project {string}")
+    public void thatIsTheProjectManagerOfTheCustomerProject(String projMngr, String projName)
     {
-
+        try
+        {
+            manager.getProject(projName).setProjectManager(manager.getDeveloper(projMngr));
+            assertTrue(manager.getProject(projName).isProjectManager(projMngr));
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            errorMessage = ONAE.getMessage();
+        }
     }
-    @Given("{string} creates a weekly report")
-    public void createsAWeeklyReport(String string)
+
+    @Given("{string} creates a weekly report for project {string}")
+    public void createsAWeeklyReportForProject(String projMngr, String projName)
     {
-
+        try
+        {
+            manager.createReport(manager.getProject(projName),manager.getDeveloper(projMngr));
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            errorMessage = ONAE.getMessage();
+        }
     }
-    @Then("a report for {string} is created containing completed activities and the remaining work that is left on the project")
-    public void aReportForIsCreatedContainingCompletedActivitiesAndTheRemainingWorkThatIsLeftOnTheProject(String string)
+    @Then("a report for {string} is created containing name of the project, project type, time budget, total time spent on the project and the estimated work time that is left on the project")
+    public void aReportForIsCreatedContainingNameOfTheProjectProjectTypeTimeBudgetTotalTimeSpentOnTheProjectAndTheEstimatedWorkTimeThatIsLeftOnTheProject(String projName)
     {
+        try
+        {
+            Project project = manager.getProject(projName);
+            String proj = project.getName();
+            String cust = project.getCustomerProject();
+            double timebud = project.timeBudget();
+            double timeSpent = project.totalTimeSpent();
+            double estTimeLeft = project.timeBudget() - project.totalTimeSpent();
 
+            String reportText = manager.readReport(project.getName());
+
+            assertTrue(reportText.contains(proj));
+            assertTrue(reportText.contains(cust));
+            assertTrue(reportText.contains(timebud + "."));
+            assertTrue(reportText.contains(timeSpent + " hours "));
+            assertTrue(reportText.contains(estTimeLeft + " hours."));
+        }
+        catch (OperationNotAllowedException | FileNotFoundException EX)
+        {
+            EX.printStackTrace();
+        }
     }
+
     @Given("that {string} is not the project manager of the customer project {string}")
-    public void thatIsNotTheProjectManagerOfTheCustomerProject(String string, String string2)
-    {
-
+    public void thatIsNotTheProjectManagerOfTheCustomerProject(String dev, String projName) {
+        try
+        {
+            assertFalse(manager.getProject(projName).isProjectManager(dev));
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            errorMessage = ONAE.getMessage();
+        }
     }
-    @Then("{string} can't create a weekly report for this project.")
-    public void canTCreateAWeeklyReportForThisProject(String string)
+    @Then("it returns the error message {string}")
+    public void itReturnsTheErrorMessage(String error)
     {
-
+        assertEquals(errorMessage,error);
     }
+
 }

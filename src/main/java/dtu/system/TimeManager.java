@@ -1,8 +1,8 @@
 package dtu.system;
 
 
+import java.nio.file.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.io.*;
@@ -51,7 +51,6 @@ public class TimeManager
             }
         }
     }
-
 
     public static void clearScreen() throws IOException, InterruptedException
     {
@@ -103,6 +102,56 @@ public class TimeManager
         throw new OperationNotAllowedException("No matching developer with initials " + initials + " found.");
     }
 
+    public Path getFilePath(String projName) throws FileNotFoundException
+    {
+        File RepDirs = new File(getRepDir());
+        String[] ReportList = RepDirs.list();
+        String fileName = null;
+
+        for (String file : ReportList)
+        {
+            try
+            {
+                if (file.equals(getProject(projName).getProjectID()+"_report.txt"))
+                {
+                    fileName = file;
+                    break;
+                }
+            }
+            catch (OperationNotAllowedException ONAE)
+            {
+                throw new RuntimeException(ONAE);
+            }
+        }
+
+        if (fileName == null)
+        {
+            throw new FileNotFoundException("File not found");
+        }
+
+        return Paths.get(getRepDir(), fileName);
+    }
+
+    public String readReport(String projName) throws FileNotFoundException
+    {
+        String text = "";
+        var path = getFilePath(projName);
+        try
+        {
+            File file = new File(String.valueOf(path));
+            Scanner sc = new Scanner(file);
+            while (sc.hasNextLine())
+            {
+                text += sc.nextLine() + "\n\r";
+            }
+        }
+        catch (FileNotFoundException FNFE)
+        {
+            FNFE.printStackTrace();
+        }
+        return text;
+    }
+
     public String getRepDir()
     {
         String curUser = System.getProperty("user.name");
@@ -112,24 +161,34 @@ public class TimeManager
         return projRepDir;
     }
 
-    //createReport(getProject(projectID))
-    public void createReport(Project project)
+    public String reportText(Project project)
     {
-
         estTimeLeft = project.timeBudget() - project.totalTimeSpent();
         String CustomerProject;
         if (project.customerProject)
         {
-            CustomerProject = "Cutomer Project";
+            CustomerProject = "Customer Project";
         }
         else
         {
             CustomerProject = "Internal Project";
         }
 
-        String report = ("Project Report for project: " + project.name + "\r\n" + "Project type: " + CustomerProject + "\r\n" + "The time budget for project" + project.name + "is" + project.timeBudget() + "." + "\r\n" +
+        return ("Project Report for project: " + project.name + "\r\n" + "Project type: " + CustomerProject +
+                "\r\n" + "The time budget for project " + project.name + " is " + project.timeBudget() + "." + "\r\n" +
                 "There has currently been worked " + project.totalTimeSpent() + " hours on the project." + "\r\n" +
-                "The estimated number of hours left on the project is" + estTimeLeft + " hours.");
+                "The estimated number of hours left on the project is " + estTimeLeft + " hours.");
+    }
+
+    public void createReport(Project project, Developer dev) throws OperationNotAllowedException
+    {
+
+        if (!project.isProjectManager(dev.initials))
+        {
+            throw new OperationNotAllowedException("You are not project manager");
+        }
+
+        String report = reportText(project);
 
         try
         {
@@ -146,7 +205,6 @@ public class TimeManager
             IOE.printStackTrace();
         }
     }
-
 
     public void createProject(String name, boolean customerProject, String startWeek, String endWeek) throws OperationNotAllowedException
     {

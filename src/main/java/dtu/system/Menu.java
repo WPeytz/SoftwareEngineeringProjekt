@@ -2,8 +2,7 @@ package dtu.system;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+
 import java.util.*;
 import java.io.*;
 
@@ -21,6 +20,7 @@ public class Menu extends TimeManager
          * 4. Create Activity
          * 5. View Free Employees
          * 6. View report list
+         * 7. Open report file //TODO
          */
         System.out.println();
         System.out.println("1. Create Project");
@@ -144,11 +144,18 @@ public class Menu extends TimeManager
 
     public void printFileContents(Path path)
     {
-        File file = new File(String.valueOf(path));
-        Scanner sc = new Scanner(file);
-        while (sc.hasNextLine())
+        try
         {
-            System.out.println(sc.nextLine());
+            File file = new File(String.valueOf(path));
+            Scanner sc = new Scanner(file);
+            while (sc.hasNextLine())
+            {
+                System.out.println(sc.nextLine());
+            }
+        }
+        catch (FileNotFoundException FNFE)
+        {
+            FNFE.printStackTrace();
         }
     }
 }
