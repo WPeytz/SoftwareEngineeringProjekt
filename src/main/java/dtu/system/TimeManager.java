@@ -23,64 +23,6 @@ public class TimeManager
         developerList = new ArrayList<>();
     }
 
-    public void loadCLI() throws Exception
-    {
-        int userIn = 0;
-        Menu mn = new Menu();
-
-        while (true)
-        {
-            mn.menu();
-            if (sc.hasNextLine())
-            {
-                userIn = sc.nextInt();
-            }
-            switch (userIn)
-            {
-                case 1 -> mn.case1();
-                case 2 -> mn.case2();
-                case 3 -> mn.case3();
-                case 4 -> mn.case4();
-                case 5 -> mn.case5();
-                case 6 -> mn.case6();
-                case 0 -> System.exit(0);
-                default -> {
-                    System.out.println("Undefined input. The program will close...");
-                    System.exit(69);
-                }
-            }
-        }
-    }
-
-    public static void clearScreen() throws IOException, InterruptedException
-    {
-        //System.out.print("\033[H\033[2J");
-        //System.out.flush();
-        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-
-    }
-
-    public void viewProjects()
-    {
-        for (Project p : projectList)
-        {
-            System.out.println(p.projectID + " " + p.name + " " + p.projectManager.initials + " " + p.totalTimeSpent() + "h");
-        }
-    }
-
-    public void viewFreeEmployees(String startWeek, String endWeek) throws OperationNotAllowedException
-    {
-        format = DateTimeFormatter.ofPattern("YYYY-ww-e");
-
-        for (Developer dev : developerList)
-        {
-            if (dev.isFree(LocalDate.parse(startWeek + "-1"), LocalDate.parse(endWeek + "-7")))
-            {
-                System.out.println(dev.initials);
-            }
-        }
-    }
-
     public Activity getExternalActivity(String actName) throws OperationNotAllowedException
     {
         for (Activity a : extActList)
@@ -183,10 +125,7 @@ public class TimeManager
     public void createReport(Project project, Developer dev) throws OperationNotAllowedException
     {
 
-        if (!project.isProjectManager(dev.initials))
-        {
-            throw new OperationNotAllowedException("You are not project manager");
-        }
+        project.isProjectManager(dev.initials);
 
         String report = reportText(project);
 
@@ -216,46 +155,6 @@ public class TimeManager
         {
             projectList.add(new Project(name, customerProject, startWeek, endWeek));
         }
-    }
-
-    public void createActivity() throws Exception {
-
-        System.out.print("Project ID (\"0\" if external activity: ");
-        int projectID = sc.nextInt();
-        System.out.println();
-
-        System.out.print("Initials: ");
-        String initials = sc.nextLine();
-        System.out.println();
-        if (projectID != 0 && !getProject(projectID).isProjectManager(initials))
-        {
-            System.out.println("Credentials do not match.");
-            return;
-        }
-        System.out.print("Activity Name: ");
-        String activityName = sc.nextLine();
-        System.out.println();
-
-        System.out.print("Time Budget: ");
-        double timeBudget = sc.nextDouble();
-        System.out.println();
-
-        System.out.print("Start Date (yyyy-ww): ");
-        String startDate = sc.nextLine();
-        System.out.println();
-        System.out.print("End Date (yyyy-ww): ");
-        String endDate = sc.nextLine();
-        System.out.println();
-
-        if (projectID == 0)
-        {
-            extActList.add(new Activity(activityName, timeBudget, projectID, startDate, endDate));
-        }
-        else
-        {
-            getProject(projectID).activities.add(new Activity(activityName, timeBudget, projectID, startDate, endDate));
-        }
-        System.out.println("Activity \"" + activityName + "\" has been created");
     }
 
     public boolean projectExists(String name)
@@ -298,14 +197,12 @@ public class TimeManager
     {
         format = DateTimeFormatter.ofPattern("YYYY-ww-e");
         Activity activity = null;
+
         if (projectID == 0)
         {
-            for (Activity a : extActList)
+            if(extActList.contains(getExternalActivity(activityName)))
             {
-                if (a.name.equals(activityName))
-                {
-                    activity = a;
-                }
+                activity = getExternalActivity(activityName);
             }
         }
         else

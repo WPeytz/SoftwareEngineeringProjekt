@@ -10,121 +10,332 @@ public class Menu extends TimeManager
 {
     int projID;
     String startWeek, endWeek;
-
-    public void menu()
+    public void println()
     {
-        /*
-         * 1. Create Project
-         * 2. View Projects
-         * 3. Create Report
-         * 4. Create Activity
-         * 5. View Free Employees
-         * 6. View report list
-         * 7. Open report file //TODO
-         */
         System.out.println();
-        System.out.println("1. Create Project");
-        System.out.println("2. View Projects");
-        System.out.println("3. Create Report");
-        System.out.println("4. Create Activity");
-        System.out.println("5. View Free Employees");
-        System.out.println("6. View reports");
-        System.out.println("0. Close");
+    }
+    public void println(boolean print)
+    {
+        System.out.println(print);
+    }
+    public void println(char print)
+    {
+        System.out.println(print);
+    }
+    public void println(char[] print)
+    {
+        System.out.println(print);
+    }
+    public void println(double print)
+    {
+        System.out.println(print);
+    }
+    public void println(float print)
+    {
+        System.out.println(print);
+    }
+    public void println(int print)
+    {
+        System.out.println(print);
+    }
+    public void println(long print)
+    {
+        System.out.println(print);
+    }
+    public void println(Object print)
+    {
+        System.out.println(print);
+    }
+    public void println(String print)
+    {
+        System.out.println(print);
     }
 
-    public void case1() throws Exception
+    public Menu()
     {
-        clearScreen();
+        int userIn = 0;
+        menuList();
+        while (true)
+        {
+
+            if (sc.hasNextLine())
+            {
+                userIn = sc.nextInt();
+            }
+            switch (userIn)
+            {
+                case 1 -> case1();
+                case 2 -> case2(1);
+                case 3 -> case3();
+                case 4 -> case4();
+                case 5 -> case5();
+                case 6 -> case6();
+                case 7 -> case7();
+                case 8 -> case2(2);
+                case 0 -> System.exit(0);
+                default ->
+                {
+                    println("Undefined input. The program will close...");
+                    System.exit(69);
+                }
+            }
+        }
+    }
+
+    /*
+     * 1. Create Project
+     * 2. View Projects
+     * 3. Create Report
+     * 4. Create Activity
+     * 5. View Free Employees
+     * 6. View report list
+     * 7. Create developer
+     * 8. TODO: Edit project parameters
+     * 9. TODO: Add project manager
+     * 0. Close system
+     */
+
+    public void menuList ()
+    {
+
+        println();
+        println("1. Create Project");
+        println("2. View Projects");
+        println("3. Create Report");
+        println("4. Create Activity");
+        println("5. View Free Employees");
+        println("6. View reports");
+        println("7. Create new developer");
+        println("8. edit a project");
+        println("0. Close system");
+    }
+
+    public void case1()
+    {
+        //clearScreen();
         System.out.print("Project Name: ");
-        String projectName = sc.nextLine();
-        System.out.println();
+        String projectName = sc.next();
+        println();
         System.out.print("External Project? y/n: ");
-        String extProject = sc.next();
-        System.out.println();
-        boolean extPrjct;
-        if (extProject.contains("n"))
+        println();
+        String extProjectInput = sc.next();
+        String extProject = extProjectInput.substring(0,1);
+        if (!(extProject.equals("y") || extProject.equals("n")))
         {
-            extPrjct = false;
+            println("Wrong input");
+            case1();
         }
-        else
-        {
-            extPrjct = true;
-        }
+        println();
+        boolean isExtProject = extProject.contains("y");
+
         System.out.print("Start Date (yyyy-ww): ");
-        startWeek = sc.nextLine();
-        System.out.println();
+        startWeek = sc.next();
+        try
+        {
+            checkDateFormat(startWeek);
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage() + " please try again");
+            case1();
+        }
+        println();
         System.out.print("End Date (yyyy-ww): ");
-        endWeek = sc.nextLine();
-        System.out.println();
-        createProject(projectName, extPrjct, startWeek, endWeek);
-        System.out.println("Project \"" + projectName + "\" created.");
-        Thread.sleep(500);
+        endWeek = sc.next();
+        try
+        {
+            checkDateFormat(endWeek);
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage() + " please try again");
+            case1();
+        }
+        println();
+        try
+        {
+            createProject(projectName, isExtProject, startWeek, endWeek);
+        } catch (OperationNotAllowedException e) {
+            println(e.getMessage());
+        }
+        println("Project \"" + projectName + "\" created.");
+
+        try
+        {
+            Thread.sleep(500);
+        }
+        catch (InterruptedException IE)
+        {
+            IE.printStackTrace();
+        }
         clearScreen();
-        menu();
+        menuList();
     }
 
-    public void case2 () throws Exception
+    public void case2(int i)
     {
         clearScreen();
         viewProjects();
+        println("Press enter to continue");
         sc.next();
         clearScreen();
-        menu();
+        if (i == 1)
+        {
+            menuList();
+        }
+        else
+        {
+            if(viewProjects() == 2)
+            {
+                case8();
+            }
+            else
+            {
+                menuList();
+            }
+        }
     }
 
-    public void case3() throws Exception
+    public void case3()
     {
         clearScreen();
         System.out.print("Enter Project ID: ");
         projID = sc.nextInt();
-        System.out.println();
+        println();
 
         System.out.print("Enter Initials: ");
         String initials = sc.nextLine();
-        System.out.println();
+        println();
 
-        createReport(getProject(projID),getDeveloper(initials));
-        Thread.sleep(500);
+        try
+        {
+            createReport(getProject(projID),getDeveloper(initials));
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+        }
+        catch (IOException IOE)
+        {
+            throw new Error(IOE);
+        }
+
+        try
+        {
+            Thread.sleep(500);
+        }
+        catch (InterruptedException IE)
+        {
+            IE.printStackTrace();
+        }
         clearScreen();
-        menu();
+        menuList();
     }
 
-    public void case4() throws Exception
+    public void case4()
     {
         clearScreen();
-        createActivity();
-        Thread.sleep(500);
+
+        //createActivity();
+        System.out.print("Project ID (\"0\" if external activity: ");
+        int projectID = sc.nextInt();
+        println();
+
+        System.out.print("Initials: ");
+        String initials = sc.nextLine();
+        println();
+        try
+        {
+            if (projectID != 0 && !getProject(projectID).isProjectManager(initials))
+            {
+                println("Credentials do not match.");
+                return;
+            }
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+        }
+        System.out.print("Activity Name: ");
+        String activityName = sc.nextLine();
+        println();
+
+        System.out.print("Time Budget: ");
+        double timeBudget = sc.nextDouble();
+        println();
+
+        System.out.print("Start Date (yyyy-ww): ");
+        String startDate = sc.nextLine();
+        println();
+        System.out.print("End Date (yyyy-ww): ");
+        String endDate = sc.nextLine();
+        println();
+
+        if (projectID == 0)
+        {
+            extActList.add(new Activity(activityName, timeBudget, projectID, startDate, endDate));
+        }
+        else
+        {
+            try
+            {
+                getProject(projectID).activities.add(new Activity(activityName, timeBudget, projectID, startDate, endDate));
+            }
+            catch (OperationNotAllowedException ONAE)
+            {
+                println(ONAE.getMessage());
+            }
+        }
+        println("Activity \"" + activityName + "\" has been created");
+
+        try
+        {
+            Thread.sleep(500);
+        }
+        catch (InterruptedException IE)
+        {
+            throw new RuntimeException(IE);
+        }
         clearScreen();
-        menu();
+        menuList();
     }
 
-    public void case5 () throws Exception
+    public void case5 ()
     {
         clearScreen();
+
         System.out.print("View free employees in the period (yyyy-ww): ");
         startWeek = sc.nextLine();
-        System.out.println();
+        println();
         System.out.print("to (yyyy-ww): ");
         endWeek = sc.nextLine();
-        System.out.println();
-        viewFreeEmployees(startWeek,endWeek);
+        println();
+        try
+        {
+            viewFreeEmployees(startWeek,endWeek);
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            throw new RuntimeException(ONAE);
+        }
         sc.next();
         clearScreen();
-        menu();
+
+        menuList();
     }
 
-    public void case6() throws FileNotFoundException
+    public void case6()
     {
         File RepDirs = new File(getRepDir());
         String[] ReportList = RepDirs.list();
-        System.out.println("Please choose a file to view:");
+        println("Please choose a file to view:");
+        String fileName = "";
 
         int fileNumber = 0;
-
         for (String file : ReportList)
         {
             fileNumber++;
-            System.out.println(fileNumber+": "+file);
+            println(fileNumber+": "+file);
         }
 
         Scanner fileSelect = new Scanner(System.in);
@@ -135,27 +346,196 @@ public class Menu extends TimeManager
             {
                 selectedFile = fileSelect.nextInt() - 1;
             }
-            String fileName =  ReportList[selectedFile];
-            var path = Paths.get(getRepDir(), fileName);
+            try
+            {
+                fileName =  ReportList[selectedFile];
+            }
+            catch(ArrayIndexOutOfBoundsException AIOOBE)
+            {
+                throw new RuntimeException("No file with the number: " + selectedFile);
+            }
 
-            printFileContents(path);
+            //var path = Paths.get(getRepDir(), fileName);
+
+            fileName = fileName.substring(0,6);
+
+            int id = Integer.parseInt(fileName);
+
+            try
+            {
+                println(getReportFromProjectID(id));
+            }
+            catch (OperationNotAllowedException | FileNotFoundException EX)
+            {
+                println(EX.getMessage());
+            }
         }
     }
 
-    public void printFileContents(Path path)
+    public void case7()
+    {
+        sc = new Scanner(System.in);
+        println("New developer:");
+        println("Initials:");
+        String initials = sc.next();
+        println();
+        try
+        {
+            developerList.add(new Developer(initials));
+            if (developerList.contains(getDeveloper(initials)))
+            {
+                println("Developer \"" + initials + "\" created");
+            }
+            else
+            {
+                throw new OperationNotAllowedException("An error occurred in adding developer");
+            }
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            ONAE.getMessage();
+            case7();
+        }
+    }
+
+    public void case8()
+    {
+        int projID = 0;
+        sc = new Scanner(System.in);
+        println("Please enter the ID of the project that should be edited");
+        String input = sc.next();
+        Project p = null;
+        try
+        {
+            projID = Integer.parseInt(input);
+            if(!projectExists(projID))
+            {
+                throw new OperationNotAllowedException("Project with ID \"" + projID + "\" does not exist. Please try again");
+            }
+            p = getProject(projID);
+        }
+        catch(NumberFormatException NFE)
+        {
+            println("Invalid input, please try again.");
+            case2(2);
+        }
+        catch(OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+            viewProjects();
+            case8();
+        }
+
+        case8_menu(p,projID);
+    }
+
+    public void case8_menu(Project p, int projID)
+    {
+        String projType;
+        if (p.customerProject)
+        {
+            projType = "Customer project";
+        }
+        else
+        {
+            projType = "Internal project";
+        }
+
+        println("Project " + projID + " has the following editable parameters:");
+        println();
+        println("1. Project name: " + p.name);
+        println("2. Start week: " + p.startWeek);
+        println("3. End week: " + p.endWeek);
+        println("4. Customer/Internal project: " + projType);
+        println();
+        println("Please choose a parameter that should be edited by entering the corresponding menu index");
+        sc = new Scanner(System.in);
+        int inp = sc.nextInt();
+        switch (inp)
+        {
+            case 1 -> case8_1();
+            case 2 -> case8_2();
+            case 3 -> case8_3();
+            case 4 -> case8_4();
+            default ->
+            {
+                println("Invalid input: please try again");
+                println();
+                case8_menu(p,projID);
+            }
+        }
+    }
+
+    public void case8_1()
+    {
+        println();
+        println("Please enter the new name of the project. To cancel this action, press \"x\" and then the enter key");
+    }
+
+    public void case8_2()
+    {
+
+    }
+
+    public void case8_3()
+    {
+
+    }
+
+    public void case8_4()
+    {
+
+    }
+
+    public int viewProjects()
+    {
+        if(projectList.isEmpty())
+        {
+            println("No projects are created yet");
+            return 1;
+        }
+        else
+        {
+            for (Project p : projectList)
+            {
+                String projMgr;
+                if (p.projectManager == null)
+                {
+                    projMgr = "N/A";
+                }
+                else
+                {
+                    projMgr = p.projectManager.initials;
+                }
+                println(
+                        "Project ID:" + p.projectID + " | Name: " + p.name + " | Manager: " + projMgr + " | Time spent: " + p.totalTimeSpent() + " h"
+                );
+            }
+        }
+        return 2;
+    }
+
+    public static void clearScreen()
     {
         try
         {
-            File file = new File(String.valueOf(path));
-            Scanner sc = new Scanner(file);
-            while (sc.hasNextLine())
-            {
-                System.out.println(sc.nextLine());
-            }
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         }
-        catch (FileNotFoundException FNFE)
+        catch (InterruptedException | IOException EX)
         {
-            FNFE.printStackTrace();
+            EX.printStackTrace();
+        }
+    }
+    public void viewFreeEmployees(String startWeek, String endWeek) throws OperationNotAllowedException
+    {
+        format = DateTimeFormatter.ofPattern("YYYY-ww-e");
+
+        for (Developer dev : developerList)
+        {
+            if (dev.isFree(LocalDate.parse(startWeek + "-1"), LocalDate.parse(endWeek + "-7")))
+            {
+                println(dev.initials);
+            }
         }
     }
 }

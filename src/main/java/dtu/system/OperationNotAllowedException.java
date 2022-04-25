@@ -1,5 +1,7 @@
 package dtu.system;
 
+import java.io.Serial;
+
 /**
  * The class represents an exception that is thrown to indicate that the
  * intended operation is not allowed. In most cases, it is thrown, when the
@@ -12,6 +14,7 @@ public class OperationNotAllowedException extends Exception {
     /**
      *
      */
+    @Serial
     private static final long serialVersionUID = 5644804383994321392L;
 
     /**

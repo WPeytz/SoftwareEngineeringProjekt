@@ -13,3 +13,9 @@ Feature: Request Assistance
     And that the developer "asbg" is assigned a project activity "Debugging" with start week "2022-40", end week "2022-42" and time budget 10 exists
     When "asbg" requests assistance for "Debugging" from busy developer "nikh"
     Then the error "Developer is not free in the given time period."  is returned
+
+  Scenario: Request Assistance from developer who is already on activity
+    Given that the "customer" project "NEM-ID" with start week "2022-09" and end week "2022-49" exists
+    And that the developers "asbg" and "nikh" are assigned a project activity "Debugging" with start week "2022-40", end week "2022-42" and time budget 10 exists
+    When "asbg" requests assistance for "Debugging" from developer "nikh"
+    Then the error "Developer is already working on the activity"  is returned

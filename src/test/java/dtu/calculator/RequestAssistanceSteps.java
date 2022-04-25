@@ -115,5 +115,17 @@ public class RequestAssistanceSteps
     }
 
 
+    @And("that the developers {string} and {string} are assigned a project activity {string} with start week {string}, end week {string} and time budget {int} exists")
+    public void thatTheDevelopersAndAreAssignedAProjectActivityWithStartWeekEndWeekAndTimeBudgetExists(String dev1, String dev2, String activity, String stW, String edW, int tb) {
+        try {
+            manager.getProject(projName).activities.add(new Activity(activity,tb,manager.getProject(projName).projectID,stW,edW));
+            manager.developerList.add(new Developer(dev1));
+            manager.developerList.add(new Developer(dev2));
+            manager.getProject(projName).getActivity(activity).addWorkingDev(manager.getDeveloper(dev1));
+            manager.getProject(projName).getActivity(activity).addWorkingDev(manager.getDeveloper(dev2));
 
+        } catch (OperationNotAllowedException ONAE) {
+            errorMessage = ONAE.getMessage();
+        }
+    }
 }

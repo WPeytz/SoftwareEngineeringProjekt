@@ -30,18 +30,7 @@ public class ChangeEndWeekForAnActivitySteps
         manager.extActList.add(a);
     }
 
-    @When("developer {string} changes end week to {string}")
-    public void developerChangesEndWeekTo(String devName, String newWeek)
-    {
-        try
-        {
-            manager.changeEndWeek(newWeek,a.name,0);
-        }
-        catch (OperationNotAllowedException ONAE)
-        {
-            errorMessage = ONAE.getMessage();
-        }
-    }
+
     @Then("end week for {string} is {string}")
     public void endWeekForIs(String activityName, String newWeek)
     {
@@ -88,8 +77,8 @@ public class ChangeEndWeekForAnActivitySteps
         }
     }
 
-    @When("project manager {string} changes end week to {string} from {string}")
-    public void projectManagerChangesEndWeekToFrom(String projMan, String newWeek, String endWeek)
+    @When("project manager {string} changes end week to {string}")
+    public void projectManagerChangesEndWeekToFrom(String projMan, String newWeek)
     {
         try {
             manager.changeEndWeek(newWeek,actName,manager.getProject(projName).projectID);
@@ -99,5 +88,33 @@ public class ChangeEndWeekForAnActivitySteps
     }
 
 
+    @When("developer {string} changes end week to {string} for activity {string}")
+    public void developerChangesEndWeekToForActivity(String dev, String endWeek, String activityName)
+    {
+        try
+        {
+            manager.changeEndWeek(endWeek,activityName,0);
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            errorMessage = ONAE.getMessage();
+        }
+
+    }
+
+    @Then("the error message {string} is returned")
+    public void theErrorMessageIsReturned(String err)
+    {
+        assertEquals(err,errorMessage);
+    }
+
+    @Then("the end week of project {string} is changed to match the new end week of activity {string}")
+    public void theEndWeekOfProjectIsChangedToMatchTheNewEndWeekOfActivity(String project, String activity) {
+        try {
+            assertEquals(manager.getProject(project).endWeek,manager.getProject(project).getActivity(activity).endWeek);
+        } catch (OperationNotAllowedException ONAE) {
+            errorMessage = ONAE.getMessage();
+        }
+    }
 }
 

@@ -67,18 +67,37 @@ public class RegisterTimeSteps
             errorMessage = ONAE.getMessage();
         }
     }
-    @When("{string} registers start time as {string}")
-    public void registers_start_time_as(String developer, String starttime)
-    {
-        startTime = starttime;
+
+    @Given("that the developer {string} is not assigned to the project activity {string} in project ID {int}")
+    public void thatTheDeveloperIsNotAssignedToTheProjectActivityInProjectID(String developer, String activity, Integer projectID) {
+        try
+        {
+            manager.developerList.add(new Developer(developer));
+            devName = developer;
+            dev = manager.getDeveloper(developer);
+            Project project = manager.getProject(projectID);
+            a = project.getActivity(activity);
+            assertFalse(a.workingDevelopers.contains(manager.getDeveloper(developer)));
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            errorMessage = ONAE.getMessage();
+        }
     }
-    @When("registers end time as {string} to project activity {string}")
-    public void registers_end_time_as_to_project_activity(String endtime, String activity) throws Exception
+
+    @When("{string} registers start time as {string} and end time as {string} to project activity {string}")
+    public void registers_start_time_as(String developer, String startTime, String endTime, String actName)
     {
-         endTime = endtime;
-         double prevTotal = a.activityTime();
-         l = manager.getDeveloper(devName).registerTimeSpent(a,startTime,endTime);
+        try
+        {
+            l = manager.getDeveloper(devName).registerTimeSpent(a,startTime,endTime);
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            errorMessage = ONAE.getMessage();
+        }
     }
+
     @Then("the total time is rounded to {double} hours")
     public void the_total_time_is_rounded_to_hours(double roundedTime)
     {
@@ -87,7 +106,7 @@ public class RegisterTimeSteps
     @Then("{double} hours is added to total time spent on project activity {string}")
     public void hours_is_added_to_total_time_spent_on_project_activity(Double roundedTime, String activity)
     {
-        assertEquals(prevTotal,a.activityTime(),roundedTime);
+        assertEquals(a.activityTime()-roundedTime,a.activityTime(),roundedTime);
     }
 
     @Then("return error message {string}")

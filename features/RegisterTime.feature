@@ -6,10 +6,16 @@ Feature: Register Time spent on activity
 		Given that a "customer" project "NEM-ID" with start week "2022-04" and end week "2022-45" exists
 		And the project activity "Debugging" with start week "2022-05" and end week "2022-07" and time budget 20 exists
 		And that the developer "alew" is assigned to the project activity "Debugging" in project ID 220001
-		When "alew" registers start time as "15-03-2022 12.00"
-		And registers end time as "15-03-2022 15.35" to project activity "Debugging"
+		When "alew" registers start time as "15-03-2022 12.00" and end time as "15-03-2022 15.35" to project activity "Debugging"
 		Then the total time is rounded to 3.5 hours
 		And 3.5 hours is added to total time spent on project activity "Debugging"
+
+	Scenario: Register time for activity on a given date for a developer not on the activity.
+		Given that a "customer" project "NEM-ID" with start week "2022-04" and end week "2022-45" exists
+		And the project activity "Debugging" with start week "2022-05" and end week "2022-07" and time budget 20 exists
+		And that the developer "alew" is not assigned to the project activity "Debugging" in project ID 220001
+		When "alew" registers start time as "15-03-2022 12.00" and end time as "15-03-2022 15.35" to project activity "Debugging"
+		Then return error message "Developer is not on the activity"
 
 	Scenario: Register time for activity on a given date with invalid developer initials
 		Given that a "customer" project "NEM-ID" with start week "2022-04" and end week "2022-45" exists

@@ -33,7 +33,7 @@ public class Developer {
     {
         if (!activity.workingDevelopers.contains(this))
         {
-            throw new OperationNotAllowedException("Developer" + this.initials + "is not on the activity" + activity.name);
+            throw new OperationNotAllowedException("Developer is not on the activity");
         }
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH.mm");
         LocalDateTime startTime = LocalDateTime.parse(StDt, format);

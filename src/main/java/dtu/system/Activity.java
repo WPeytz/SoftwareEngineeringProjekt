@@ -21,14 +21,10 @@ public class Activity {
         this.endWeek = LocalDate.parse(endWeek+"-7", format);
         this.name = name;
         this.timeBudget = timeBudget;
-        if (projectID == 0)
-        {
-            this.externalActivity = true;
-        }
-        else
-        {
-            this.projectID = projectID;
-        }
+
+        this.externalActivity = (projectID == 0);
+
+        this.projectID = projectID;
         timeSpent = new ArrayList<>();
         workingDevelopers = new ArrayList<>();
     }

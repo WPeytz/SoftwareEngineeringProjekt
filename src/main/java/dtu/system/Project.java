@@ -18,7 +18,7 @@ public class Project
     DecimalFormat decFormat = new DecimalFormat("0000");
     DateTimeFormatter format;
 
-    public Project(String name, boolean customerProject, String startWeek, String endWeek)
+    public Project(String name, boolean customerProject, String startWeek, String endWeek) throws OperationNotAllowedException
     {
         format = DateTimeFormatter.ofPattern("YYYY-ww-e");
 
@@ -92,14 +92,22 @@ public class Project
 
     public Activity getActivity (String name) throws OperationNotAllowedException
     {
+        Activity act = null;
+
         for (Activity a : activities)
         {
             if (a.name.equals(name))
             {
-                return a;
+                act = a;
+                break;
             }
         }
-        throw new OperationNotAllowedException("Activity \"" + name + "\" could not be found");
+        if (act == null)
+        {
+            throw new OperationNotAllowedException("Activity \"" + name + "\" could not be found");
+        }
+        return act;
+
     }
 
     public void changeProjectEndWeek(String endWeek)
@@ -118,7 +126,10 @@ public class Project
         {
             return "Customer Project";
         }
-        return "Internal Project";
+        else
+        {
+            return "Internal Project";
+        }
     }
 
     public String getName ()
