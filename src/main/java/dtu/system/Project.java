@@ -26,6 +26,10 @@ public class Project
         this.customerProject = customerProject;
         this.startWeek = LocalDate.parse(startWeek+"-1",format);
         this.endWeek = LocalDate.parse(endWeek+"-7",format);
+        if (this.endWeek.isBefore(this.startWeek))
+        {
+            throw new OperationNotAllowedException("End week of project is before start week");
+        }
         activities = new ArrayList<>();
         workingProjectDevelopers = new ArrayList<>();
         projectID = Integer.parseInt(String.valueOf(this.startWeek.getYear()).substring(2,4)

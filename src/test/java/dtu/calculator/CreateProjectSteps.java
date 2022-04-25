@@ -60,4 +60,12 @@ public class CreateProjectSteps {
     {
         assertEquals(errMsg,errorMessage);
     }
+    //______________________________________________________________________________________________________________________
+    // White box test 1
+    @Then("the developer {string} is given the error message {string}")
+    public void theDeveloperIsGivenTheErrorMessage(String dev, String error) {
+        assertEquals(error,errorMessage);
+    }
 }
+
+
