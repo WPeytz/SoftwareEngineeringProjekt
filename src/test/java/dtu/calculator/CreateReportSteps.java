@@ -4,7 +4,7 @@ import io.cucumber.java.en.*;
 import dtu.system.*;
 
 import java.io.FileNotFoundException;
-import java.sql.Time;
+import java.io.IOException;
 
 import static org.junit.Assert.*;
 
@@ -44,6 +44,25 @@ public class CreateReportSteps
         }
     }
 
+    @Given("the project {string} contains the first activity {string} with start week {string} and end week {string} and time budget {int}")
+    public void theProjectContainsTheFirstActivityWithStartWeekAndEndWeekAndTimeBudget(String projName, String name, String stw, String enw, Integer tb)
+    {
+        try {
+            manager.getProject(projName).activities.add(new Activity(name,tb,manager.getProject(projName).projectID,stw,enw));
+        } catch (OperationNotAllowedException ONAE) {
+            errorMessage = ONAE.getMessage();
+        }
+    }
+    @Given("the project {string} contains the second activity {string} with start week {string} and end week {string} and time budget {int}")
+    public void theProjectContainsTheSecondActivityWithStartWeekAndEndWeekAndTimeBudget(String projName, String name, String stw, String enw, Integer tb)
+    {
+        try {
+            manager.getProject(projName).activities.add(new Activity(name,tb,manager.getProject(projName).projectID,stw,enw));
+        } catch (OperationNotAllowedException ONAE) {
+            errorMessage = ONAE.getMessage();
+        }
+    }
+
     @Given("{string} creates a weekly report for project {string}")
     public void createsAWeeklyReportForProject(String projMngr, String projName)
     {
@@ -54,6 +73,10 @@ public class CreateReportSteps
         catch (OperationNotAllowedException ONAE)
         {
             errorMessage = ONAE.getMessage();
+        }
+        catch (IOException IOE)
+        {
+            throw new Error(IOE);
         }
     }
     @Then("a report for {string} is created containing name of the project, project type, time budget, total time spent on the project and the estimated work time that is left on the project")
@@ -68,7 +91,7 @@ public class CreateReportSteps
             double timeSpent = project.totalTimeSpent();
             double estTimeLeft = project.timeBudget() - project.totalTimeSpent();
 
-            String reportText = manager.readReport(project.getName());
+            String reportText = manager.readReportFromName(project.getName());
 
             assertTrue(reportText.contains(proj));
             assertTrue(reportText.contains(cust));

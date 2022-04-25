@@ -61,7 +61,7 @@ public class RequestAssistanceSteps
         try
         {
             manager.developerList.add(new Developer(dev));
-            manager.getProject(projName).getActivity(name).requestAssistance(manager.getDeveloper(dev));
+            manager.getProject(projName).getActivity(name).addWorkingDev(manager.getDeveloper(dev));
         }
         catch (OperationNotAllowedException ONAE)
         {
@@ -101,7 +101,7 @@ public class RequestAssistanceSteps
         }
         try
         {
-            manager.getProject(projName).getActivity(name).requestAssistance(manager.getDeveloper(dev));
+            manager.getProject(projName).getActivity(name).addWorkingDev(manager.getDeveloper(dev));
         }
         catch (OperationNotAllowedException ONAE)
         {

@@ -10,8 +10,14 @@ Feature: Create Report
     And "whkp" creates a weekly report for project "DTU Website"
     Then a report for "DTU Website" is created containing name of the project, project type, time budget, total time spent on the project and the estimated work time that is left on the project
 
-  Scenario: Create a report for the project "DTU Website" if you are not a project manager
+  Scenario: Create a report for the customer project "DTU Website" if you are not a project manager
     Given that the developer "nikh" and "customer" project "DTU Website" with start week "2022-02", end week "2022-32" exists
     And that "nikh" is not the project manager of the customer project "DTU Website"
     And "nikh" creates a weekly report for project "DTU Website"
     Then it returns the error message "You are not project manager"
+
+    Scenario: Create a report for the internal project "Fix SOFTWAREHUSET's website"
+      Given that the developer "asbg" and "internal" project "Fix SOFTWAREHUSET's website" with start week "2022-01", end week "2022-03" exists
+      And that "asbg" is the project manager of the project "Fix SOFTWAREHUSET's website"
+      And "asbg" creates a weekly report for project "Fix SOFTWAREHUSET's website"
+      Then a report for "Fix SOFTWAREHUSET's website" is created containing name of the project, project type, time budget, total time spent on the project and the estimated work time that is left on the project

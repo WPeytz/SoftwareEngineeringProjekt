@@ -5,7 +5,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.time.*;
 
-public class Developer {
+public class Developer
+{
     public String initials;
     ArrayList<Activity> activities;
 
@@ -20,7 +21,7 @@ public class Developer {
             }
             else
             {
-                throw new OperationNotAllowedException("Invalid amount of initials for developer name. Initials length must be between 1 and 4 (inclusive)");
+                throw new OperationNotAllowedException("Invalid amount of initials for developer name. Initials length must be between 1 and 4 characters (inclusive)");
             }
         }
         else

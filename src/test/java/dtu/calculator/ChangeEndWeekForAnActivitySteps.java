@@ -41,8 +41,6 @@ public class ChangeEndWeekForAnActivitySteps
     @Given("that project activity {string} exists in the {string} project {string} with start week {string} and end week {string}")
     public void thatProjectActivityExistsInTheCustomerProject(String activityName, String customer, String projectName, String startWeek, String endWeek)
     {
-
-
         projName = projectName;
         try
         {
@@ -80,9 +78,12 @@ public class ChangeEndWeekForAnActivitySteps
     @When("project manager {string} changes end week to {string}")
     public void projectManagerChangesEndWeekToFrom(String projMan, String newWeek)
     {
-        try {
+        try
+        {
             manager.changeEndWeek(newWeek,actName,manager.getProject(projName).projectID);
-        } catch (OperationNotAllowedException ONAE) {
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
             errorMessage = ONAE.getMessage();
         }
     }

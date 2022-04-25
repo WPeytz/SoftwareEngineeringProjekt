@@ -36,7 +36,8 @@ public class CreateExternalActivitySteps
         manager.developerList.add(new Developer(emp1));
         manager.developerList.add(new Developer(emp2));
         manager.developerList.add(new Developer(emp3));
-        try {
+        try
+        {
             demp1 = manager.getDeveloper(emp1);
             demp2 = manager.getDeveloper(emp2);
             demp3 = manager.getDeveloper(emp3);
@@ -44,7 +45,6 @@ public class CreateExternalActivitySteps
         catch (OperationNotAllowedException ONAE)
         {
             errorMessage = ONAE.getMessage();
-
         }
     }
     @Given("that the chosen developers are free employees in the time period")
@@ -62,9 +62,12 @@ public class CreateExternalActivitySteps
     @Then("the external activity is created")
     public void the_external_activity_is_created()
     {
-        try {
+        try
+        {
             assertEquals(a.name,manager.getExternalActivity(a.name).name);
-        } catch (OperationNotAllowedException ONAE) {
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
             errorMessage = ONAE.getMessage();
         }
     }
@@ -75,7 +78,9 @@ public class CreateExternalActivitySteps
             manager.getExternalActivity(a.name).workingDevelopers.add(demp1);
             manager.getExternalActivity(a.name).workingDevelopers.add(demp2);
             manager.getExternalActivity(a.name).workingDevelopers.add(demp3);
-        } catch (OperationNotAllowedException ONAE) {
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
             errorMessage = ONAE.getMessage();
         }
     }

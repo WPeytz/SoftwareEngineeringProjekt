@@ -4,7 +4,8 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-public class Activity {
+public class Activity
+{
     public String name;
     double timeBudget;
     public LocalDate startWeek, endWeek;
@@ -39,31 +40,15 @@ public class Activity {
         return sum;
     }
 
-    public void addWorkingDev(Developer developer) throws OperationNotAllowedException {
+    public void addWorkingDev(Developer developer) throws OperationNotAllowedException
+    {
+        developer.isFree(this.startWeek,this.endWeek);
+
         if (workingDevelopers.contains(developer))
         {
             throw new OperationNotAllowedException("Developer is already working on the activity");
         }
-        else if (!developer.isFree(this.startWeek,this.endWeek)){
-            throw new OperationNotAllowedException("Developer could not be added as the developer is not free in the given time period.");
-        }
         workingDevelopers.add(developer);
         developer.activities.add(this);
-    }
-
-    public void requestAssistance (Developer assistingDev) throws OperationNotAllowedException {
-        if (!this.workingDevelopers.contains(assistingDev) && assistingDev.isFree(this.startWeek,this.endWeek))
-        {
-            addWorkingDev(assistingDev);
-        }
-        else
-        {
-            throw new OperationNotAllowedException(assistingDev.initials + " is already working on the same activity as you or is busy.");
-        }
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
     }
 }

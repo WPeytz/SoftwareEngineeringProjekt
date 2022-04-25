@@ -49,6 +49,7 @@ public class ChangeEndWeekForAProjectSteps
         }
     }
 
+
     @Then("end week for project {string} is {string}")
     public void endWeekForProjectIs(String projectName, String newWeek)
     {
@@ -60,5 +61,23 @@ public class ChangeEndWeekForAProjectSteps
         {
             errorMessage = ONAE.getMessage();
         }
+    }
+    @Given("that the developer {string} changes end week to {string} from {string} for project {string}")
+    public void thatTheDeveloperChangesEndWeekToFromForProject(String string, String newWeek, String oldweek, String projName)
+    {
+        try
+        {
+            manager.getProject(projName).changeProjectEndWeek(newWeek);
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            errorMessage = ONAE.getMessage();
+        }
+    }
+
+    @Then("the errormessage {string} is thrown")
+    public void theErrormessageIsThrown(String errMsg)
+    {
+        assertEquals(errorMessage,errMsg);
     }
 }

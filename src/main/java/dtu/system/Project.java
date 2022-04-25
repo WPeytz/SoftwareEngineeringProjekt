@@ -9,7 +9,7 @@ public class Project
 {
     public ArrayList<Activity> activities;
     String name;
-    public int projectID;
+    public final int projectID;
     public LocalDate startWeek, endWeek;
     public Developer projectManager;
     public ArrayList<Developer> workingProjectDevelopers;
@@ -68,10 +68,10 @@ public class Project
         double sum = 0;
         for (Activity a : activities)
         {
-            //TODO
+            sum += a.activityTime();
         }
 
-        return 1000000000;
+        return sum;
     }
 
     public double timeBudget()
@@ -135,11 +135,6 @@ public class Project
     public String getName ()
     {
         return name;
-    }
-
-    public String getProjectManager ()
-    {
-        return projectManager.initials;
     }
 
 }

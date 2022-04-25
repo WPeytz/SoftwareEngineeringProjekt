@@ -1,9 +1,9 @@
 package dtu.system;
 
-
 import java.nio.file.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.*;
 import java.io.*;
 
@@ -25,11 +25,22 @@ public class TimeManager
 
     public Activity getExternalActivity(String actName) throws OperationNotAllowedException
     {
+        Activity act = null;
+        boolean actFound = false;
         for (Activity a : extActList)
         {
-            if (a.name.equals(actName)) return a;
+            if (a.name.equals(actName) || !actFound)
+            {
+                act = a;
+                actFound = true;
+            }
         }
-        throw new OperationNotAllowedException("External activity does not exist");
+
+        if (act == null)
+        {
+            throw new OperationNotAllowedException("External activity does not exist");
+        }
+        return act;
     }
 
     public Developer getDeveloper(String initials) throws OperationNotAllowedException
@@ -44,54 +55,56 @@ public class TimeManager
         throw new OperationNotAllowedException("No matching developer with initials " + initials + " found.");
     }
 
-    public Path getFilePath(String projName) throws FileNotFoundException
+    public String getReportFromProjectID(int projID) throws OperationNotAllowedException, FileNotFoundException
     {
         File RepDirs = new File(getRepDir());
         String[] ReportList = RepDirs.list();
-        String fileName = null;
+        String fileName = "";
 
-        for (String file : ReportList)
+        if (ReportList != null)
         {
-            try
+            for (String file : ReportList)
             {
-                if (file.equals(getProject(projName).getProjectID()+"_report.txt"))
+                if (file.equals(getProject(projID).getProjectID()+"_report.txt"))
                 {
                     fileName = file;
                     break;
                 }
             }
-            catch (OperationNotAllowedException ONAE)
-            {
-                throw new RuntimeException(ONAE);
-            }
         }
 
-        if (fileName == null)
-        {
-            throw new FileNotFoundException("File not found");
-        }
-
-        return Paths.get(getRepDir(), fileName);
+        return getFileContents(Paths.get(getRepDir(), fileName));
     }
 
-    public String readReport(String projName) throws FileNotFoundException
+    public String getFileContents(Path path) throws FileNotFoundException
     {
+        StringBuilder sb = new StringBuilder();
+        File file = new File(String.valueOf(path));
+        Scanner sc = new Scanner(file);
+        while (sc.hasNextLine())
+        {
+            sb.append(sc.nextLine());
+        }
+
+        return sb.toString();
+    }
+
+    public String readReportFromName(String projName) throws FileNotFoundException, OperationNotAllowedException
+    {
+        return (getReportFromProjectID(getProject(projName).getProjectID()));
+        /*
         String text = "";
         var path = getFilePath(projName);
-        try
+        File file = new File(String.valueOf(path));
+        Scanner sc = new Scanner(file);
+        StringBuilder stringConc = new StringBuilder();
+        while (sc.hasNextLine())
         {
-            File file = new File(String.valueOf(path));
-            Scanner sc = new Scanner(file);
-            while (sc.hasNextLine())
-            {
-                text += sc.nextLine() + "\n\r";
-            }
+            stringConc.append(sc.nextLine() + "\n\r");
         }
-        catch (FileNotFoundException FNFE)
-        {
-            FNFE.printStackTrace();
-        }
+        text = stringConc.toString();
         return text;
+         */
     }
 
     public String getRepDir()
@@ -122,27 +135,20 @@ public class TimeManager
                 "The estimated number of hours left on the project is " + estTimeLeft + " hours.");
     }
 
-    public void createReport(Project project, Developer dev) throws OperationNotAllowedException
+    public void createReport(Project project, Developer dev) throws OperationNotAllowedException, IOException
     {
 
         project.isProjectManager(dev.initials);
 
         String report = reportText(project);
 
-        try
-        {
-            String projRepDir = getRepDir();
-            File projReport = new File(projRepDir + project.projectID + "_report.txt");
-            projReport.createNewFile();
-            FileWriter FlWrtr = new FileWriter(projReport);
-            FlWrtr.write(report);
-            FlWrtr.close();
-            System.out.println("Project Report has been saved in: " + getRepDir());
-        }
-        catch (IOException IOE)
-        {
-            IOE.printStackTrace();
-        }
+        String projRepDir = getRepDir();
+        File projReport = new File(projRepDir + project.projectID + "_report.txt");
+        projReport.createNewFile();
+        FileWriter FlWrtr = new FileWriter(projReport);
+        FlWrtr.write(report);
+        FlWrtr.close();
+        System.out.println("Project report has been saved in: " + getRepDir());
     }
 
     public void createProject(String name, boolean customerProject, String startWeek, String endWeek) throws OperationNotAllowedException
@@ -159,14 +165,28 @@ public class TimeManager
 
     public boolean projectExists(String name)
     {
+        boolean projExists = false;
         for (Project p : projectList)
         {
             if (p.name.equals(name))
             {
-                return true;
+                projExists = true;
             }
         }
-        return false;
+        return projExists;
+    }
+
+    public boolean projectExists(int projID)
+    {
+        boolean projExists = false;
+        for (Project p : projectList)
+        {
+            if (p.projectID == projID)
+            {
+                projExists = true;
+            }
+        }
+        return projExists;
     }
 
     public Project getProject(int projectID) throws OperationNotAllowedException
@@ -178,19 +198,25 @@ public class TimeManager
                 return p;
             }
         }
+        System.out.println("Project not exist test");
         throw new OperationNotAllowedException("Project does not exist");
     }
 
     public Project getProject(String projectName) throws OperationNotAllowedException
     {
+        Project proj = null;
         for (Project p : projectList)
         {
             if (p.name.equals(projectName))
             {
-                return p;
+                proj = p;
             }
         }
-        throw new OperationNotAllowedException("Project does not exist");
+        if (proj == null)
+        {
+            throw new OperationNotAllowedException("Project does not exist");
+        }
+        return proj;
     }
 
     public void changeEndWeek(String endWeek, String activityName, int projectID) throws OperationNotAllowedException
@@ -215,14 +241,26 @@ public class TimeManager
                 }
             }
         }
-        if (activity == null)
-        {
-            throw new OperationNotAllowedException("Activity does not exist");
-        }
+
         activity.endWeek = LocalDate.parse(endWeek + "-7", format);
+
         if (activity.endWeek.isAfter(getProject(activity.projectID).endWeek))
         {
             getProject(activity.projectID).endWeek = activity.endWeek;
         }
+    }
+
+    public boolean checkDateFormat(String date) throws OperationNotAllowedException
+    {
+        try
+        {
+            format = DateTimeFormatter.ofPattern("YYYY-ww-e");
+            LocalDate.parse(date + "-7", format);
+        }
+        catch(DateTimeParseException DTPE)
+        {
+            throw new OperationNotAllowedException("Wrong date format");
+        }
+        return true;
     }
 }
