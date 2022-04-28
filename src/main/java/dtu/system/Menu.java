@@ -5,6 +5,7 @@ import java.nio.file.Paths;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.*;
 import java.io.*;
 
@@ -55,8 +56,13 @@ public class Menu extends TimeManager
 
     public Menu()
     {
-        int userIn = 0;
+        mainMenu();
+    }
+
+    public void mainMenu()
+    {
         menuList();
+        int userIn = 0;
         while (true)
         {
 
@@ -92,7 +98,7 @@ public class Menu extends TimeManager
      * 5. View Free Employees
      * 6. View report list
      * 7. Create developer
-     * 8. TODO: Edit project parameters
+     * 8. Edit project parameters
      * 9. TODO: Add project manager
      * 0. Close system
      */
@@ -171,7 +177,7 @@ public class Menu extends TimeManager
             IE.printStackTrace();
         }
         clearScreen();
-        menuList();
+        mainMenu();
     }
 
     public void case2(int i)
@@ -183,7 +189,7 @@ public class Menu extends TimeManager
         clearScreen();
         if (i == 1)
         {
-            menuList();
+            mainMenu();
         }
         else
         {
@@ -193,7 +199,7 @@ public class Menu extends TimeManager
             }
             else
             {
-                menuList();
+                mainMenu();
             }
         }
     }
@@ -231,7 +237,7 @@ public class Menu extends TimeManager
             IE.printStackTrace();
         }
         clearScreen();
-        menuList();
+        mainMenu();
     }
 
     public void case4()
@@ -299,7 +305,7 @@ public class Menu extends TimeManager
             throw new RuntimeException(IE);
         }
         clearScreen();
-        menuList();
+        mainMenu();
     }
 
     public void case5 ()
@@ -323,7 +329,7 @@ public class Menu extends TimeManager
         sc.next();
         clearScreen();
 
-        menuList();
+        mainMenu();
     }
 
     public void case6()
@@ -377,8 +383,12 @@ public class Menu extends TimeManager
     public void case7()
     {
         sc = new Scanner(System.in);
-        println("New developer:");
-        println("Initials:");
+        println("Please enter the initials of the new developer. To return to the main menu, press \"x\" and then the enter key");
+        String input = sc.next();
+        if (input.equalsIgnoreCase("x"))
+        {
+            mainMenu();
+        }
         String initials = sc.next();
         println();
         try
@@ -404,8 +414,12 @@ public class Menu extends TimeManager
     {
         int projID = 0;
         sc = new Scanner(System.in);
-        println("Please enter the ID of the project that should be edited");
+        println("Please enter the ID of the project that should be edited. To return to the main menu, press \"x\" and then the enter key");
         String input = sc.next();
+        if (input.equalsIgnoreCase("x"))
+        {
+            mainMenu();
+        }
         Project p = null;
         try
         {
@@ -446,19 +460,19 @@ public class Menu extends TimeManager
         println("Project " + projID + " has the following editable parameters:");
         println();
         println("1. Project name: " + p.name);
-        println("2. Start week: " + p.startWeek);
-        println("3. End week: " + p.endWeek);
-        println("4. Customer/Internal project: " + projType);
+        println("2. End week: " + p.endWeek);
+        println("3. Customer/Internal project: " + projType);
+        println("4. Return to main menu");
         println();
         println("Please choose a parameter that should be edited by entering the corresponding menu index");
         sc = new Scanner(System.in);
         int inp = sc.nextInt();
         switch (inp)
         {
-            case 1 -> case8_1();
-            case 2 -> case8_2();
-            case 3 -> case8_3();
-            case 4 -> case8_4();
+            case 1 -> case8_1(p);
+            case 2 -> case8_2(p);
+            case 3 -> case8_3(p);
+            case 4 -> mainMenu();
             default ->
             {
                 println("Invalid input: please try again");
@@ -468,25 +482,76 @@ public class Menu extends TimeManager
         }
     }
 
-    public void case8_1()
+    public void case8_1(Project p)
     {
         println();
         println("Please enter the new name of the project. To cancel this action, press \"x\" and then the enter key");
+        sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        if (input.equalsIgnoreCase("x"))
+        {
+            case8();
+        }
+        println(p.setName(input));
+        mainMenu();
     }
 
-    public void case8_2()
+    public void case8_2(Project p)
     {
-
+        println("Please enter the new end week of the project (format it yyyy-ww). \r\n To cancel this action, press \"x\" and then the enter key");
+        sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        if (input.equalsIgnoreCase("x"))
+        {
+            case8();
+        }
+        try
+        {
+            p.changeProjectEndWeek(input);
+        }
+        catch(DateTimeParseException DTPE)
+        {
+            println("Wrong format of week. Try again.");
+            case8_2(p);
+        }
     }
 
-    public void case8_3()
+    public void case8_3(Project p)
     {
-
+        println("Please enter the new type of the project (Customer/Internal). \r\n To cancel this action, press \"x\" and then the enter key");
+        println("Current project type is: " + projType(p));
+        sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        if (input.equalsIgnoreCase("x"))
+        {
+            case8();
+        }
+        else if (input.equalsIgnoreCase("Customer Project"))
+        {
+            p.customerProject = true;
+            println("New project type is: " + projType(p));
+            mainMenu();
+        }
+        else if (input.equalsIgnoreCase("Internal Project"))
+        {
+            p.customerProject = false;
+            println("New project type is: " + projType(p));
+            mainMenu();
+        }
+        else
+        {
+            println("Wrong input. Please try again.");
+            case8();
+        }
     }
 
-    public void case8_4()
+    public String projType(Project p)
     {
-
+        if (p.customerProject)
+        {
+            return "Customer Project";
+        }
+        return "Internal Project";
     }
 
     public int viewProjects()

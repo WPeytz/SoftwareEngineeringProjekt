@@ -136,9 +136,15 @@ public class Project
         }
     }
 
-    public String getName ()
+    public String getName()
     {
         return name;
+    }
+
+    public String setName(String name)
+    {
+        this.name = name;
+        return "The new name of the project is: " + this.name;
     }
 
 }
