@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.time.*;
 
-public class Developer
+public class  Developer
 {
     public String initials;
     ArrayList<Activity> activities;
