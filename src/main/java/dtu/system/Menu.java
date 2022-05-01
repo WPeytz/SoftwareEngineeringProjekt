@@ -73,13 +73,14 @@ public class Menu extends TimeManager
             switch (userIn)
             {
                 case 1 -> case1();
-                case 2 -> case2(1);
+                case 2 -> case2(0);
                 case 3 -> case3();
                 case 4 -> case4();
                 case 5 -> case5();
                 case 6 -> case6();
                 case 7 -> case7();
-                case 8 -> case2(2);
+                case 8 -> case2(0);
+                case 9 -> case2(1);
                 case 0 -> System.exit(0);
                 default ->
                 {
@@ -105,7 +106,6 @@ public class Menu extends TimeManager
 
     public void menuList ()
     {
-
         println();
         println("1. Create Project");
         println("2. View Projects");
@@ -115,6 +115,7 @@ public class Menu extends TimeManager
         println("6. View reports");
         println("7. Create new developer");
         println("8. edit a project");
+        println("9. Add or change manager for a project");
         println("0. Close system");
     }
 
@@ -180,27 +181,38 @@ public class Menu extends TimeManager
         mainMenu();
     }
 
-    public void case2(int i)
+    public void case2(int j)
     {
         clearScreen();
-        viewProjects();
+        int i = viewProjects();
         println("Press enter to continue");
-        sc.next();
+        try
+        {
+            System.in.read();
+        }
+        catch (IOException IOE)
+        {
+            IOE.printStackTrace();
+        }
         clearScreen();
         if (i == 1)
         {
             mainMenu();
         }
-        else
+        else if(i == 2)
         {
-            if(viewProjects() == 2)
+            if (j == 1)
             {
-                case8();
+                case9();
             }
             else
             {
-                mainMenu();
+                case8();
             }
+        }
+        else
+        {
+            mainMenu();
         }
     }
 
@@ -308,7 +320,7 @@ public class Menu extends TimeManager
         mainMenu();
     }
 
-    public void case5 ()
+    public void case5()
     {
         clearScreen();
 
@@ -433,7 +445,7 @@ public class Menu extends TimeManager
         catch(NumberFormatException NFE)
         {
             println("Invalid input, please try again.");
-            case2(2);
+            case2(0);
         }
         catch(OperationNotAllowedException ONAE)
         {
@@ -543,6 +555,11 @@ public class Menu extends TimeManager
             println("Wrong input. Please try again.");
             case8();
         }
+    }
+
+    public void case9()
+    {
+
     }
 
     public String projType(Project p)
