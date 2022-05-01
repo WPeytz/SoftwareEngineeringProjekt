@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_29__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_36__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
-    </list>
+    <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3" />
     <list id="aa1a8e99-bbab-481b-a612-5fa9c754b386" name="Changes by aleks" comment="Changes by aleks" />
     <list id="84ae9332-c244-40bd-b739-9a1eda0f39f2" name="Changes by asbg2" comment="Changes by asbg2" />
     <list id="138d5bff-0662-4459-b46b-4b120c207ece" name="Changes by niko2" comment="Changes by niko2" />
     <list id="f5be4745-d31f-4837-aece-c57ac94baa03" name="Changes by Nikolai" comment="" />
-    <list id="91d8a79f-9c99-4a20-b6bd-edeec3651c89" name="Changes by williampeytz" comment="Changes by williampeytz" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,11 +229,7 @@
       <workItem from="1650871292988" duration="848000" />
       <workItem from="1650872173570" duration="443000" />
       <workItem from="1650872637445" duration="146000" />
-      <workItem from="1650872823792" duration="25798000" />
-      <workItem from="1650964402338" duration="322000" />
-      <workItem from="1650964942542" duration="1307000" />
-      <workItem from="1650970907911" duration="349000" />
-      <workItem from="1651147479471" duration="1022000" />
+      <workItem from="1650872823792" duration="25983000" />
     </task>
     <task id="LOCAL-00007" summary="24/3">
       <created>1649069156648</created>
@@ -425,7 +413,28 @@
       <option name="project" value="LOCAL" />
       <updated>1650743737746</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="24/3">
+      <created>1650900570300</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1650900570300</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Changes by aleks">
+      <created>1650900650071</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1650900650071</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Changes by asbg2">
+      <created>1650900665473</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1650900665473</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,26 +470,26 @@
     <MESSAGE value="11/04" />
     <MESSAGE value="18/04" />
     <MESSAGE value="Changes by Alex" />
+    <MESSAGE value="Changes by williampeytz" />
     <MESSAGE value="24/3" />
     <MESSAGE value="Changes by aleks" />
     <MESSAGE value="Changes by asbg2" />
-    <MESSAGE value="Changes by williampeytz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by williampeytz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by asbg2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1649077313869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dtu.system.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$CucumberTest.ic" NAME="CucumberTest Coverage Results" MODIFIED="1650893619795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dtu.system.Activity</FILTER>
       <FILTER>dtu.system.Developer</FILTER>
       <FILTER>dtu.system.OperationNotAllowedException</FILTER>
       <FILTER>dtu.system.Project</FILTER>
       <FILTER>dtu.system.TimeManager</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1649077313869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dtu.system.*</FILTER>
     </SUITE>
   </component>
 </project>
