@@ -133,7 +133,7 @@ public class Menu extends TimeManager
         println("0. Close system");
     }
 
-    public void case1()
+    public void createProjectCase()
     {
         //clearScreen();
         println("Project name must not contain any white spaces.");
@@ -149,7 +149,7 @@ public class Menu extends TimeManager
         if (!(extProject.equals("y") || extProject.equals("n")))
         {
             println("Wrong input");
-            case1();
+            createProjectCase();
         }
         println();
         boolean isExtProject = extProject.contains("y");
@@ -163,7 +163,7 @@ public class Menu extends TimeManager
         catch (OperationNotAllowedException ONAE)
         {
             println(ONAE.getMessage() + " please try again");
-            case1();
+            createProjectCase();
         }
         println();
         System.out.print("End Date (yyyy-ww): ");
@@ -175,7 +175,7 @@ public class Menu extends TimeManager
         catch (OperationNotAllowedException ONAE)
         {
             println(ONAE.getMessage() + " please try again");
-            case1();
+            createProjectCase();
         }
         println();
         try
@@ -198,7 +198,7 @@ public class Menu extends TimeManager
         mainMenu();
     }
 
-    public void case2(int j)
+    public void viewProjectsCase(int j)
     {
         clearScreen();
         int i = viewProjects();
@@ -216,7 +216,7 @@ public class Menu extends TimeManager
         {
             if (j == 1)
             {
-                case9();
+                changeProjectManagerCase();
             }
             else if (j==2)
             {
@@ -224,7 +224,7 @@ public class Menu extends TimeManager
             }
             else
             {
-                case8();
+                editProjectCase();
             }
         }
         else
@@ -233,7 +233,7 @@ public class Menu extends TimeManager
         }
     }
 
-    public void case3()
+    public void createReportCase()
     {
         clearScreen();
         System.out.print("Enter Project ID: ");
@@ -269,7 +269,7 @@ public class Menu extends TimeManager
         mainMenu();
     }
 
-    public void case4()
+    public void createActivityCase()
     {
         System.out.print("Project ID (\"0\" if external activity): ");
         sc = new Scanner(System.in);
@@ -285,7 +285,7 @@ public class Menu extends TimeManager
             if (projectID != 0 && !getProject(projectID).isProjectManager(initials))
             {
                 println("Credentials do not match.");
-                return;
+                mainMenu();
             }
         }
         catch (OperationNotAllowedException ONAE)
@@ -341,7 +341,7 @@ public class Menu extends TimeManager
         mainMenu();
     }
 
-    public void case5()
+    public void viewFreeEmployeesCase()
     {
         clearScreen();
 
@@ -357,12 +357,12 @@ public class Menu extends TimeManager
         }
         catch (OperationNotAllowedException ONAE)
         {
-            throw new RuntimeException(ONAE);
+            println(ONAE.getMessage());
         }
         mainMenu();
     }
 
-    public void case6()
+    public void viewReportsCase()
     {
         File RepDirs = new File(getRepDir());
         String[] ReportList = RepDirs.list();
@@ -421,7 +421,7 @@ public class Menu extends TimeManager
         }
     }
 
-    public void case7()
+    public void createNewDeveloperCase()
     {
         sc = new Scanner(System.in);
         println("Please enter the initials of the new developer. To return to the main menu, press \"x\" and then the enter key");
@@ -439,12 +439,12 @@ public class Menu extends TimeManager
         }
         catch (OperationNotAllowedException ONAE)
         {
-            ONAE.getMessage();
-            case7();
+            println(ONAE.getMessage());
+            createNewDeveloperCase();
         }
     }
 
-    public void case8()
+    public void editProjectCase()
     {
         int projID = 0;
         sc = new Scanner(System.in);
@@ -467,19 +467,19 @@ public class Menu extends TimeManager
         catch(NumberFormatException NFE)
         {
             println("Invalid input, please try again.");
-            case2(0);
+            viewProjectsCase(0);
         }
         catch(OperationNotAllowedException ONAE)
         {
             println(ONAE.getMessage());
             viewProjects();
-            case8();
+            editProjectCase();
         }
 
-        case8_menu(p,projID);
+        editProjectMenu(p,projID);
     }
 
-    public void case8_menu(Project p, int projID)
+    public void editProjectMenu(Project p, int projID)
     {
         String projType;
         if (p.customerProject)
@@ -503,20 +503,20 @@ public class Menu extends TimeManager
         int inp = sc.nextInt();
         switch (inp)
         {
-            case 1 -> case8_1(p);
-            case 2 -> case8_2(p);
-            case 3 -> case8_3(p);
+            case 1 -> editProjectName(p);
+            case 2 -> editProjectEndWeek(p);
+            case 3 -> editProjectType(p);
             case 4 -> mainMenu();
             default ->
             {
                 println("Invalid input: please try again");
                 println();
-                case8_menu(p,projID);
+                editProjectMenu(p,projID);
             }
         }
     }
 
-    public void case8_1(Project p)
+    public void editProjectName(Project p)
     {
         println();
         println("Please enter the new name of the project. To cancel this action, press \"x\" and then the enter key");
@@ -524,41 +524,43 @@ public class Menu extends TimeManager
         String input = sc.nextLine();
         if (input.equalsIgnoreCase("x"))
         {
-            case8();
+            editProjectCase();
         }
         println(p.setName(input));
         mainMenu();
     }
 
-    public void case8_2(Project p)
+    public void editProjectEndWeek(Project p)
     {
         println("Please enter the new end week of the project (format it yyyy-ww). \r\n To cancel this action, press \"x\" and then the enter key");
         sc = new Scanner(System.in);
         String input = sc.next();
         if (input.equalsIgnoreCase("x"))
         {
-            case8();
+            editProjectCase();
         }
         try
         {
             p.changeProjectEndWeek(input);
+            println("Project end week changed to: " + input);
+            mainMenu();
         }
         catch(DateTimeParseException DTPE)
         {
             println("Wrong format of week. Try again.");
-            case8_2(p);
+            editProjectEndWeek(p);
         }
     }
 
-    public void case8_3(Project p)
+    public void editProjectType(Project p)
     {
-        println("Please enter the new type of the project (Customer/Internal). \r\n To cancel this action, press \"x\" and then the enter key");
+        println("Please enter the new type of the project (Customer/Internal). \r\nTo cancel this action, press \"x\" and then the enter key");
         println("Current project type is: " + projType(p));
         sc = new Scanner(System.in);
         String input = sc.next();
         if (input.equalsIgnoreCase("x"))
         {
-            case8();
+            editProjectCase();
         }
         else if (input.equalsIgnoreCase("Customer"))
         {
@@ -575,11 +577,11 @@ public class Menu extends TimeManager
         else
         {
             println("Wrong input. Please try again.");
-            case8();
+            editProjectCase();
         }
     }
 
-    public void case9()
+    public void changeProjectManagerCase()
     {
         int projID = 0;
         sc = new Scanner(System.in);
