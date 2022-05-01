@@ -83,7 +83,7 @@ public class TimeManager
         Scanner sc = new Scanner(file);
         while (sc.hasNextLine())
         {
-            sb.append(sc.nextLine());
+            sb.append(sc.nextLine()+"\r\n");
         }
 
         return sb.toString();

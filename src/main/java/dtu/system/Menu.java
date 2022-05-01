@@ -1,7 +1,6 @@
 package dtu.system;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import io.cucumber.java.en_old.Ac;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -72,20 +71,25 @@ public class Menu extends TimeManager
             }
             switch (userIn)
             {
-                case 1 -> case1();
-                case 2 -> case2(0);
-                case 3 -> case3();
-                case 4 -> case4();
-                case 5 -> case5();
-                case 6 -> case6();
-                case 7 -> case7();
-                case 8 -> case2(0);
-                case 9 -> case2(1);
+                case 1 -> createProjectCase();
+                case 2 -> viewProjectsCase(2);
+                case 3 -> createReportCase();
+                case 4 -> createActivityCase();
+                case 5 -> viewFreeEmployeesCase();
+                case 6 -> viewReportsCase();
+                case 7 -> createNewDeveloperCase();
+                case 8 -> viewProjectsCase(0);
+                case 9 -> viewProjectsCase(1);
+                case 10 -> addDeveloperToProjectCase();
+                case 11 -> addDeveloperToActivityCase();
+                case 12 -> editActivityCase();
+                case 13 -> registerTimeCase();
+                case 14 -> requestAssistanceCase();
                 case 0 -> System.exit(0);
                 default ->
                 {
-                    println("Undefined input. The program will close...");
-                    System.exit(69);
+                    println("Undefined input. Try again");
+                    mainMenu();
                 }
             }
         }
@@ -100,7 +104,12 @@ public class Menu extends TimeManager
      * 6. View report list
      * 7. Create developer
      * 8. Edit project parameters
-     * 9. TODO: Add project manager
+     * 9. Add project manager
+     * 10. Add developer to project
+     * 11. Add developer to activity
+     * TODO: 12. Edit activity
+     * TODO: 13. Register time
+     * TODO: 14. Request assistance
      * 0. Close system
      */
 
@@ -114,20 +123,28 @@ public class Menu extends TimeManager
         println("5. View Free Employees");
         println("6. View reports");
         println("7. Create new developer");
-        println("8. edit a project");
+        println("8. Edit a project");
         println("9. Add or change manager for a project");
+        println("10. Add developer to project");
+        println("11. Add developer to activity");
+        println("12. Edit activity");
+        println("13. Register Time");
+        println("14. Request assistance");
         println("0. Close system");
     }
 
     public void case1()
     {
         //clearScreen();
-        System.out.print("Project Name: ");
+        println("Project name must not contain any white spaces.");
+        System.out.print("Please enter the desired project name: ");
+        sc = new Scanner(System.in);
         String projectName = sc.next();
         println();
         System.out.print("External Project? y/n: ");
-        println();
+        sc = new Scanner(System.in);
         String extProjectInput = sc.next();
+        println();
         String extProject = extProjectInput.substring(0,1);
         if (!(extProject.equals("y") || extProject.equals("n")))
         {
@@ -195,15 +212,15 @@ public class Menu extends TimeManager
             IOE.printStackTrace();
         }
         clearScreen();
-        if (i == 1)
-        {
-            mainMenu();
-        }
-        else if(i == 2)
+        if(i == 2)
         {
             if (j == 1)
             {
                 case9();
+            }
+            else if (j==2)
+            {
+                mainMenu();
             }
             else
             {
@@ -224,7 +241,7 @@ public class Menu extends TimeManager
         println();
 
         System.out.print("Enter Initials: ");
-        String initials = sc.nextLine();
+        String initials = sc.next();
         println();
 
         try
@@ -254,15 +271,14 @@ public class Menu extends TimeManager
 
     public void case4()
     {
-        clearScreen();
-
-        //createActivity();
-        System.out.print("Project ID (\"0\" if external activity: ");
+        System.out.print("Project ID (\"0\" if external activity): ");
+        sc = new Scanner(System.in);
         int projectID = sc.nextInt();
         println();
 
-        System.out.print("Initials: ");
-        String initials = sc.nextLine();
+        System.out.print("Please enter your initials: ");
+        sc = new Scanner(System.in);
+        String initials = sc.next();
         println();
         try
         {
@@ -275,20 +291,25 @@ public class Menu extends TimeManager
         catch (OperationNotAllowedException ONAE)
         {
             println(ONAE.getMessage());
+            mainMenu();
         }
         System.out.print("Activity Name: ");
-        String activityName = sc.nextLine();
+        sc = new Scanner(System.in);
+        String activityName = sc.next();
         println();
 
         System.out.print("Time Budget: ");
+        sc = new Scanner(System.in);
         double timeBudget = sc.nextDouble();
         println();
 
         System.out.print("Start Date (yyyy-ww): ");
-        String startDate = sc.nextLine();
+        sc = new Scanner(System.in);
+        String startDate = sc.next();
         println();
         System.out.print("End Date (yyyy-ww): ");
-        String endDate = sc.nextLine();
+        sc = new Scanner(System.in);
+        String endDate = sc.next();
         println();
 
         if (projectID == 0)
@@ -325,10 +346,10 @@ public class Menu extends TimeManager
         clearScreen();
 
         System.out.print("View free employees in the period (yyyy-ww): ");
-        startWeek = sc.nextLine();
+        startWeek = sc.next();
         println();
         System.out.print("to (yyyy-ww): ");
-        endWeek = sc.nextLine();
+        endWeek = sc.next();
         println();
         try
         {
@@ -338,9 +359,6 @@ public class Menu extends TimeManager
         {
             throw new RuntimeException(ONAE);
         }
-        sc.next();
-        clearScreen();
-
         mainMenu();
     }
 
@@ -384,10 +402,21 @@ public class Menu extends TimeManager
             try
             {
                 println(getReportFromProjectID(id));
+                println("Press enter to return to the main menu");
+                try
+                {
+                    System.in.read();
+                    mainMenu();
+                }
+                catch (IOException IOE)
+                {
+                    IOE.printStackTrace();
+                }
             }
             catch (OperationNotAllowedException | FileNotFoundException EX)
             {
                 println(EX.getMessage());
+                mainMenu();
             }
         }
     }
@@ -396,24 +425,17 @@ public class Menu extends TimeManager
     {
         sc = new Scanner(System.in);
         println("Please enter the initials of the new developer. To return to the main menu, press \"x\" and then the enter key");
-        String input = sc.next();
-        if (input.equalsIgnoreCase("x"))
+        String initials = sc.next();
+        if (initials.equalsIgnoreCase("x"))
         {
             mainMenu();
         }
-        String initials = sc.next();
         println();
         try
         {
             developerList.add(new Developer(initials));
-            if (developerList.contains(getDeveloper(initials)))
-            {
-                println("Developer \"" + initials + "\" created");
-            }
-            else
-            {
-                throw new OperationNotAllowedException("An error occurred in adding developer");
-            }
+            println("Developer \"" + initials + "\" created");
+            mainMenu();
         }
         catch (OperationNotAllowedException ONAE)
         {
@@ -512,7 +534,7 @@ public class Menu extends TimeManager
     {
         println("Please enter the new end week of the project (format it yyyy-ww). \r\n To cancel this action, press \"x\" and then the enter key");
         sc = new Scanner(System.in);
-        String input = sc.nextLine();
+        String input = sc.next();
         if (input.equalsIgnoreCase("x"))
         {
             case8();
@@ -533,18 +555,18 @@ public class Menu extends TimeManager
         println("Please enter the new type of the project (Customer/Internal). \r\n To cancel this action, press \"x\" and then the enter key");
         println("Current project type is: " + projType(p));
         sc = new Scanner(System.in);
-        String input = sc.nextLine();
+        String input = sc.next();
         if (input.equalsIgnoreCase("x"))
         {
             case8();
         }
-        else if (input.equalsIgnoreCase("Customer Project"))
+        else if (input.equalsIgnoreCase("Customer"))
         {
             p.customerProject = true;
             println("New project type is: " + projType(p));
             mainMenu();
         }
-        else if (input.equalsIgnoreCase("Internal Project"))
+        else if (input.equalsIgnoreCase("Internal"))
         {
             p.customerProject = false;
             println("New project type is: " + projType(p));
@@ -559,7 +581,212 @@ public class Menu extends TimeManager
 
     public void case9()
     {
+        int projID = 0;
+        sc = new Scanner(System.in);
+        println("Please enter the ID of the project you would like to add a project manager to. To return to the main menu, press \"x\" and then the enter key");
+        String input = sc.next();
+        if (input.equalsIgnoreCase("x"))
+        {
+            mainMenu();
+        }
+        Project p = null;
+        try
+        {
+            projID = Integer.parseInt(input);
+            if(!projectExists(projID))
+            {
+                throw new OperationNotAllowedException("Project with ID \"" + projID + "\" does not exist. Please try again");
+            }
+            p = getProject(projID);
+        }
+        catch(NumberFormatException NFE)
+        {
+            println("Invalid input, please try again.");
+            viewProjectsCase(0);
+        }
+        catch(OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+            viewProjects();
+            editProjectCase();
+        }
 
+        int i = viewEmployees();
+        if (i==2)
+        {
+            mainMenu();
+        }
+        println("Please enter the initials of the developer you would like to make the project manager of project " + p.name);
+        sc = new Scanner(System.in);
+        String projMgr = sc.nextLine();
+        try
+        {
+            p.setProjectManager(getDeveloper(projMgr.toLowerCase()));
+            println("Developer " + p.projectManager.initials + " is now the project manager for project " + p.name);
+            mainMenu();
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+            println("Returning to main menu...");
+            mainMenu();
+        }
+    }
+
+    public void addDeveloperToProjectCase()
+    {
+        int projID = 0;
+        sc = new Scanner(System.in);
+        println("Please enter the ID of the project you would like to assign a developer to. To return to the main menu, press \"x\" and then the enter key");
+        String input = sc.next();
+        if (input.equalsIgnoreCase("x"))
+        {
+            mainMenu();
+        }
+        Project p = null;
+        try
+        {
+            projID = Integer.parseInt(input);
+            if(!projectExists(projID))
+            {
+                throw new OperationNotAllowedException("Project with ID \"" + projID + "\" does not exist. Please try again");
+            }
+            p = getProject(projID);
+        }
+        catch(NumberFormatException NFE)
+        {
+            println("Invalid input, please try again.");
+            viewProjectsCase(0);
+        }
+        catch(OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+            viewProjects();
+            editProjectCase();
+        }
+
+        int i = viewEmployees();
+        if (i==2)
+        {
+            mainMenu();
+        }
+        println("Please enter the initials of the developer you would like to assign to the project " + p.name);
+        sc = new Scanner(System.in);
+        String developer = sc.nextLine();
+        try
+        {
+            p.setProjectManager(getDeveloper(developer.toLowerCase()));
+            println("Developer " + p.projectManager.initials + " is now assigned to project " + p.name);
+            mainMenu();
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+            println("Returning to main menu...");
+            mainMenu();
+        }
+    }
+
+    public void addDeveloperToActivityCase()
+    {
+        int projID = 0;
+        sc = new Scanner(System.in);
+        println("Please enter the ID of the project, where the activity you would like to assign a developer to. To return to the main menu, press \"x\" and then the enter key");
+        String input = sc.next();
+        if (input.equalsIgnoreCase("x"))
+        {
+            mainMenu();
+        }
+        Project p = null;
+        try
+        {
+            projID = Integer.parseInt(input);
+            if(!projectExists(projID))
+            {
+                throw new OperationNotAllowedException("Project with ID \"" + projID + "\" does not exist. Please try again");
+            }
+            p = getProject(projID);
+        }
+        catch(NumberFormatException NFE)
+        {
+            println("Invalid input, please try again.");
+            viewProjectsCase(0);
+        }
+        catch(OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+            viewProjects();
+            editProjectCase();
+        }
+
+        viewActivities(p);
+
+        int actID = 0;
+        sc = new Scanner(System.in);
+        println("Please enter the number of the desired activity (as shown in the list above), where the activity you would like to assign a developer to. To return to the main menu, press \"x\" and then the enter key");
+        String inputAct = sc.next();
+        if (inputAct.equalsIgnoreCase("x"))
+        {
+            mainMenu();
+        }
+        Activity a = null;
+        try
+        {
+            actID = Integer.parseInt(inputAct);
+            if(!p.activities.contains(p.activities.get(actID-1)))
+            {
+                throw new OperationNotAllowedException("Given activity does not exist");
+            }
+            a = p.activities.get(actID-1);
+        }
+        catch(NumberFormatException NFE)
+        {
+            println("Invalid input, please try again.");
+            viewProjectsCase(0);
+        }
+        catch(OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+            viewProjects();
+            editProjectCase();
+        }
+
+        int i = viewEmployees();
+        if (i==2)
+        {
+            mainMenu();
+        }
+        println("Please enter the initials of the developer you would like to assign to the activity " + a.name);
+        sc = new Scanner(System.in);
+        String developer = sc.next();
+        try
+        {
+            a.addWorkingDev(getDeveloper(developer));
+            println("Developer " + getDeveloper(developer).initials + " is now assigned to activity " + a.name);
+            mainMenu();
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+            println("Returning to main menu...");
+            mainMenu();
+        }
+    }
+    public void editActivityCase()
+    {
+        println("WIP. Returning to main menu...");
+        mainMenu();
+    }
+    public void registerTimeCase()
+    {
+        println("WIP. Returning to main menu...");
+        mainMenu();
+    }
+
+    public void requestAssistanceCase()
+    {
+        println("WIP. Returning to main menu...");
+        mainMenu();
     }
 
     public String projType(Project p)
@@ -575,7 +802,7 @@ public class Menu extends TimeManager
     {
         if(projectList.isEmpty())
         {
-            println("No projects are created yet");
+            println("No projects are created yet. Returning to the main menu...");
             return 1;
         }
         else
@@ -599,6 +826,43 @@ public class Menu extends TimeManager
         return 2;
     }
 
+    public int viewActivities(Project p)
+    {
+        if(p.activities.isEmpty())
+        {
+            println("No activities are created yet. Returning to the main menu...");
+            mainMenu();
+        }
+        else
+        {
+            int i = 1;
+            println("Activies for project " + p.name);
+            for (Activity a : p.activities)
+            {
+                println(i + ": " +a.name);
+            }
+        }
+        return 2;
+    }
+
+    public int viewEmployees()
+    {
+        if (developerList.isEmpty())
+        {
+            println("There are currently no developers created. Returning to the main menu...");
+            return 2;
+        }
+        else
+        {
+            println("Developers:");
+            for (Developer d : developerList)
+            {
+                println(d.initials);
+            }
+        }
+        return 1;
+    }
+
     public static void clearScreen()
     {
         try
@@ -616,10 +880,20 @@ public class Menu extends TimeManager
 
         for (Developer dev : developerList)
         {
-            if (dev.isFree(LocalDate.parse(startWeek + "-1"), LocalDate.parse(endWeek + "-7")))
+            if (dev.isFree(LocalDate.parse(startWeek + "-1",format), LocalDate.parse(endWeek + "-7",format)))
             {
                 println(dev.initials);
             }
+        }
+        println("Press enter to return to the main menu");
+        try
+        {
+            System.in.read();
+            mainMenu();
+        }
+        catch (IOException IOE)
+        {
+            IOE.printStackTrace();
         }
     }
 }
