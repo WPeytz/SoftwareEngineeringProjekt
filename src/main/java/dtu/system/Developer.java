@@ -32,6 +32,8 @@ public class  Developer
     
     public double registerTimeSpent (Activity activity, String StDt, String EnDt) throws OperationNotAllowedException
     {
+        assert (true);
+        double prevActTime = activity.activityTime();
         if (!activity.workingDevelopers.contains(this))
         {
             throw new OperationNotAllowedException("Developer is not on the activity");
@@ -42,23 +44,20 @@ public class  Developer
         double l = Duration.between(startTime, endTime).toMinutes();
         l = (double) Math.round(l/30)/2;
         activity.timeSpent.add(l);
+        assert (activity.activityTime() > prevActTime && activity.activityTime()-l == prevActTime);
         return l;
     }
 
 
-    public boolean isFree(LocalDate newStartWeek, LocalDate newEndWeek) throws OperationNotAllowedException
-    {
-        for (LocalDate i = newStartWeek; i.isBefore(newEndWeek);i = i.plusWeeks(1))
-        {
+    public boolean isFree(LocalDate newStartWeek, LocalDate newEndWeek) throws OperationNotAllowedException {
+        assert (true); // Precondition
+        for (LocalDate i = newStartWeek; i.isBefore(newEndWeek); i = i.plusWeeks(1)) {
             int activityCount = 0;
-            for (Activity a : activities)
-            {
-                if (activityCount >= 20)
-                {
+            for (Activity a : activities) {
+                if (activityCount >= 20) {
+                    assert (activityCount >=20); // Postcondition
                     throw new OperationNotAllowedException("Developer is not free in the given time period.");
-                }
-                else if ((i.isAfter(a.startWeek)) && (i.isBefore(a.endWeek)))
-                {
+                } else if ((i.isAfter(a.startWeek)) && (i.isBefore(a.endWeek))) {
                     activityCount++;
                 }
             }
