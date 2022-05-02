@@ -22,11 +22,22 @@ public class ChangeEndWeekForAnActivitySteps
     }
 
     @Given("that external activity {string} with start week {string} and end week {string} with time budget {int} exists")
-    public void thatExternalActivityWithStartWeekAndEndWeekWithTimeBudgetExists(String activityName, String startWeek, String endWeek, int timeBudget)
-    {
-        stW = startWeek;
-        edW = endWeek;
-        a = new Activity(activityName,timeBudget,0,startWeek,endWeek);
+    public void thatExternalActivityWithStartWeekAndEndWeekWithTimeBudgetExists(String activityName, String startWeek, String endWeek, int timeBudget) throws OperationNotAllowedException {
+
+        if(manager.checkDateFormat(startWeek) && manager.checkDateFormat(endWeek))
+        {
+            stW = startWeek;
+            edW = endWeek;
+        }
+        if (manager.checkDateFormat(startWeek) && manager.checkDateFormat(endWeek))
+        {
+            a = new Activity(activityName,timeBudget,0,startWeek,endWeek);
+        }
+        else
+        {
+            System.out.println("Error, wrong format of dates");
+            throw new OperationNotAllowedException("Error, wrong format of dates");
+        }
         manager.extActList.add(a);
     }
 

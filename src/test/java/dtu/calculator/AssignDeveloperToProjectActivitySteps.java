@@ -104,6 +104,9 @@ public class AssignDeveloperToProjectActivitySteps
     {
         try
         {
+            manager.getProject(projectName).activities.
+                    add(new Activity("test",10,manager.
+                            getProject(projectName).projectID,"2022-01","2022-10"));
             manager.getProject(projectName).getActivity(activity).addWorkingDev(manager.getDeveloper(dev));
         }
         catch (OperationNotAllowedException ONAE)
@@ -114,7 +117,7 @@ public class AssignDeveloperToProjectActivitySteps
     @Then("the errormessage {string}")
     public void theErrormessage(String err)
     {
-            assertEquals(err,errorMessage);
+        assertEquals(err,errorMessage);
     }
 }
 

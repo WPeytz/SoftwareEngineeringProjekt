@@ -49,6 +49,8 @@ public class CreateProjectSteps {
         try
         {
             manager.createProject(projName,custProj.equalsIgnoreCase("customer"), stWeek, enWeek);
+            Project p = manager.getProject(projName);
+            p.setName(projName);
         }
         catch (OperationNotAllowedException ONAE)
         {

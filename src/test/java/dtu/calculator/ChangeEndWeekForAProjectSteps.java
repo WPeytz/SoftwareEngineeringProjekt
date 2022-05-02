@@ -71,12 +71,40 @@ public class ChangeEndWeekForAProjectSteps
         }
         catch (OperationNotAllowedException ONAE)
         {
+            try
+            {
+                manager.getProject(220010).changeProjectEndWeek(newWeek);
+            }
+            catch (OperationNotAllowedException ONAE2)
+            {
+                if (!manager.projectExists(220010))
+                {
+                    errorMessage = ONAE2.getMessage();
+                }
+            }
+        }
+    }
+
+    @Given("that the developer {string} by accident changes end week to {string}, instead of {string}, from {string} for project {string}")
+    public void thatTheDeveloperByAccidentChangesEndWeekToInsteadOfFromForProject(String dev, String newWeek, String correctWeek, String oldWeek, String projName) {
+        try
+        {
+            manager.checkDateFormat(newWeek);
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
             errorMessage = ONAE.getMessage();
         }
     }
 
     @Then("the errormessage {string} is thrown")
     public void theErrormessageIsThrown(String errMsg)
+    {
+        assertEquals(errorMessage,errMsg);
+    }
+
+    @Then("an error with errormessage {string} is thrown")
+    public void anErrorWithErrormessageIsThrown(String errMsg)
     {
         assertEquals(errorMessage,errMsg);
     }

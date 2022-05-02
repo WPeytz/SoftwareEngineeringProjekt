@@ -92,19 +92,6 @@ public class TimeManager
     public String readReportFromName(String projName) throws FileNotFoundException, OperationNotAllowedException
     {
         return (getReportFromProjectID(getProject(projName).getProjectID()));
-        /*
-        String text = "";
-        var path = getFilePath(projName);
-        File file = new File(String.valueOf(path));
-        Scanner sc = new Scanner(file);
-        StringBuilder stringConc = new StringBuilder();
-        while (sc.hasNextLine())
-        {
-            stringConc.append(sc.nextLine() + "\n\r");
-        }
-        text = stringConc.toString();
-        return text;
-         */
     }
 
     public String getRepDir()
@@ -191,15 +178,19 @@ public class TimeManager
 
     public Project getProject(int projectID) throws OperationNotAllowedException
     {
+        Project proj = null;
         for (Project p : projectList)
         {
             if (p.projectID == projectID)
             {
-                return p;
+                proj = p;
             }
         }
-        System.out.println("Project not exist test");
-        throw new OperationNotAllowedException("Project does not exist");
+        if (proj == null)
+        {
+            throw new OperationNotAllowedException("Project does not exist");
+        }
+        return proj;
     }
 
     public Project getProject(String projectName) throws OperationNotAllowedException
@@ -214,7 +205,7 @@ public class TimeManager
         }
         if (proj == null)
         {
-            throw new OperationNotAllowedException("Project does not exist");
+            throw new OperationNotAllowedException("Project does NOT exist");
         }
         return proj;
     }
@@ -262,5 +253,16 @@ public class TimeManager
             throw new OperationNotAllowedException("Wrong date format");
         }
         return true;
+    }
+
+    public LocalDate toLocalDate(String date) throws OperationNotAllowedException
+    {
+        LocalDate locDate = null;
+        if(checkDateFormat(date))
+        {
+            format = DateTimeFormatter.ofPattern("YYYY-ww-e");
+            locDate = LocalDate.parse(date + "-7", format);
+        }
+        return locDate;
     }
 }

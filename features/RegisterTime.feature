@@ -21,7 +21,7 @@ Feature: Register Time spent on activity
 		Given that a "customer" project "NEM-ID" with start week "2022-04" and end week "2022-45" exists
 		And the project activity "Debugging" with start week "2022-05" and end week "2022-07" and time budget 20 exists
 		And that the developer "alews" is assigned to the project activity "Debugging" in project ID 220001
-		Then return error message "Invalid amount of initials for developer name. Initials length must be between 1 and 4 (inclusive)"
+		Then return error message "Invalid amount of initials for developer name. Initials length must be between 1 and 4 characters (inclusive)"
 
 	Scenario: Register time for activity on a given date with invalid developer initials
 		Given that a "customer" project "NEM-ID" with start week "2022-04" and end week "2022-45" exists

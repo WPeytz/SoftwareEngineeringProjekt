@@ -32,8 +32,15 @@ public class CreateProjectActivitySteps {
     @And("that the user {string} is the project manager of the project {string}")
     public void thatTheUserIsTheProjectManagerOfTheProject(String init, String project) {
         try {
-            manager.getProject(project).setProjectManager(manager.getDeveloper(init));
-            assertEquals(manager.getProject(project).projectManager.initials, manager.getDeveloper(init).initials);
+            if (manager.projectExists(project))
+            {
+                manager.getProject(project).setProjectManager(manager.getDeveloper(init));
+                assertEquals(manager.getProject(project).projectManager.initials, manager.getDeveloper(init).initials);
+            }
+            else
+            {
+                throw new OperationNotAllowedException("Project does not exist");
+            }
         } catch (OperationNotAllowedException ONAE) {
             errorMessage = ONAE.getMessage();
         }
@@ -42,9 +49,15 @@ public class CreateProjectActivitySteps {
     @Then("the user {string} creates a new project activity {string}, start week {string}, end week {string} and time budget {int} hours for project {string}")
     public void theUserCreatesANewActivityWithTheNameStartWeekToEndWeekToAndTimeBudgetToHours(String ID, String name, String stw, String enw, int tb, String projName) {
         projectName = projName;
-        try {
-            manager.getProject(projName).activities.add(new Activity(name,tb,manager.getProject(projName).projectID,stw,enw));
-        } catch (OperationNotAllowedException ONAE) {
+        try
+        {
+            if (manager.projectExists(manager.getProject(projName).projectID))
+            {
+                manager.getProject(projName).activities.add(new Activity(name, tb, manager.getProject(projName).projectID, stw, enw));
+            }
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
             errorMessage = ONAE.getMessage();
         }
     }

@@ -5,20 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3">
+      <change afterPath="$PROJECT_DIR$/features/WBMethod2.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_29__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_36__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/ChangeEndWeekForAProject.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/ChangeEndWeekForAProject.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/RegisterTime.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/RegisterTime.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/AssignDeveloperToProjectActivitySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/AssignDeveloperToProjectActivitySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/ChangeEndWeekForAProjectSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/ChangeEndWeekForAProjectSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/ChangeEndWeekForAnActivitySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/ChangeEndWeekForAnActivitySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectActivitySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectActivitySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectSteps.java" afterDir="false" />
     </list>
     <list id="aa1a8e99-bbab-481b-a612-5fa9c754b386" name="Changes by aleks" comment="Changes by aleks" />
     <list id="84ae9332-c244-40bd-b739-9a1eda0f39f2" name="Changes by asbg2" comment="Changes by asbg2">
+      <change beforePath="$PROJECT_DIR$/features/WBMethod1.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/WBMethod1.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateExternalActivitySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateExternalActivitySteps.java" afterDir="false" />
     </list>
     <list id="138d5bff-0662-4459-b46b-4b120c207ece" name="Changes by niko2" comment="Changes by niko2" />
-    <list id="f5be4745-d31f-4837-aece-c57ac94baa03" name="Changes by Nikolai" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" afterDir="false" />
-    </list>
+    <list id="f5be4745-d31f-4837-aece-c57ac94baa03" name="Changes by Nikolai" comment="" />
+    <list id="02e2745f-de66-4358-acb2-d97ef4dc294d" name="Changes by williampeytz" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +37,7 @@
   </component>
   <component name="ExportToHTMLSettings">
     <option name="OPEN_IN_BROWSER" value="true" />
-    <option name="OUTPUT_DIRECTORY" value="C:\Users\niko2\OneDrive - Danmarks Tekniske Universitet\02161 - Software Engineering 1\SoftwareEngineeringProjekt\target\generated-coverage-report" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\aleks\IdeaProjects\SoftwareEngineeringProjekt\coverage report" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,80 +61,18 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/dtu/system/Project.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java">
+    <file path="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java">
       <ranges>
-        <range start1="2" end1="4" start2="2" end2="3" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="74" end1="83" start2="73" end2="87" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="86" end1="88" start2="90" end2="92" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="102" end1="103" start2="106" end2="112" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="116" end1="117" start2="125" end2="126" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="118" end1="118" start2="127" end2="132" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="121" end1="122" start2="135" end2="136" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="124" end1="125" start2="138" end2="141" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="128" end1="129" start2="144" end2="145" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="130" end1="130" start2="146" end2="147" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="134" end1="135" start2="151" end2="152" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="148" end1="149" start2="165" end2="166" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="160" end1="161" start2="177" end2="178" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="183" end1="184" start2="200" end2="201" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="197" end1="202" start2="214" end2="215" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="205" end1="206" start2="218" end2="219" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="207" end1="207" start2="220" end2="224" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="209" end1="210" start2="226" end2="227" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="218" end1="219" start2="235" end2="236" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="226" end1="227" start2="243" end2="244" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="254" end1="255" start2="271" end2="272" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="256" end1="260" start2="273" end2="275" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="263" end1="265" start2="278" end2="281" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="271" end1="272" start2="287" end2="288" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="277" end1="277" start2="293" end2="294" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="279" end1="280" start2="296" end2="298" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="283" end1="283" start2="301" end2="302" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="287" end1="288" start2="306" end2="308" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="290" end1="291" start2="310" end2="312" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="322" end1="323" start2="343" end2="344" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="327" end1="328" start2="348" end2="349" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="330" end1="331" start2="351" end2="352" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="338" end1="339" start2="359" end2="360" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="340" end1="343" start2="361" end2="361" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="346" end1="347" start2="364" end2="365" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="386" end1="386" start2="404" end2="414" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="390" end1="390" start2="418" end2="419" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="394" end1="395" start2="423" end2="424" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="398" end1="400" start2="427" end2="429" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="403" end1="404" start2="432" end2="432" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="408" end1="416" start2="436" end2="438" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="419" end1="421" start2="441" end2="443" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="424" end1="425" start2="446" end2="447" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="447" end1="448" start2="469" end2="470" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="453" end1="454" start2="475" end2="476" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="456" end1="457" start2="478" end2="479" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="459" end1="460" start2="481" end2="482" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="483" end1="486" start2="505" end2="508" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="491" end1="492" start2="513" end2="514" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="496" end1="497" start2="518" end2="519" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="504" end1="505" start2="526" end2="527" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="510" end1="511" start2="532" end2="533" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="514" end1="515" start2="536" end2="537" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="517" end1="518" start2="539" end2="540" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="522" end1="522" start2="544" end2="546" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="526" end1="527" start2="550" end2="551" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="530" end1="531" start2="554" end2="555" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="532" end1="533" start2="556" end2="557" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="535" end1="536" start2="559" end2="560" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="538" end1="539" start2="562" end2="563" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="540" end1="541" start2="564" end2="565" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="546" end1="547" start2="570" end2="571" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="555" end1="556" start2="579" end2="580" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="559" end1="560" start2="583" end2="584" changelist="f5be4745-d31f-4837-aece-c57ac94baa03" />
-        <range start1="561" end1="561" start2="585" end2="614" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="562" end1="562" start2="615" end2="635" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="563" end1="563" start2="636" end2="792" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="577" end1="578" start2="806" end2="807" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="600" end1="600" start2="829" end2="866" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="618" end1="619" start2="884" end2="885" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="623" end1="623" start2="889" end2="899" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="625" end1="626" start2="901" end2="901" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="94" end1="107" start2="94" end2="94" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="155" end1="156" start2="142" end2="143" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
+        <range start1="157" end1="158" start2="144" end2="147" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
+        <range start1="161" end1="162" start2="150" end2="151" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
+        <range start1="163" end1="163" start2="152" end2="153" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
+        <range start1="193" end1="193" start2="183" end2="184" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="197" end1="198" start2="188" end2="189" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="200" end1="202" start2="191" end2="196" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="216" end1="217" start2="210" end2="211" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="265" end1="265" start2="259" end2="270" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
       </ranges>
     </file>
   </component>
@@ -141,24 +90,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "extract.method.default.visibility": "public",
-    "last_opened_file_path": "C:/Users/niko2/OneDrive - Danmarks Tekniske Universitet/02161 - Software Engineering 1/SoftwareEngineeringProjekt/target/generated-coverage-report",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;public&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/niko2/OneDrive - Danmarks Tekniske Universitet/02161 - Software Engineering 1/SoftwareEngineeringProjekt/target/generated-coverage-report&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/features" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aleks\IdeaProjects\SoftwareEngineeringProjekt\features" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -215,6 +167,8 @@
     <configuration name="All in SoftwareEngineeringProjekt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareEngineeringProjekt" />
       <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -252,6 +206,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Cucumber Java.Feature: CreateExternalActivity" />
+      <item itemvalue="Cucumber Java.Feature: CreateProjectActivity" />
+      <item itemvalue="JUnit.All in SoftwareEngineeringProjekt" />
+      <item itemvalue="JUnit.CucumberTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -321,6 +282,7 @@
       <workItem from="1650872637445" duration="146000" />
       <workItem from="1650872823792" duration="25983000" />
       <workItem from="1651431549876" duration="9756000" />
+      <workItem from="1651490038615" duration="14151000" />
     </task>
     <task id="LOCAL-00007" summary="24/3">
       <created>1649069156648</created>
@@ -575,12 +537,13 @@
     <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1649077313869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dtu.system.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$CucumberTest.ic" NAME="CucumberTest Coverage Results" MODIFIED="1650893619795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$CucumberTest.ic" NAME="CucumberTest Coverage Results" MODIFIED="1651495315408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dtu.system.Activity</FILTER>
       <FILTER>dtu.system.Developer</FILTER>
       <FILTER>dtu.system.OperationNotAllowedException</FILTER>
       <FILTER>dtu.system.Project</FILTER>
       <FILTER>dtu.system.TimeManager</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$All_in_SoftwareEngineeringProjekt.ic" NAME="All in SoftwareEngineeringProjekt Coverage Results" MODIFIED="1651490086649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
