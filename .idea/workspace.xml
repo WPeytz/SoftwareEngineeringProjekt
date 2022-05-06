@@ -5,31 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3">
-      <change afterPath="$PROJECT_DIR$/features/WBMethod2.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/WBMethod3.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeSpent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_29__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-03-2022_20_36__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ChangeEndWeekForAProject.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/ChangeEndWeekForAProject.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/RegisterTime.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/RegisterTime.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/AssignDeveloperToProjectActivitySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/AssignDeveloperToProjectActivitySteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/ChangeEndWeekForAProjectSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/ChangeEndWeekForAProjectSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/ChangeEndWeekForAnActivitySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/ChangeEndWeekForAnActivitySteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectActivitySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectActivitySteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateProjectSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
     </list>
-    <list id="aa1a8e99-bbab-481b-a612-5fa9c754b386" name="Changes by aleks" comment="Changes by aleks" />
+    <list id="aa1a8e99-bbab-481b-a612-5fa9c754b386" name="Changes by aleks" comment="Changes by aleks">
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" afterDir="false" />
+    </list>
     <list id="84ae9332-c244-40bd-b739-9a1eda0f39f2" name="Changes by asbg2" comment="Changes by asbg2">
-      <change beforePath="$PROJECT_DIR$/features/WBMethod1.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/WBMethod1.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateExternalActivitySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateExternalActivitySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateReportSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dtu/calculator/CreateReportSteps.java" afterDir="false" />
     </list>
     <list id="138d5bff-0662-4459-b46b-4b120c207ece" name="Changes by niko2" comment="Changes by niko2" />
     <list id="f5be4745-d31f-4837-aece-c57ac94baa03" name="Changes by Nikolai" comment="" />
-    <list id="02e2745f-de66-4358-acb2-d97ef4dc294d" name="Changes by williampeytz" comment="" />
+    <list id="7f50ba4f-02c6-4441-9c26-7c64f55b270b" name="Changes by williampeytz" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +30,7 @@
   </component>
   <component name="ExportToHTMLSettings">
     <option name="OPEN_IN_BROWSER" value="true" />
-    <option name="OUTPUT_DIRECTORY" value="C:\Users\aleks\IdeaProjects\SoftwareEngineeringProjekt\coverage report" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\niko2\OneDrive - Danmarks Tekniske Universitet\02161 - Software Engineering 1\SoftwareEngineeringProjekt\target\generated-coverage-report" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -61,18 +54,16 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/dtu/system/Project.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java">
+    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java">
       <ranges>
-        <range start1="94" end1="107" start2="94" end2="94" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="155" end1="156" start2="142" end2="143" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="157" end1="158" start2="144" end2="147" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="161" end1="162" start2="150" end2="151" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="163" end1="163" start2="152" end2="153" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="193" end1="193" start2="183" end2="184" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="197" end1="198" start2="188" end2="189" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="200" end1="202" start2="191" end2="196" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="216" end1="217" start2="210" end2="211" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="265" end1="265" start2="259" end2="270" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="4" end1="4" start2="4" end2="5" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
+        <range start1="11" end1="11" start2="12" end2="15" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
+        <range start1="20" end1="20" start2="24" end2="25" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
+        <range start1="32" end1="33" start2="37" end2="38" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
+        <range start1="36" end1="37" start2="41" end2="42" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
+        <range start1="38" end1="39" start2="43" end2="44" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
+        <range start1="43" end1="48" start2="48" end2="58" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
+        <range start1="49" end1="49" start2="59" end2="61" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
       </ranges>
     </file>
   </component>
@@ -90,30 +81,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;public&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/niko2/OneDrive - Danmarks Tekniske Universitet/02161 - Software Engineering 1/SoftwareEngineeringProjekt/target/generated-coverage-report&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/niko2/OneDrive - Danmarks Tekniske Universitet/02161 - Software Engineering 1/SoftwareEngineeringProjekt/target/generated-coverage-report",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/features" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\aleks\IdeaProjects\SoftwareEngineeringProjekt\features" />
-    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.CucumberTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dtu.system.Main" />
       <module name="SoftwareEngineeringProjekt" />
@@ -167,8 +154,6 @@
     <configuration name="All in SoftwareEngineeringProjekt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareEngineeringProjekt" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -206,17 +191,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Cucumber Java.Feature: CreateExternalActivity" />
-      <item itemvalue="Cucumber Java.Feature: CreateProjectActivity" />
-      <item itemvalue="JUnit.All in SoftwareEngineeringProjekt" />
-      <item itemvalue="JUnit.CucumberTest" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CucumberTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.All in SoftwareEngineeringProjekt" />
         <item itemvalue="Cucumber Java.Feature: CreateProjectActivity" />
         <item itemvalue="Cucumber Java.Feature: CreateExternalActivity" />
@@ -281,8 +259,11 @@
       <workItem from="1650872173570" duration="443000" />
       <workItem from="1650872637445" duration="146000" />
       <workItem from="1650872823792" duration="25983000" />
-      <workItem from="1651431549876" duration="9756000" />
-      <workItem from="1651490038615" duration="14151000" />
+      <workItem from="1651429274152" duration="1139000" />
+      <workItem from="1651430723736" duration="311000" />
+      <workItem from="1651431279803" duration="2441000" />
+      <workItem from="1651498547042" duration="668000" />
+      <workItem from="1651829844312" duration="8278000" />
     </task>
     <task id="LOCAL-00007" summary="24/3">
       <created>1649069156648</created>
@@ -487,7 +468,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650900665473</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="24/3">
+      <created>1651429405201</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1651429405201</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Changes by aleks">
+      <created>1651431386364</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1651431386364</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,26 +519,25 @@
     <MESSAGE value="18/04" />
     <MESSAGE value="Changes by Alex" />
     <MESSAGE value="Changes by williampeytz" />
+    <MESSAGE value="Changes by asbg2" />
     <MESSAGE value="24/3" />
     <MESSAGE value="Changes by aleks" />
-    <MESSAGE value="Changes by asbg2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by asbg2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by aleks" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1649077313869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dtu.system.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$CucumberTest.ic" NAME="CucumberTest Coverage Results" MODIFIED="1651495315408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$CucumberTest.ic" NAME="CucumberTest Coverage Results" MODIFIED="1651832435130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dtu.system.Activity</FILTER>
       <FILTER>dtu.system.Developer</FILTER>
       <FILTER>dtu.system.OperationNotAllowedException</FILTER>
       <FILTER>dtu.system.Project</FILTER>
       <FILTER>dtu.system.TimeManager</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$All_in_SoftwareEngineeringProjekt.ic" NAME="All in SoftwareEngineeringProjekt Coverage Results" MODIFIED="1651490086649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1649077313869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dtu.system.*</FILTER>
+    </SUITE>
   </component>
 </project>

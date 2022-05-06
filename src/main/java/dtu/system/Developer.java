@@ -18,6 +18,7 @@ public class  Developer
             {
                 this.initials = initials;
                 activities = new ArrayList<>();
+                workTimes = new ArrayList<>();
             }
             else
             {
