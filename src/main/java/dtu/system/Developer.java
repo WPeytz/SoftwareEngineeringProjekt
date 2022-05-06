@@ -2,6 +2,7 @@ package dtu.system;
 
 
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.*;
 import java.time.*;
 
@@ -9,6 +10,9 @@ public class  Developer
 {
     public String initials;
     ArrayList<Activity> activities;
+    ArrayList<TimeSpent> workTimes;
+
+    public Developer(){}
 
     public Developer(String initials) throws OperationNotAllowedException
     {
@@ -31,7 +35,7 @@ public class  Developer
         }
     }
     
-    public double registerTimeSpent (Activity activity, String StDt, String EnDt) throws OperationNotAllowedException
+    public double registerTimeSpent(Activity activity, String StDt, String EnDt) throws OperationNotAllowedException, DateTimeParseException
     {
         assert (true);
         double prevActTime = activity.activityTime();

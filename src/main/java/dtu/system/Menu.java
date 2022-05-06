@@ -29,6 +29,7 @@ public class Menu extends TimeManager
     {
         menuList();
         int userIn = 0;
+        sc = new Scanner(System.in);
         while (true)
         {
 
@@ -82,8 +83,8 @@ public class Menu extends TimeManager
      * 9. Add project manager
      * 10. Add developer to project
      * 11. Add developer to activity
-     * TODO (test): 12. Edit activity
-     * TODO: 13. Register time
+     * 12. Edit activity
+     * TODO (test): 13. Register time
      * TODO: 14. Request assistance
      * 0. Close system
      */
@@ -181,15 +182,6 @@ public class Menu extends TimeManager
     {
         clearScreen();
         int i = viewProjects();
-        println("Press enter to continue");
-        try
-        {
-            System.in.read();
-        }
-        catch (IOException IOE)
-        {
-            IOE.printStackTrace();
-        }
         clearScreen();
         if(i == 2)
         {
@@ -827,8 +819,90 @@ public class Menu extends TimeManager
     }
     public void registerTimeCase()
     {
-        println("WIP. Returning to main menu...");
-        mainMenu();
+        Developer dev = null;
+        Activity desiredActivity = null;
+        Activity[] actList;
+        int index = 0;
+        int input = 0;
+
+        if(developerList.isEmpty())
+        {
+            println("There are currently no existing developers. Please add a developer first to proceed.");
+            mainMenu();
+        }
+
+        println("To register your time spent on an activity, please enter your initials. To return to the main menu, press \"x\" and then the enter key");
+        sc = new Scanner(System.in);
+        String initials = sc.nextLine();
+        try
+        {
+            dev = getDeveloper(initials);
+            if (!dev.activities.isEmpty())
+            {
+                actList = new Activity[dev.activities.size()+1];
+                println("You are currently registered on the projects:");
+                for (Activity a : dev.activities)
+                {
+                    index++;
+                    actList[index] = a;
+                    println(index + ": " + a.name + " in project: " + getProject(a.projectID).name);
+                }
+                try
+                {
+                    println("please enter the number of the desired activity");
+                    sc = new Scanner(System.in);
+                    input = sc.nextInt();
+
+                    desiredActivity = actList[input];
+                }
+                catch (ArrayIndexOutOfBoundsException AIOOBE)
+                {
+                    println("No activity with the index \"" + input +"\". Please try again.");
+                    registerTimeCase();
+                }
+                catch (InputMismatchException IME)
+                {
+                    println("Illegal input. Only enter a number. Please try again.");
+                    registerTimeCase();
+                }
+                println("Selected activity: " + desiredActivity.name);
+                println("Please enter the start time, in the format \"dd-MM-yyyy hh.mm \".");
+
+                String startTime = null;
+                String endTime = null;
+
+                sc = new Scanner(System.in);
+                startTime = sc.nextLine();
+                println("Please enter the end time, in the format \"dd-MM-yyyy HH.mm \".");
+                sc = new Scanner(System.in);
+                endTime = sc.nextLine();
+                println();
+                /*
+                System.out.println(String.format("0x%02X", startTime));
+                System.out.println(String.format("0x%02X", endTime));
+                 */
+                println("StartTime: " + startTime);
+                println("EndTime: " + endTime);
+                println();
+                try
+                {
+                    dev.registerTimeSpent(desiredActivity,startTime,endTime);
+                    println("Time has been registered");
+                    println("Returning to main menu...");
+                    mainMenu();
+                }
+                catch (DateTimeParseException DTPE)
+                {
+                    println("The entered dates are not of the right format.");
+                }
+            }
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+            println("Returning to main menu...");
+            mainMenu();
+        }
     }
 
     public void requestAssistanceCase()
