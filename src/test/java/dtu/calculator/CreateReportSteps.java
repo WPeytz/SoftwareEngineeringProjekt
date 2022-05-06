@@ -122,4 +122,40 @@ public class CreateReportSteps
         assertEquals(errorMessage,error);
     }
 
+    //______________________________________________________________________________________________________________________
+    // White box test 4
+
+    @Given("that the developer {string} exists")
+    public void thatTheDeveloperExists(String dev) {
+        try
+        {
+            manager.developerList.add(new Developer(dev));
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            errorMessage = ONAE.getMessage();
+        }
+    }
+    @Given("{string} creates a weekly report for non-existing project {string}")
+    public void createsAWeeklyReportForNonExistingProject(String dev, String projName) {
+        try
+        {
+            manager.createReport(manager.getProject(projName),manager.getDeveloper(dev));
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            errorMessage = ONAE.getMessage();
+        }
+        catch (IOException IOE)
+        {
+            throw new Error(IOE);
+        }
+    }
+
+    @Then("return a error message {string}")
+    public void returnAErrorMessage(String error) {
+        assertEquals(errorMessage,error);
+    }
+
+
 }

@@ -39,19 +39,26 @@ public class  Developer
     {
         assert (true);
         double prevActTime = activity.activityTime();
-        if (!activity.workingDevelopers.contains(this))
+        if (!activity.workingDevelopers.contains(this)) //1
         {
-            throw new OperationNotAllowedException("Developer is not on the activity");
+            throw new OperationNotAllowedException("Developer is not on the activity"); //2
         }
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH.mm");
         LocalDateTime startTime = LocalDateTime.parse(StDt, format);
         LocalDateTime endTime = LocalDateTime.parse(EnDt, format);
-        double l = Duration.between(startTime, endTime).toMinutes();
-        l = (double) Math.round(l/30)/2;
-        activity.timeSpent.add(l);
-        assert (activity.activityTime() > prevActTime && activity.activityTime()-l == prevActTime);
-        return l;
+        double l = Duration.between(startTime, endTime).toMinutes(); //3
+        if (l <0) //4
+        {
+            throw new OperationNotAllowedException("Start time is after end time");
+        }
+        l = (double) Math.round(l/30)/2; //5
+        activity.timeSpent.add(l); //6
+        workTimes.add(new TimeSpent(activity, startTime, endTime, l));
+        assert (activity.activityTime()-l == prevActTime);
+        return l; //7
     }
+
+
 
 
     public boolean isFree(LocalDate newStartWeek, LocalDate newEndWeek) throws OperationNotAllowedException {

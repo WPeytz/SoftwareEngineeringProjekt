@@ -124,19 +124,19 @@ public class TimeManager
 
     public void createReport(Project project, Developer dev) throws OperationNotAllowedException, IOException
     {
-
-        project.isProjectManager(dev.initials);
-
-        String report = reportText(project);
-
-        String projRepDir = getRepDir();
-        File projReport = new File(projRepDir + project.projectID + "_report.txt");
-        projReport.createNewFile();
-        FileWriter FlWrtr = new FileWriter(projReport);
-        FlWrtr.write(report);
-        FlWrtr.close();
+        assert(true); // Precondition
+        project.isProjectManager(dev.initials); //1
+        String report = reportText(project); //2
+        String projRepDir = getRepDir(); //3
+        File projReport = new File(projRepDir + project.projectID + "_report.txt"); //4
+        projReport.createNewFile(); //5
+        FileWriter FlWrtr = new FileWriter(projReport); //6
+        FlWrtr.write(report); //7
+        FlWrtr.close(); //8
         System.out.println("Project report has been saved in: " + getRepDir());
+        assert(getReportFromProjectID(project.getProjectID()) != null); // Postcondition
     }
+
 
     public void createProject(String name, boolean customerProject, String startWeek, String endWeek) throws OperationNotAllowedException
     {
