@@ -121,4 +121,50 @@ public class RegisterTimeSteps
         assertEquals(error,errorMessage);
     }
 
+    @When("{string} wants to edit registered time on project activity {string}")
+    public void wantsToEditRegisteredTimeOnProjectActivity(String devName, String actName)
+    {
+        try {
+            manager.developerList.add(new Developer(devName));
+            this.dev = manager.getDeveloper(devName);
+        } catch (OperationNotAllowedException ONAE) {
+            errorMessage = ONAE.getMessage();
+        }
+    }
+
+    @Then("the previous time registration for project activity {string} of {double} hours with start time {string} and end time {string} is deleted in project ID {int}")
+    public void thePreviousTimeRegistrationForProjectActivityOfHoursIsDeletedInProjectID(String actName, Double time,String startTimeStr, String endTimeStr, Integer projectID)
+    {
+        try
+        {
+            Activity a = manager.getProject(projectID).getActivity(actName);
+
+            a.timeSpent.add(-time);
+            DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH.mm");
+            LocalDateTime startTime = LocalDateTime.parse(startTimeStr, format);
+            LocalDateTime endTime = LocalDateTime.parse(endTimeStr, format);
+
+            for(TimeSpent ts : dev.workTimes)
+            {
+                if (ts.activity.equals(a) && ts.startTime.equals(startTime) && ts.endTime.equals(endTime))
+                {
+                    check = ts;
+                }
+            }
+            assertTrue(dev.workTimes.contains(check));
+            dev.workTimes.remove(check);
+            assertFalse(dev.workTimes.contains(check));
+
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            errorMessage = ONAE.getMessage();
+        }
+    }
+
+    //______________________________________________________________________________________________________________________
+    // White box test 1
+
+    @Then("there is returned an error message {string}")
+    public void thereIsReturnedAnErrorMessage(String error) {assertEquals(error,errorMessage);}
 }

@@ -44,18 +44,26 @@ public class  Developer
             throw new OperationNotAllowedException("Developer is not on the activity"); //2
         }
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH.mm");
-        LocalDateTime startTime = LocalDateTime.parse(StDt, format);
-        LocalDateTime endTime = LocalDateTime.parse(EnDt, format);
-        double l = Duration.between(startTime, endTime).toMinutes(); //3
-        if (l <0) //4
+        try
         {
-            throw new OperationNotAllowedException("Start time is after end time");
+            startTime = LocalDateTime.parse(StDt, format); //3
+            endTime = LocalDateTime.parse(EnDt, format); //4
         }
-        l = (double) Math.round(l/30)/2; //5
-        activity.timeSpent.add(l); //6
-        workTimes.add(new TimeSpent(activity, startTime, endTime, l));
+        catch (DateTimeParseException ONAE)
+        {
+            throw new OperationNotAllowedException("The entered dates are not of the right format."); //5
+        }
+
+        double l = Duration.between(startTime, endTime).toMinutes(); //6
+        if (l <0) //7
+        {
+            throw new OperationNotAllowedException("Start time is after end time"); //8
+        }
+        l = (double) Math.round(l/30)/2; //9
+        activity.timeSpent.add(l); //10
+        workTimes.add(new TimeSpent(activity, startTime, endTime, l)); //11
         assert (activity.activityTime()-l == prevActTime);
-        return l; //7
+        return l; //12
     }
 
 
