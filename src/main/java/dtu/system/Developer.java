@@ -73,9 +73,11 @@ public class  Developer
         for (LocalDate i = newStartWeek; i.isBefore(newEndWeek); i = i.plusWeeks(1))
         {
             int activityCount = 0;
-            for (Activity a : activities) {
-                if (activityCount >= 20) {
-                    assert (activityCount >=20); // Postcondition
+            for (Activity a : activities)
+            {
+                if (activityCount >= 20)
+                {
+                    assert (activityCount >= 20); // Postcondition
                     throw new OperationNotAllowedException("Developer is not free in the given time period.");
                 } else if ((i.isAfter(a.startWeek)) && (i.isBefore(a.endWeek))) {
                     activityCount++;
