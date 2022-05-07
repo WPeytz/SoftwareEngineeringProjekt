@@ -1,5 +1,6 @@
 package dtu.system;
 
+import java.sql.Time;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -57,11 +58,12 @@ public class Menu extends TimeManager
                 case 8 -> viewProjectsCase(0);
                 case 9 -> viewProjectsCase(1);
                 case 10 -> addDeveloperToProjectCase();
-                case 11 -> addDeveloperToActivityCase();
+                case 11 -> addDeveloperToActivityCase(0);
                 case 12 -> editActivityCase();
                 case 13 -> registerTimeCase();
                 case 14 -> requestAssistanceCase();
-                case 0 -> System.exit(0);
+                case 15 -> editRegisteredTimeCase();
+                case 0 -> systemExit();
                 default ->
                 {
                     println("Undefined input. Try again");
@@ -84,12 +86,13 @@ public class Menu extends TimeManager
      * 10. Add developer to project
      * 11. Add developer to activity
      * 12. Edit activity
-     * TODO (test): 13. Register time
-     * TODO: 14. Request assistance
+     * 13. Register time
+     * 14. Request assistance
+     * TODO (test): 15. Edit registered time
      * 0. Close system
      */
 
-    public void menuList ()
+    public void menuList()
     {
         println();
         println("1. Create Project");
@@ -642,14 +645,28 @@ public class Menu extends TimeManager
         }
     }
 
-    public Activity activityEditDuplicateCode()
+    public Activity activityEditDuplicateCode(int param)
     {
-        println("Please enter the ID of the project, where the activity you would like modify is located. To return to the main menu, press \"x\" and then the enter key");
+        if (param == 0)
+        {
+            println("Please enter the ID of the project, where the activity you would like modify is located. To return to the main menu, press \"x\" and then the enter key");
+        }
+        else if (param == 1)
+        {
+            println("Please enter the ID of the project, where the activity you would like help is located. To return to the main menu, press \"x\" and then the enter key");
+        }
         Project p = projectEditDuplicateCode();
         viewActivities(p);
         int actID;
         sc = new Scanner(System.in);
-        println("Please enter the number of the desired activity (as shown in the list above), where the activity you would like to modify. To return to the main menu, press \"x\" and then the enter key");
+        if (param == 0)
+        {
+            println("Please enter the number of the desired activity (as shown in the list above), you would like to modify. To return to the main menu, press \"x\" and then the enter key");
+        }
+        else if (param == 1)
+        {
+            println("Please enter the number of the desired activity (as shown in the list above), you would like help. To return to the main menu, press \"x\" and then the enter key");
+        }
         String inputAct = sc.next();
         if (inputAct.equalsIgnoreCase("x"))
         {
@@ -679,16 +696,24 @@ public class Menu extends TimeManager
         return a;
     }
 
-    public void addDeveloperToActivityCase()
+    public void addDeveloperToActivityCase(int param)
     {
-        Activity a = activityEditDuplicateCode();
+        Activity a = activityEditDuplicateCode(param);
 
         int i = viewEmployees();
         if (i==2)
         {
             mainMenu();
         }
-        println("Please enter the initials of the developer you would like to assign to the activity " + a.name);
+
+        if(param == 0)
+        {
+            println("Please enter the initials of the developer you would like to assign to the activity " + a.name);
+        }
+        else if (param == 1)
+        {
+            println("Please enter the initials of the developer you would like help from " + a.name);
+        }
         sc = new Scanner(System.in);
         String developer = sc.next();
         try
@@ -706,7 +731,7 @@ public class Menu extends TimeManager
     }
     public void editActivityCase()
     {
-        Activity a = activityEditDuplicateCode();
+        Activity a = activityEditDuplicateCode(0);
 
         println("Please choose what parameters of the activity you would like to change. To return to the main menu, press \"0\" and then the enter key");
         println("1. Name. Current name is: " + "\"" + a.name + "\"");
@@ -877,10 +902,6 @@ public class Menu extends TimeManager
                 sc = new Scanner(System.in);
                 endTime = sc.nextLine();
                 println();
-                /*
-                System.out.println(String.format("0x%02X", startTime));
-                System.out.println(String.format("0x%02X", endTime));
-                 */
                 println("StartTime: " + startTime);
                 println("EndTime: " + endTime);
                 println();
@@ -905,10 +926,87 @@ public class Menu extends TimeManager
         }
     }
 
+    public void editRegisteredTimeCase()
+    {
+        Developer dev = null;
+        TimeSpent desiredWorkTime = null;
+        TimeSpent[] workTimesList;
+        int index = 0;
+        int input = 0;
+
+        double oldDur = 0;
+
+        if(developerList.isEmpty())
+        {
+            println("There are currently no existing developers. Please add a developer first to proceed.");
+            mainMenu();
+        }
+
+        println("To edit your registered time spent on an activity, please enter your initials. To return to the main menu, press \"x\" and then the enter key");
+        sc = new Scanner(System.in);
+        String initials = sc.nextLine();
+        try
+        {
+            dev = getDeveloper(initials);
+            if (!dev.workTimes.isEmpty())
+            {
+                workTimesList = new TimeSpent[dev.workTimes.size()+1];
+                println("You currently  have registered these work times: ");
+                for (TimeSpent ts : dev.workTimes)
+                {
+                    index++;
+                    workTimesList[index] = ts;
+                    println(index + ": Activity: " + ts.activity.name + ". Start time: " + ts.startTime + ". End time: " + ts.endTime + ". Duration: " + ts.duration);
+                }
+                try
+                {
+                    println("please enter the number of the desired time registration");
+                    sc = new Scanner(System.in);
+                    input = sc.nextInt();
+
+                    desiredWorkTime = workTimesList[input];
+                }
+                catch (ArrayIndexOutOfBoundsException AIOOBE)
+                {
+                    println("No time registration with the index \"" + input +"\". Please try again.");
+                    registerTimeCase();
+                }
+                catch (InputMismatchException IME)
+                {
+                    println("Illegal input. Only enter a number. Please try again.");
+                    registerTimeCase();
+                }
+
+                println("Selected time registration: " + "Activity: " + desiredWorkTime.activity.name + ". Start time: " + desiredWorkTime.startTime + ". End time: " + desiredWorkTime.endTime+ ". Duration: " + desiredWorkTime.duration);
+                println("Would you like to edit this time registration? (y/n)");
+
+                sc = new Scanner(System.in);
+                String yn = sc.next();
+                if (!yn.equalsIgnoreCase("y"))
+                {
+                    println("Procedure cancelled");
+                    mainMenu();
+                }
+
+                desiredWorkTime.activity.timeSpent.add(-desiredWorkTime.duration);
+                dev.workTimes.remove(desiredWorkTime);
+
+                println("The time registration has now been deleted. Please enter the new time registration:");
+
+                registerTimeCase();
+            }
+        }
+        catch (OperationNotAllowedException ONAE)
+        {
+            println(ONAE.getMessage());
+            println("Returning to main menu...");
+            mainMenu();
+        }
+    }
+
     public void requestAssistanceCase()
     {
-        println("WIP. Returning to main menu...");
-        mainMenu();
+        addDeveloperToActivityCase(1);
     }
 
     public String projType(Project p)
@@ -952,12 +1050,7 @@ public class Menu extends TimeManager
 
     public int viewActivities(Project p)
     {
-        if(p.activities.isEmpty())
-        {
-            println("No activities are created yet. Returning to the main menu...");
-            mainMenu();
-        }
-        else
+        if(!p.activities.isEmpty())
         {
             int i = 1;
             println("Activies for project " + p.name);
@@ -965,6 +1058,11 @@ public class Menu extends TimeManager
             {
                 println(i + ": " +a.name);
             }
+        }
+        else
+        {
+            println("No activities are created yet. Returning to the main menu...");
+            mainMenu();
         }
         return 2;
     }
@@ -1019,5 +1117,49 @@ public class Menu extends TimeManager
         {
             IOE.printStackTrace();
         }
+    }
+
+    public void systemExit()
+    {
+        println("Do you really want to close the system? (y/n)");
+        sc = new Scanner(System.in);
+        String input = sc.next();
+        if (input.equalsIgnoreCase("y"))
+        {
+            println("We are sad to see you go :(");
+            println("We hope you liked our program!");
+            println("It took us many hours and a lot of sweat and tears to make it.");
+            exitProcedure();
+        }
+        else
+        {
+            mainMenu();
+        }
+    }
+
+    public void exitProcedure()
+    {
+        String[] endScreen =
+        {
+            "Credits:",
+            "Alexander Samuel Bendix Gosden (s204209)",
+            "William Peytz (s204145)",
+            "Nikolai Bergdahl Hansen (s214681)",
+            "Aleksander Wind (s214683)",
+            "Hubert (Aleksander Wind's Labrador puppy). No seriously, my dog is actually named Hubert. I am not kidding."
+        };
+        for (String str : endScreen)
+        {
+            try
+            {
+                Thread.sleep(100);
+            }
+            catch (InterruptedException e)
+            {
+                System.exit(-1);
+            }
+            println(str);
+        }
+        System.exit(0);
     }
 }

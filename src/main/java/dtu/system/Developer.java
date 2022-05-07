@@ -58,9 +58,6 @@ public class  Developer
         return l; //7
     }
 
-
-
-
     public boolean isFree(LocalDate newStartWeek, LocalDate newEndWeek) throws OperationNotAllowedException {
         assert (true); // Precondition
         for (LocalDate i = newStartWeek; i.isBefore(newEndWeek); i = i.plusWeeks(1)) {
