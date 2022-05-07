@@ -12,7 +12,7 @@ public class Activity
     public ArrayList<Developer> workingDevelopers;
     boolean externalActivity = false;
     int projectID;
-    ArrayList<Double> timeSpent;
+    public ArrayList<Double> timeSpent;
     DateTimeFormatter format;
 
     public Activity(String name, double timeBudget, int projectID, String startWeek, String endWeek)

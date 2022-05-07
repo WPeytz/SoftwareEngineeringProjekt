@@ -2,10 +2,16 @@ package dtu.calculator;
 
 import dtu.system.*;
 import io.cucumber.java.en.*;
+
+import java.sql.Time;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import static org.junit.Assert.*;
 
 public class RegisterTimeSteps
 {
+    TimeSpent check;
     TimeManager manager;
     Activity a;
     Developer dev;

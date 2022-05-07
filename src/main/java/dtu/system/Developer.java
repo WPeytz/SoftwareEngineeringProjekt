@@ -10,9 +10,7 @@ public class  Developer
 {
     public String initials;
     ArrayList<Activity> activities;
-    ArrayList<TimeSpent> workTimes;
-
-    public Developer(){}
+    public ArrayList<TimeSpent> workTimes;
 
     public Developer(String initials) throws OperationNotAllowedException
     {
@@ -34,10 +32,12 @@ public class  Developer
             throw new OperationNotAllowedException("Illegal character(s) found. Only letters are allowed in developer initials");
         }
     }
-    
-    public double registerTimeSpent(Activity activity, String StDt, String EnDt) throws OperationNotAllowedException, DateTimeParseException
+
+    public double registerTimeSpent(Activity activity, String StDt, String EnDt) throws OperationNotAllowedException
     {
         assert (true);
+        LocalDateTime startTime;
+        LocalDateTime endTime;
         double prevActTime = activity.activityTime();
         if (!activity.workingDevelopers.contains(this)) //1
         {
@@ -58,9 +58,12 @@ public class  Developer
         return l; //7
     }
 
-    public boolean isFree(LocalDate newStartWeek, LocalDate newEndWeek) throws OperationNotAllowedException {
+
+    public boolean isFree(LocalDate newStartWeek, LocalDate newEndWeek) throws OperationNotAllowedException
+    {
         assert (true); // Precondition
-        for (LocalDate i = newStartWeek; i.isBefore(newEndWeek); i = i.plusWeeks(1)) {
+        for (LocalDate i = newStartWeek; i.isBefore(newEndWeek); i = i.plusWeeks(1))
+        {
             int activityCount = 0;
             for (Activity a : activities) {
                 if (activityCount >= 20) {

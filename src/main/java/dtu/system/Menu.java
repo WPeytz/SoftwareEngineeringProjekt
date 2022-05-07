@@ -6,7 +6,6 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.*;
 import java.io.*;
-
 public class Menu extends TimeManager
 {
     int projID;
@@ -109,6 +108,7 @@ public class Menu extends TimeManager
         println("12. Edit activity");
         println("13. Register Time");
         println("14. Request assistance");
+        println("15. Edit time registration");
         println("0. Close system");
     }
 
@@ -912,10 +912,14 @@ public class Menu extends TimeManager
                     println("Returning to main menu...");
                     mainMenu();
                 }
-                catch (DateTimeParseException DTPE)
+                catch (OperationNotAllowedException ONAE)
                 {
-                    println("The entered dates are not of the right format.");
+                    println(ONAE.getMessage());
                 }
+            }
+            else
+            {
+                throw new OperationNotAllowedException("Developer \"" + dev.initials + "\" is not assigned to any activities");
             }
         }
         catch (OperationNotAllowedException ONAE)
@@ -933,8 +937,6 @@ public class Menu extends TimeManager
         TimeSpent[] workTimesList;
         int index = 0;
         int input = 0;
-
-        double oldDur = 0;
 
         if(developerList.isEmpty())
         {
@@ -994,6 +996,10 @@ public class Menu extends TimeManager
                 println("The time registration has now been deleted. Please enter the new time registration:");
 
                 registerTimeCase();
+            }
+            else
+            {
+                throw new OperationNotAllowedException("No time registrations made for developer \"" + dev.initials + "\"");
             }
         }
         catch (OperationNotAllowedException ONAE)
@@ -1144,7 +1150,7 @@ public class Menu extends TimeManager
             "Credits:",
             "Alexander Samuel Bendix Gosden (s204209)",
             "William Peytz (s204145)",
-            "Nikolai Bergdahl Hansen (s214681)",
+            "Nikolai Hansen (s214681)",
             "Aleksander Wind (s214683)",
             "Hubert (Aleksander Wind's Labrador puppy). No seriously, my dog is actually named Hubert. I am not kidding."
         };
@@ -1152,7 +1158,7 @@ public class Menu extends TimeManager
         {
             try
             {
-                Thread.sleep(100);
+                Thread.sleep(1000);
             }
             catch (InterruptedException e)
             {

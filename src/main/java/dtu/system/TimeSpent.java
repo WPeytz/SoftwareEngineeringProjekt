@@ -3,10 +3,10 @@ package dtu.system;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class TimeSpent extends Developer
+public class TimeSpent
 {
-    Activity activity;
-    LocalDateTime startTime, endTime;
+    public Activity activity;
+    public LocalDateTime startTime, endTime;
     double duration;
     public TimeSpent (Activity act, LocalDateTime st, LocalDateTime et, double dur)
     {
