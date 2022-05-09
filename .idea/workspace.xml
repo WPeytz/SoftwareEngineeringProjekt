@@ -6,22 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" name="Changes" comment="24/3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <list id="123df20c-386a-4860-8d4a-86698988c39a" name="Changes by aleks" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-    </list>
-    <list id="aa1a8e99-bbab-481b-a612-5fa9c754b386" name="Changes by aleks" comment="Changes by aleks">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
-    </list>
-    <list id="84ae9332-c244-40bd-b739-9a1eda0f39f2" name="Changes by asbg2" comment="Changes by asbg2">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtu/system/TimeSpent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtu/system/TimeSpent.java" afterDir="false" />
     </list>
     <list id="138d5bff-0662-4459-b46b-4b120c207ece" name="Changes by niko2" comment="Changes by niko2" />
     <list id="f5be4745-d31f-4837-aece-c57ac94baa03" name="Changes by Nikolai" comment="" />
-    <list id="cf07a861-c309-4d73-865f-ec4e573bb217" name="Changes by williampeytz" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,49 +47,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/dtu/system/Project.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Project.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="5" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="16" end1="17" start2="19" end2="19" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="23" end1="24" start2="25" end2="25" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="35" end1="36" start2="36" end2="37" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="89" end1="95" start2="90" end2="90" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/Menu.java">
-      <ranges>
-        <range start1="73" end1="92" start2="73" end2="73" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="96" end1="112" start2="77" end2="93" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="116" end1="117" start2="97" end2="97" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="118" end1="118" start2="98" end2="99" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="179" end1="180" start2="160" end2="160" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="185" end1="186" start2="165" end2="165" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="187" end1="188" start2="166" end2="166" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="249" end1="250" start2="227" end2="227" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="343" end1="344" start2="320" end2="320" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="349" end1="350" start2="325" end2="325" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="430" end1="430" start2="405" end2="406" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="527" end1="527" start2="503" end2="510" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="608" end1="610" start2="591" end2="593" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="614" end1="616" start2="597" end2="599" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="635" end1="637" start2="618" end2="621" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="867" end1="868" start2="851" end2="852" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="1093" end1="1104" start2="1077" end2="1077" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="1110" end1="1113" start2="1083" end2="1094" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/dtu/system/TimeManager.java">
-      <ranges>
-        <range start1="12" end1="13" start2="12" end2="13" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="17" end1="17" start2="17" end2="18" changelist="aa1a8e99-bbab-481b-a612-5fa9c754b386" />
-        <range start1="23" end1="23" start2="24" end2="26" changelist="d2655cb2-2b02-43ca-ac5c-f9a7bcd9a4b3" />
-        <range start1="142" end1="143" start2="145" end2="146" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="145" end1="146" start2="148" end2="149" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-        <range start1="150" end1="151" start2="153" end2="154" changelist="84ae9332-c244-40bd-b739-9a1eda0f39f2" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -210,6 +163,10 @@
           <option name="PATTERN" value="dtu.system.TimeManager" />
           <option name="ENABLED" value="true" />
         </pattern>
+        <pattern>
+          <option name="PATTERN" value="dtu.system.TimeSpent" />
+          <option name="ENABLED" value="true" />
+        </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dtu.calculator" />
       <option name="MAIN_CLASS_NAME" value="dtu.calculator.CucumberTest" />
@@ -293,7 +250,7 @@
       <workItem from="1651498547042" duration="668000" />
       <workItem from="1651829844312" duration="8343000" />
       <workItem from="1651933143301" duration="2005000" />
-      <workItem from="1652083543827" duration="9020000" />
+      <workItem from="1652083543827" duration="14765000" />
     </task>
     <task id="LOCAL-00007" summary="24/3">
       <created>1649069156648</created>
@@ -533,7 +490,28 @@
       <option name="project" value="LOCAL" />
       <updated>1651845723793</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="24/3">
+      <created>1652092941180</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1652092941180</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Changes by aleks">
+      <created>1652092962059</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1652092962059</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Changes by asbg2">
+      <created>1652092976779</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1652092976779</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,12 +558,13 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$CucumberTest.ic" NAME="CucumberTest Coverage Results" MODIFIED="1652092719639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$CucumberTest.ic" NAME="CucumberTest Coverage Results" MODIFIED="1652098614325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dtu.system.Activity</FILTER>
       <FILTER>dtu.system.Developer</FILTER>
       <FILTER>dtu.system.OperationNotAllowedException</FILTER>
       <FILTER>dtu.system.Project</FILTER>
       <FILTER>dtu.system.TimeManager</FILTER>
+      <FILTER>dtu.system.TimeSpent</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftwareEngineeringProjekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1649077313869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dtu.system.*</FILTER>
