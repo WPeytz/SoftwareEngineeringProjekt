@@ -20,6 +20,7 @@ public class Project
     DecimalFormat decFormat = new DecimalFormat("0000");
     DateTimeFormatter format;
 
+    //William
     public Project(String name, boolean customerProject, String startWeek, String endWeek) throws OperationNotAllowedException
     {
         format = DateTimeFormatter.ofPattern("YYYY-ww-e");
@@ -37,6 +38,7 @@ public class Project
                 +decFormat.format(TimeManager.projectList.size()+1));
     }
 
+    //Gosden
     public void setProjectManager(Developer projectManager) throws OperationNotAllowedException
     {
         this.projectManager = projectManager;
@@ -46,6 +48,7 @@ public class Project
         }
     }
 
+    //Wind
     public void addWorkingDev(Developer developer) throws OperationNotAllowedException
     {
         if (!workingProjectDevelopers.contains(developer))
@@ -58,6 +61,7 @@ public class Project
         }
     }
 
+    //Nikolai
     public boolean isProjectManager (String init) throws OperationNotAllowedException
     {
         if (this.projectManager == null || !this.projectManager.initials.equals(init))
@@ -68,6 +72,7 @@ public class Project
 
     }
 
+    //Wind
     public double totalTimeSpent()
     {
         double sum = 0;
@@ -79,6 +84,7 @@ public class Project
         return sum;
     }
 
+    //Gosden
     public double timeBudget()
     {
         double sum = 0;
@@ -89,6 +95,7 @@ public class Project
         return sum;
     }
 
+    //William
     public Activity getActivity (String name) throws OperationNotAllowedException
     {
         Activity act = null;
@@ -109,16 +116,19 @@ public class Project
 
     }
 
+    //Wind
     public void changeProjectEndWeek(String endWeek)
     {
         this.endWeek = LocalDate.parse(endWeek+"-7",format);
     }
 
+    //William
     public int getProjectID ()
     {
         return projectID;
     }
 
+    //Nikolai
     public String getCustomerProject()
     {
         if (customerProject)
@@ -131,11 +141,13 @@ public class Project
         }
     }
 
+    //William
     public String getName()
     {
         return name;
     }
 
+    //Wind
     public String setName(String name)
     {
         this.name = name;

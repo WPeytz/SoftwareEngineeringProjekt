@@ -17,6 +17,7 @@ public class TimeManager
     Scanner sc = new Scanner(System.in);
     public static ArrayList<int[]> years;
 
+    //William
     public TimeManager()
     {
         extActList = new ArrayList<>();
@@ -26,6 +27,7 @@ public class TimeManager
         years.add(new int[2]);
     }
 
+    //Wind
     public Activity getExternalActivity(String actName) throws OperationNotAllowedException
     {
         Activity act = null;
@@ -46,6 +48,7 @@ public class TimeManager
         return act;
     }
 
+    //Gosden
     public Developer getDeveloper(String initials) throws OperationNotAllowedException
     {
         for (Developer dev : developerList)
@@ -58,6 +61,7 @@ public class TimeManager
         throw new OperationNotAllowedException("No matching developer with initials " + initials + " found.");
     }
 
+    //Wind
     public String getReportFromProjectID(int projID) throws OperationNotAllowedException, FileNotFoundException
     {
         File RepDirs = new File(getRepDir());
@@ -79,6 +83,7 @@ public class TimeManager
         return getFileContents(Paths.get(getRepDir(), fileName));
     }
 
+    //Nikolai
     public String getFileContents(Path path) throws FileNotFoundException
     {
         StringBuilder sb = new StringBuilder();
@@ -92,11 +97,13 @@ public class TimeManager
         return sb.toString();
     }
 
+    //Wind
     public String readReportFromName(String projName) throws FileNotFoundException, OperationNotAllowedException
     {
         return (getReportFromProjectID(getProject(projName).getProjectID()));
     }
 
+    //William
     public String getRepDir()
     {
         String curUser = System.getProperty("user.name");
@@ -106,6 +113,7 @@ public class TimeManager
         return projRepDir;
     }
 
+    //Gosden
     public String reportText(Project project)
     {
         estTimeLeft = project.timeBudget() - project.totalTimeSpent();
@@ -125,6 +133,7 @@ public class TimeManager
                 "The estimated number of hours left on the project is " + estTimeLeft + " hours.");
     }
 
+    //Nikolai
     public void createReport(Project project, Developer dev) throws OperationNotAllowedException, IOException
     {
         assert(true); // Precondition
@@ -140,7 +149,7 @@ public class TimeManager
         assert(getReportFromProjectID(project.getProjectID()) != null); // Postcondition
     }
 
-
+    //Gosden
     public void createProject(String name, boolean customerProject, String startWeek, String endWeek) throws OperationNotAllowedException
     {
         if (!projectExists(name)) //1
@@ -156,6 +165,7 @@ public class TimeManager
 
     }
 
+    //Nikolai
     public boolean projectExists(String name)
     {
         boolean projExists = false;
@@ -169,6 +179,7 @@ public class TimeManager
         return projExists;
     }
 
+    //Nikolai
     public boolean projectExists(int projID)
     {
         boolean projExists = false;
@@ -182,6 +193,7 @@ public class TimeManager
         return projExists;
     }
 
+    //William
     public Project getProject(int projectID) throws OperationNotAllowedException
     {
         Project proj = null;
@@ -199,6 +211,7 @@ public class TimeManager
         return proj;
     }
 
+    //William
     public Project getProject(String projectName) throws OperationNotAllowedException
     {
         Project proj = null;
@@ -216,6 +229,7 @@ public class TimeManager
         return proj;
     }
 
+    //Nikolai
     public void changeEndWeek(String endWeek, String activityName, int projectID) throws OperationNotAllowedException
     {
         format = DateTimeFormatter.ofPattern("YYYY-ww-e");
@@ -247,6 +261,7 @@ public class TimeManager
         }
     }
 
+    //Gosden
     public boolean checkDateFormat(String date) throws OperationNotAllowedException
     {
         try
@@ -261,6 +276,7 @@ public class TimeManager
         return true;
     }
 
+    //William
     public LocalDate toLocalDate(String date) throws OperationNotAllowedException
     {
         LocalDate locDate = null;

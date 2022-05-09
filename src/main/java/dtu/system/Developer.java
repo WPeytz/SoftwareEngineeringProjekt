@@ -12,6 +12,7 @@ public class  Developer
     ArrayList<Activity> activities;
     public ArrayList<TimeSpent> workTimes;
 
+    //William
     public Developer(String initials) throws OperationNotAllowedException
     {
         if(initials.matches("[a-zA-Z]+"))
@@ -33,6 +34,7 @@ public class  Developer
         }
     }
 
+    //Nikolai
     public double registerTimeSpent(Activity activity, String StDt, String EnDt) throws OperationNotAllowedException
     {
         assert (true);
@@ -66,7 +68,7 @@ public class  Developer
         return l; //12
     }
 
-
+    //Wind
     public boolean isFree(LocalDate newStartWeek, LocalDate newEndWeek) throws OperationNotAllowedException
     {
         assert (true); // Precondition

@@ -15,6 +15,7 @@ public class Activity
     public ArrayList<Double> timeSpent;
     DateTimeFormatter format;
 
+    //Nikolai
     public Activity(String name, double timeBudget, int projectID, String startWeek, String endWeek)
     {
         format = DateTimeFormatter.ofPattern("YYYY-ww-e");
@@ -30,6 +31,7 @@ public class Activity
         workingDevelopers = new ArrayList<>();
     }
 
+    //William
     public double activityTime()
     {
         double sum = 0;
@@ -40,6 +42,7 @@ public class Activity
         return sum;
     }
 
+    //Nikolai
     public void addWorkingDev(Developer developer) throws OperationNotAllowedException
     {
         developer.isFree(this.startWeek,this.endWeek);

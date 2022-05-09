@@ -7,6 +7,8 @@ public class TimeSpent
     public Activity activity;
     public LocalDateTime startTime, endTime;
     double duration;
+
+    //Wind
     public TimeSpent (Activity act, LocalDateTime st, LocalDateTime et, double dur)
     {
         this.activity = act;

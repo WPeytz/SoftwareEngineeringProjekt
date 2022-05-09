@@ -10,21 +10,26 @@ public class Menu extends TimeManager
 {
     int projID;
     String startWeek, endWeek;
+
+    //Gosden
     public void println()
     {
         System.out.println();
     }
 
+    //Gosden
     public void println(String print)
     {
         System.out.println(print);
     }
 
+    //Gosden
     public Menu()
     {
         mainMenu();
     }
 
+    //William
     public void mainMenu()
     {
         menuList();
@@ -72,6 +77,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //Wind
     public void menuList()
     {
         println();
@@ -93,6 +99,7 @@ public class Menu extends TimeManager
         println("0. Close system");                         //  0. Close system
     }
 
+    //Gosden
     public void createProjectCase()
     {
         println("Project name must not contain any white spaces.");
@@ -161,6 +168,7 @@ public class Menu extends TimeManager
         mainMenu();
     }
 
+    //Wind
     public void viewProjectsCase(int j)
     {
         int i = viewProjects();
@@ -185,6 +193,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //Gosden
     public void createReportCase()
     {
         sc = new Scanner(System.in);
@@ -228,6 +237,7 @@ public class Menu extends TimeManager
         mainMenu();
     }
 
+    //Wind
     public void createActivityCase()
     {
         System.out.print("Project ID (\"0\" if external activity): ");
@@ -321,6 +331,7 @@ public class Menu extends TimeManager
         mainMenu();
     }
 
+    //Nikolai
     public void viewFreeEmployeesCase()
     {
         System.out.print("View free employees in the period (yyyy-ww): ");
@@ -340,6 +351,7 @@ public class Menu extends TimeManager
         mainMenu();
     }
 
+    //William
     public void viewReportsCase()
     {
         File RepDirs = new File(getRepDir());
@@ -399,6 +411,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //Gosden
     public void createNewDeveloperCase()
     {
         sc = new Scanner(System.in);
@@ -423,6 +436,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //William
     public void editProjectCase()
     {
         println("Please enter the ID of the project that should be edited. To return to the main menu, press \"x\" and then the enter key");
@@ -430,6 +444,7 @@ public class Menu extends TimeManager
         editProjectMenu(p,projID);
     }
 
+    //Wind
     public void editProjectMenu(Project p, int projID)
     {
         String projType;
@@ -476,6 +491,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //William
     public void editProjectName(Project p)
     {
         println();
@@ -490,6 +506,7 @@ public class Menu extends TimeManager
         mainMenu();
     }
 
+    //Gosden
     public void editProjectEndWeek(Project p)
     {
         println("Please enter the new end week of the project (format it yyyy-ww). \r\nTo cancel this action, press \"x\" and then the enter key");
@@ -519,6 +536,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //Wind
     public void editProjectType(Project p)
     {
         println("Please enter the new type of the project (Customer/Internal). \r\nTo cancel this action, press \"x\" and then the enter key");
@@ -548,6 +566,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //William
     public void changeProjectManagerCase()
     {
         println("Please enter the ID of the project you would like to add a project manager to. To return to the main menu, press \"x\" and then the enter key");
@@ -569,6 +588,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //Gosden
     public Project projectEditDuplicateCode()
     {
         int projID;
@@ -607,6 +627,7 @@ public class Menu extends TimeManager
         return p;
     }
 
+    //Nikolai
     public void addDeveloperToProjectCase()
     {
         println("Please enter the ID of the project you would like to assign a developer to. To return to the main menu, press \"x\" and then the enter key");
@@ -629,6 +650,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //Wind
     public Activity activityEditDuplicateCode(int param)
     {
         if (param == 0)
@@ -680,6 +702,7 @@ public class Menu extends TimeManager
         return a;
     }
 
+    //Nikolai
     public void addDeveloperToActivityCase(int param)
     {
         Activity a = activityEditDuplicateCode(param);
@@ -713,6 +736,8 @@ public class Menu extends TimeManager
             mainMenu();
         }
     }
+
+    //William
     public void editActivityCase()
     {
         Activity a = activityEditDuplicateCode(0);
@@ -747,6 +772,8 @@ public class Menu extends TimeManager
             }
         }
     }
+
+    //Wind
     public void editActivityName(Activity a)
     {
         println("Please enter the new name of the activity.\r\nTo cancel this action, press \"x\" and then the enter key");
@@ -760,6 +787,8 @@ public class Menu extends TimeManager
         println("New name of the activity is: " + a.name);
         mainMenu();
     }
+
+    //Gosden
     public void editActivityTimeBudget(Activity a)
     {
         println("Please enter the new time budget of the activity.\r\nTo cancel this action, press \"x\" and then the enter key");
@@ -781,6 +810,8 @@ public class Menu extends TimeManager
         println("New time budget of the activity is: " + a.timeBudget + "hours");
         mainMenu();
     }
+
+    //Nikolai
     public void editActivityWeek(Activity a, boolean weekTypeParam)
     {
         String weekType;
@@ -826,6 +857,8 @@ public class Menu extends TimeManager
         }
         mainMenu();
     }
+
+    //Wind
     public void registerTimeCase()
     {
         Developer dev = null;
@@ -914,6 +947,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //Nikolai
     public void editRegisteredTimeCase()
     {
         Developer dev = null;
@@ -994,11 +1028,13 @@ public class Menu extends TimeManager
         }
     }
 
+    //Willima
     public void requestAssistanceCase()
     {
         addDeveloperToActivityCase(1);
     }
 
+    //Gosden
     public String projType(Project p)
     {
         if (p.customerProject)
@@ -1008,6 +1044,7 @@ public class Menu extends TimeManager
         return "Internal Project";
     }
 
+    //Wind
     public int viewProjects()
     {
         if(projectList.isEmpty())
@@ -1038,6 +1075,7 @@ public class Menu extends TimeManager
         return 2;
     }
 
+    //William
     public int viewActivities(Project p)
     {
         if(!p.activities.isEmpty())
@@ -1057,6 +1095,7 @@ public class Menu extends TimeManager
         return 2;
     }
 
+    //Gosden
     public int viewEmployees()
     {
         if (developerList.isEmpty())
@@ -1075,6 +1114,7 @@ public class Menu extends TimeManager
         return 1;
     }
 
+    //Wind
     public void viewFreeEmployees(String startWeek, String endWeek) throws OperationNotAllowedException
     {
         format = DateTimeFormatter.ofPattern("YYYY-ww-e");
@@ -1106,6 +1146,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //William
     public void systemExit()
     {
         println("Do you really want to close the system? (y/n)");
@@ -1124,6 +1165,7 @@ public class Menu extends TimeManager
         }
     }
 
+    //Wind
     public void exitProcedure()
     {
         String[] endScreen =
