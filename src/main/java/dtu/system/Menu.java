@@ -341,7 +341,6 @@ public class Menu extends TimeManager
         {
             throw new RuntimeException(IE);
         }
-        clearScreen();
         mainMenu();
     }
 

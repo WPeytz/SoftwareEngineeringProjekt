@@ -21,6 +21,8 @@ public class TimeManager
         extActList = new ArrayList<>();
         projectList = new HashSet<>();
         developerList = new ArrayList<>();
+        years = new ArrayList<>();
+        years.add(new int[2]);
     }
 
     public Activity getExternalActivity(String actName) throws OperationNotAllowedException

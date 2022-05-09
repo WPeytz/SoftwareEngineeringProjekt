@@ -1,5 +1,8 @@
 package dtu.system;
 
+import io.cucumber.datatable.internal.difflib.StringUtills;
+
+import java.sql.Time;
 import java.text.DecimalFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -21,7 +24,6 @@ public class Project
     public Project(String name, boolean customerProject, String startWeek, String endWeek) throws OperationNotAllowedException
     {
         format = DateTimeFormatter.ofPattern("YYYY-ww-e");
-
         this.name = name;
         this.customerProject = customerProject;
         this.startWeek = LocalDate.parse(startWeek+"-1",format);
