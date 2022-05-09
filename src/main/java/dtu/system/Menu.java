@@ -72,25 +72,6 @@ public class Menu extends TimeManager
         }
     }
 
-    /*
-     * 1. Create Project
-     * 2. View Projects
-     * 3. Create Report
-     * 4. Create Activity
-     * 5. View Free Employees
-     * 6. View report list
-     * 7. Create developer
-     * 8. Edit project parameters
-     * 9. Add project manager
-     * 10. Add developer to project
-     * 11. Add developer to activity
-     * 12. Edit activity
-     * 13. Register time
-     * 14. Request assistance
-     * TODO (test): 15. Edit registered time
-     * 0. Close system
-     */
-
     public void menuList()
     {
         println();
@@ -114,7 +95,6 @@ public class Menu extends TimeManager
 
     public void createProjectCase()
     {
-        //clearScreen();
         println("Project name must not contain any white spaces.");
         println("If a whitespace is typed in, anything after the first whitespace will not be a part of the project name.");
         System.out.print("Please enter the desired project name: ");
@@ -184,7 +164,6 @@ public class Menu extends TimeManager
     public void viewProjectsCase(int j)
     {
         int i = viewProjects();
-        clearScreen();
         if(i == 2)
         {
             if (j == 1)

@@ -143,15 +143,15 @@ public class TimeManager
 
     public void createProject(String name, boolean customerProject, String startWeek, String endWeek) throws OperationNotAllowedException
     {
-        if (!projectExists(name))
+        if (!projectExists(name)) //1
         {
             assert(true); //Precondition
-            projectList.add(new Project(name, customerProject, startWeek, endWeek));
+            projectList.add(new Project(name, customerProject, startWeek, endWeek)); //2
             assert(projectExists(name) || !toLocalDate(startWeek).isBefore(toLocalDate(endWeek))); // Postcondition
         }
         else
         {
-            throw new OperationNotAllowedException("Project could not be created, as the project name is already in use.");
+            throw new OperationNotAllowedException("Project could not be created, as the project name is already in use."); //3
         }
 
     }
