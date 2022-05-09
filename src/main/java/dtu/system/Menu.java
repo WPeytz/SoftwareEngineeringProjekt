@@ -94,28 +94,29 @@ public class Menu extends TimeManager
     public void menuList()
     {
         println();
-        println("1. Create Project");
-        println("2. View Projects");
-        println("3. Create Report");
-        println("4. Create Activity");
-        println("5. View Free Employees");
-        println("6. View reports");
-        println("7. Create new developer");
-        println("8. Edit a project");
-        println("9. Add or change manager for a project");
-        println("10. Add developer to project");
-        println("11. Add developer to activity");
-        println("12. Edit activity");
-        println("13. Register Time");
-        println("14. Request assistance");
-        println("15. Edit time registration");
-        println("0. Close system");
+        println("1. Create Project");                       //  1. Create Project
+        println("2. View Projects");                        //  2. View Projects
+        println("3. Create Report");                        //  3. Create Report
+        println("4. Create Activity");                      //  4. Create Activity
+        println("5. View Free Employees");                  //  5. View Free Employees
+        println("6. View reports");                         //  6. View report list
+        println("7. Create new developer");                 //  7. Create developer
+        println("8. Edit a project");                       //  8. Edit project parameters
+        println("9. Add or change manager for a project");  //  9. Add project manager
+        println("10. Add developer to project");            //  10. Add developer to project
+        println("11. Add developer to activity");           //  11. Add developer to activity
+        println("12. View and edit activities");            //  12. Edit activity
+        println("13. Register Time");                       //  13. Register time
+        println("14. Request assistance");                  //  14. Request assistance
+        println("15. Edit time registration");              //  15. Edit registered time
+        println("0. Close system");                         //  0. Close system
     }
 
     public void createProjectCase()
     {
         //clearScreen();
         println("Project name must not contain any white spaces.");
+        println("If a whitespace is typed in, anything after the first whitespace will not be a part of the project name.");
         System.out.print("Please enter the desired project name: ");
         sc = new Scanner(System.in);
         String projectName = sc.next();
@@ -177,13 +178,11 @@ public class Menu extends TimeManager
         {
             IE.printStackTrace();
         }
-        clearScreen();
         mainMenu();
     }
 
     public void viewProjectsCase(int j)
     {
-        clearScreen();
         int i = viewProjects();
         clearScreen();
         if(i == 2)
@@ -247,7 +246,6 @@ public class Menu extends TimeManager
         {
             IE.printStackTrace();
         }
-        clearScreen();
         mainMenu();
     }
 
@@ -346,7 +344,6 @@ public class Menu extends TimeManager
 
     public void viewFreeEmployeesCase()
     {
-        clearScreen();
         System.out.print("View free employees in the period (yyyy-ww): ");
         startWeek = sc.next();
         println();
@@ -427,6 +424,7 @@ public class Menu extends TimeManager
     {
         sc = new Scanner(System.in);
         println("Please enter the initials of the new developer. To return to the main menu, press \"x\" and then the enter key");
+        println("Initals of a developer must only contain letters, and be 4 (four) characters long");
         String initials = sc.next();
         if (initials.equalsIgnoreCase("x"))
         {
@@ -524,6 +522,13 @@ public class Menu extends TimeManager
         }
         try
         {
+            DateTimeFormatter format = DateTimeFormatter.ofPattern("YYYY-ww-e");
+            if(LocalDate.parse(input+"-7",format).isBefore(p.startWeek))
+            {
+                println("The end week cannot be before the start week of the project.");
+                println("Returning to the main menu...");
+                mainMenu();
+            }
             p.changeProjectEndWeek(input);
             println("Project end week changed to: " + input);
             mainMenu();
@@ -605,14 +610,14 @@ public class Menu extends TimeManager
         }
         catch(NumberFormatException NFE)
         {
-            println("Invalid input, please try again.");
-            viewProjectsCase(0);
+            println("Invalid input, please try again. Returning to main menu...");
+            mainMenu();
         }
         catch(OperationNotAllowedException ONAE)
         {
             println(ONAE.getMessage());
-            viewProjects();
-            editProjectCase();
+            println("Returning to main menu...");
+            mainMenu();
         }
 
         int i = viewEmployees();
@@ -632,8 +637,9 @@ public class Menu extends TimeManager
         String developer = sc.nextLine();
         try
         {
-            p.setProjectManager(getDeveloper(developer.toLowerCase()));
-            println("Developer " + p.projectManager.initials + " is now assigned to project " + p.name);
+            Developer devToAdd = getDeveloper(developer.toLowerCase());
+            p.addWorkingDev(devToAdd);
+            println("Developer " + devToAdd.initials + " is now assigned to project " + p.name);
             mainMenu();
         }
         catch (OperationNotAllowedException ONAE)
@@ -864,7 +870,7 @@ public class Menu extends TimeManager
             if (!dev.activities.isEmpty())
             {
                 actList = new Activity[dev.activities.size()+1];
-                println("You are currently registered on the projects:");
+                println("You are currently registered on the activities:");
                 for (Activity a : dev.activities)
                 {
                     index++;
@@ -1090,26 +1096,23 @@ public class Menu extends TimeManager
         return 1;
     }
 
-    public static void clearScreen()
-    {
-        try
-        {
-            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-        }
-        catch (InterruptedException | IOException EX)
-        {
-            EX.printStackTrace();
-        }
-    }
     public void viewFreeEmployees(String startWeek, String endWeek) throws OperationNotAllowedException
     {
         format = DateTimeFormatter.ofPattern("YYYY-ww-e");
 
         for (Developer dev : developerList)
         {
-            if (dev.isFree(LocalDate.parse(startWeek + "-1",format), LocalDate.parse(endWeek + "-7",format)))
+            try
             {
-                println(dev.initials);
+                if (dev.isFree(LocalDate.parse(startWeek + "-1",format), LocalDate.parse(endWeek + "-7",format)))
+                {
+                    println(dev.initials);
+                }
+            }
+            catch (DateTimeParseException DTPE)
+            {
+                println("Wrong format of entered dates. Please try again. Returning to main menu...");
+                mainMenu();
             }
         }
         println("Press enter to return to the main menu");

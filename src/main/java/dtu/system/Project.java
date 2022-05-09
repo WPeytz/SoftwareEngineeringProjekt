@@ -17,7 +17,6 @@ public class Project
     public Developer projectManager;
     public ArrayList<Developer> workingProjectDevelopers;
     boolean customerProject;
-    int tracking = 0;
     DecimalFormat decFormat = new DecimalFormat("0000");
     DateTimeFormatter format;
 
@@ -35,7 +34,7 @@ public class Project
         activities = new ArrayList<>();
         workingProjectDevelopers = new ArrayList<>();
         projectID = Integer.parseInt(String.valueOf(this.startWeek.getYear()).substring(2,4)
-                +decFormat.format(incTracking()));
+                +decFormat.format(TimeManager.projectList.size()+1));
     }
 
     public void setProjectManager(Developer projectManager) throws OperationNotAllowedException
@@ -88,12 +87,6 @@ public class Project
             sum += a.timeBudget;
         }
         return sum;
-    }
-
-    public int incTracking()
-    {
-        tracking++;
-        return tracking;
     }
 
     public Activity getActivity (String name) throws OperationNotAllowedException

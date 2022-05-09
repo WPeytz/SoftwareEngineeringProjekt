@@ -10,11 +10,12 @@ import java.io.*;
 public class TimeManager
 {
     public ArrayList<Activity> extActList;
-    HashSet<Project> projectList;
+    public static HashSet<Project> projectList;
     public ArrayList<Developer> developerList;
     double estTimeLeft;
     DateTimeFormatter format;
     Scanner sc = new Scanner(System.in);
+    public static ArrayList<int[]> years;
 
     public TimeManager()
     {
